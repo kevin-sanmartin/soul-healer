@@ -1,5 +1,7 @@
+import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 import classNames from "classnames";
 import { Component } from "react";
+import CustomLink from "../CustomLink";
 
 // Components
 import BurgerMenu from "./BurgerMenu";
@@ -33,7 +35,15 @@ export default class MobileMenu extends Component<IProps, IState> {
           className={classNames(classes["menu-mobile-container"], {
             [classes["menu-open"]]: this.state.isBurgerMenuOpen,
           })}
-        ></div>
+        >
+          <div className={classes["menu-mobile"]}>
+            <CustomLink text={EWebsiteLinksNames.HOME} to={EWebsiteLinks.HOME} className={classes["link"]} />
+            <CustomLink text={EWebsiteLinksNames.ABOUT} to={EWebsiteLinks.ABOUT} className={classes["link"]} />
+            <CustomLink text={EWebsiteLinksNames.PROJECTS} to={EWebsiteLinks.PROJECTS} className={classes["link"]} />
+            <CustomLink text={EWebsiteLinksNames.RESUME} to={EWebsiteLinks.RESUME} className={classes["link"]} />
+            <CustomLink text={EWebsiteLinksNames.CONTACT} to={EWebsiteLinks.CONTACT} className={classes["link"]} />
+          </div>
+        </div>
       </div>
     );
   }
