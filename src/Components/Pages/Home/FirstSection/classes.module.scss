@@ -1,0 +1,32 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: $PastelGray;
+
+  @media screen and (min-width: $mobileViewport) {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 20px;
+
+    @media screen and (min-width: $mobileViewport) {
+      margin: 20px 0;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    text-align: justify;
+
+    @media screen and (min-width: $mobileViewport) {
+      margin-bottom: 20px;
+    }
+  }
+}

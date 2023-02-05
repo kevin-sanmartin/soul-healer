@@ -11,6 +11,7 @@ type IProps = {
   variant: EButtonVariant;
   size: EButtonSize;
   isSubmitButton?: boolean;
+  className?: string;
   children?: React.ReactNode;
 };
 type IState = {};
@@ -25,7 +26,12 @@ export default class Button extends Component<IProps, IState> {
     return (
       <button
         type={this.props.isSubmitButton ? "submit" : "button"}
-        className={classNames(classes["root"], classes[this.props.variant], classes[this.props.size])}
+        className={classNames(
+          classes["root"],
+          classes[this.props.variant],
+          classes[this.props.size],
+          this.props.className
+        )}
       >
         {this.props.children}
       </button>

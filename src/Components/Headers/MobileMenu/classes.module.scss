@@ -10,9 +10,10 @@
     left: 0;
     height: 100%;
     width: 80%;
-    background-color: $PastelGray;
+    background-color: $Crayola;
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
+    border-right: 1px solid $White;
 
     .menu-mobile {
       padding: 0 20px;
@@ -25,6 +26,10 @@
 
       & > *:not(:last-child) {
         margin-bottom: 20px;
+      }
+
+      .link {
+        color: $BlanchedAlmond;
       }
     }
   }
