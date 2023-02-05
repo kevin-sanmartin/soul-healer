@@ -1,0 +1,21 @@
+@import "styles/colors";
+
+.collapsible {
+  background-color: $Crayola;
+  color: $Black;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: $Cornsilk;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

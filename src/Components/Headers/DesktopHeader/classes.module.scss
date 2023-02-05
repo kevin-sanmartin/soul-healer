@@ -1,0 +1,30 @@
+@import "/styles/colors.scss";
+
+.root {
+  padding: 0 40px;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: $Crayola;
+
+  .content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .links-container {
+      display: flex;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+}

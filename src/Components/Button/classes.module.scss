@@ -1,0 +1,45 @@
+@import "styles/colors";
+
+.root {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  background-color: $Crayola;
+  border: 1px solid $White;
+  color: $Cornsilk;
+}
+
+.secondary {
+  background-color: $Cornsilk;
+  border: 1px solid $Crayola;
+  color: $Crayola;
+}
+
+.tertiary {
+  background-color: $PastelGray;
+  border: 1px solid $Cornsilk;
+}
+
+.large {
+  padding: 15px 60px;
+  font-size: 26px;
+}
+
+.medium {
+  padding: 10px 40px;
+  font-size: 20px;
+}
+
+.small {
+  padding: 5px 20px;
+  font-size: 14px;
+}

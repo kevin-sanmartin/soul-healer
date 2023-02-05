@@ -1,0 +1,11 @@
+@import "/styles/colors.scss";
+
+.root {
+  padding: 0 40px;
+  background-color: $BlanchedAlmond;
+
+  .content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
