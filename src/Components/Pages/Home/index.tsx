@@ -5,11 +5,13 @@ import classNames from "classnames";
 // Styles
 import classes from "./classes.module.scss";
 import FirstSection from "./FirstSection";
+import SecondSection from "./SecondSection";
 
 export default function HomePage() {
   return (
     <Layout className={classes["root"]}>
       <FirstSection className={classes["section"]} />
+      <SecondSection className={classes["section"]} />
     </Layout>
   );
 }
