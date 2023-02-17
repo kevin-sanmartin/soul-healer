@@ -2,31 +2,47 @@
 @import "/styles/breakpoints.scss";
 
 .root {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   height: 100vh;
-  background-color: $PastelGray;
+  background-image: url("/images/outside/portrait-professionnel-089.jpg");
 
-  @media screen and (min-width: $mobileViewport) {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: $tabletViewport) {
     justify-content: center;
+    background-position: 70%;
   }
 
-  .title {
-    font-size: 20px;
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
 
-    @media screen and (min-width: $mobileViewport) {
-      margin: 20px 0;
+    .title {
+      max-width: 600px;
+      font-size: 38px;
+      font-weight: 800;
+      color: $Crayola;
+
+      @media screen and (min-width: $mobileViewport) {
+        margin: 20px 0;
+      }
     }
-  }
 
-  .description {
-    font-size: 16px;
-    text-align: justify;
-
-    @media screen and (min-width: $mobileViewport) {
-      margin-bottom: 20px;
+    .description {
+      max-width: 600px;
+      font-size: 16px;
+      text-align: justify;
+      margin: 20px 0 40px;
+      color: $BlanchedAlmond;
     }
   }
 }

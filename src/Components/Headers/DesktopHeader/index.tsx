@@ -1,4 +1,5 @@
 import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
+import classNames from "classnames";
 import Link from "next/link";
 import { Component } from "react";
 
@@ -10,12 +11,28 @@ import CustomLink from "../CustomLink";
 import classes from "./classes.module.scss";
 
 type IProps = {};
-type IState = {};
+type IState = {
+  isAtTop: boolean;
+};
 
 export default class DesktopHeader extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      isAtTop: true,
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
   public render() {
     return (
-      <header className={classes["root"]}>
+      <header
+        className={classNames(classes["root"], {
+          [classes["scrolled"]]: !this.state.isAtTop,
+        })}
+      >
         <div className={classes["content"]}>
           <Logo />
 
@@ -29,5 +46,24 @@ export default class DesktopHeader extends Component<IProps, IState> {
         </div>
       </header>
     );
+  }
+
+  public componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+    this.handleScroll();
+  }
+
+  public componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  private handleScroll() {
+    if (typeof window === "undefined") return;
+
+    const isAtTop = window.scrollY === 0;
+
+    if (isAtTop !== this.state.isAtTop) {
+      this.setState({ isAtTop });
+    }
   }
 }

@@ -11,6 +11,8 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Styles
 import classes from "./classes.module.scss";
+import Image from "next/image";
+import ForestImage from "public/images/outside/portrait-professionnel-054-min.jpg";
 
 type IProps = {
   className?: string;
@@ -21,20 +23,24 @@ export default class FirstSection extends Component<IProps, IState> {
   override render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
-        <Logo />
+        {/* <Image className={classes["image"]} src={ForestImage} alt="" /> */}
 
-        <Text tag={ETextTag.H1} className={classes["title"]}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </Text>
+        <div className={classes["container"]}>
+          <Logo />
 
-        <Text tag={ETextTag.P} className={classes["description"]}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda obcaecati error? Placeat odio,
-          necessitatibus rem, saepe facilis illo cumque alias vel sunt eos voluptatibus nemo deserunt quae ullam!
-        </Text>
+          <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title"]}>
+            Vous avez le pouvoir de vous soigner vous même.
+          </Text>
 
-        <Button className={classes["button"]}>
-          <Text tag={ETextTag.SPAN}>BUTTON</Text>
-        </Button>
+          <Text tag={ETextTag.P} className={classes["description"]}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda obcaecati error? Placeat odio,
+            necessitatibus rem, saepe facilis illo cumque alias vel sunt eos voluptatibus nemo deserunt quae ullam!
+          </Text>
+
+          <Button className={classes["button"]}>
+            <Text tag={ETextTag.SPAN}>BUTTON</Text>
+          </Button>
+        </div>
       </section>
     );
   }

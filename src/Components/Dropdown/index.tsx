@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import classNames from "classnames";
 
 // Components
 import Text from "../Text";
@@ -12,6 +13,7 @@ import classes from "./classes.module.scss";
 
 type IProps = {
   title: string;
+  className?: string;
   children?: React.ReactNode;
 };
 type IState = {
@@ -37,7 +39,11 @@ export default class Dropdown extends Component<IProps, IState> {
   public render() {
     return (
       <div ref={this.dropdownRef}>
-        <button type="button" className={classes["collapsible"]} onClick={this.toggleOpen}>
+        <button
+          type="button"
+          className={classNames(classes["collapsible"], this.props.className, { [classes["open"]]: this.state.isOpen })}
+          onClick={this.toggleOpen}
+        >
           <Text tag={ETextTag.P}>{this.props.title}</Text>
         </button>
         <div ref={this.contentRef} style={{ maxHeight: this.state.scrollHeight }} className={classes["content"]}>
