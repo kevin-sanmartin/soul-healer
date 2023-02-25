@@ -7,18 +7,20 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Styles
 import classes from "./classes.module.scss";
-import { Roboto, ZCOOL_XiaoWei } from "@next/font/google";
+import { Roboto, ZCOOL_XiaoWei, Cabin } from "@next/font/google";
 const roboto = Roboto({ weight: ["400", "500", "700"], subsets: ["latin"], display: "swap" });
 const xiaoWei = ZCOOL_XiaoWei({ weight: ["400"], subsets: ["latin"], display: "swap" });
+const cabin = Cabin({ weight: ["400", "500", "600", "700"], subsets: ["latin"], display: "swap" });
 
 export const Fonts = {
   roboto,
   xiaoWei,
+  cabin,
 };
 
 type IProps = {
   tag: ETextTag;
-  font: "roboto" | "xiaoWei";
+  font: "roboto" | "xiaoWei" | "cabin";
   className?: string;
   children?: React.ReactNode;
 };

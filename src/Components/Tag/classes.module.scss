@@ -1,0 +1,19 @@
+@import "/styles/colors.scss";
+
+.root {
+  border-radius: 5px;
+  width: fit-content;
+  padding: 12px 20px;
+
+  &.crayola {
+    background-color: $Crayola;
+  }
+
+  &.pastel-gray {
+    background-color: $PastelGray;
+  }
+
+  &.blanched-almond {
+    background-color: $BlanchedAlmond;
+  }
+}

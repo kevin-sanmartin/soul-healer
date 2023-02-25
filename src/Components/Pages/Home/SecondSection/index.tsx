@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import Tag, { ETagColor } from "@/src/Components/Tag";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -19,21 +20,30 @@ export default class SecondSection extends Component<IProps, IState> {
   override render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
-        <Text tag={ETextTag.H2} className={classes["title"]}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </Text>
+        <div className={classes["presentation-container"]}>
+          <div className={classes["video-container"]}>
+            <video controls controlsList="nodownload" className={classes["video"]}>
+              <source src="/tmp.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-        <video controls controlsList="nodownload" className={classes["video"]}>
-          <source src="/tmp.mp4" type="video/mp4" />
-        </video>
+          <div className={classes["text-container"]}>
+            <Tag color={ETagColor.BLANCHED_ALMOND}>
+              <Text tag={ETextTag.SPAN} font="xiaoWei" className={classes["tag"]}>
+                A propos de moi
+              </Text>
+            </Tag>
 
-        <Text tag={ETextTag.P} className={classes["description"]}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate ut, quas quam ullam minus nihil
-          qui dignissimos dolore blanditiis et, ipsam consequatur natus voluptatum velit facere vero placeat suscipit,
-          sed voluptatibus recusandae nobis enim. Reiciendis, officiis, suscipit at cupiditate vitae voluptatibus
-          voluptatem voluptatum aliquam incidunt et quis molestias labore odit dicta atque commodi officia dolores
-          ducimus totam? Earum hic id vitae.
-        </Text>
+            <Text tag={ETextTag.H2} font="cabin" className={classes["title"]}>
+              J'aide les individus à devenir leur meilleure version.
+            </Text>
+
+            <Text tag={ETextTag.P} className={classes["description"]}>
+              I am glad that you have made it here to send a distress signal, and inform the Senate that all on board
+              were killed. Dantooine. I'm not going to Alderaan. I really got to go. But that to me.
+            </Text>
+          </div>
+        </div>
       </section>
     );
   }

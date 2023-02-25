@@ -2,26 +2,43 @@
 @import "/styles/breakpoints.scss";
 
 .root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("/images/background.png");
   height: 100vh;
 
-  .title {
-    margin-top: 20px;
-    font-size: 20px;
-  }
+  .presentation-container {
+    padding: 20px;
+    display: flex;
 
-  .description {
-    font-size: 14px;
-    text-align: justify;
-  }
+    .video-container {
+      margin-right: 20px;
+      width: 50%;
 
-  .video {
-    width: 100%;
-    max-width: 600px;
-    margin: 40px auto;
-    border-radius: 10px;
+      .video {
+        max-width: 700px;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .text-container {
+      width: 50%;
+
+      .tag {
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      .title {
+        margin: 20px 0;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1;
+      }
+
+      .description {
+        font-size: 16px;
+        color: $DarkGray;
+      }
+    }
   }
 }
