@@ -19,6 +19,7 @@
   @media screen and (max-width: $tabletViewport) {
     justify-content: center;
     background-position: 70%;
+    background-attachment: scroll;
   }
 
   .container {
@@ -43,6 +44,9 @@
       text-align: justify;
       margin: 20px 0 40px;
       color: $BlanchedAlmond;
+    }
+
+    .button {
     }
   }
 }

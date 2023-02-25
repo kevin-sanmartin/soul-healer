@@ -38,7 +38,7 @@ export default class FirstSection extends Component<IProps, IState> {
           </Text>
 
           <Button className={classes["button"]}>
-            <Text tag={ETextTag.SPAN}>BUTTON</Text>
+            <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
           </Button>
         </div>
       </section>
