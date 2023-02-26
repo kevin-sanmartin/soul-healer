@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: $tabletViewport) {
+  @media screen and (max-width: $medium) {
     justify-content: center;
     background-position: 70%;
     background-attachment: scroll;
@@ -33,7 +33,7 @@
       font-weight: 800;
       color: $Crayola;
 
-      @media screen and (min-width: $mobileViewport) {
+      @media screen and (min-width: $small) {
         margin: 20px 0;
       }
     }

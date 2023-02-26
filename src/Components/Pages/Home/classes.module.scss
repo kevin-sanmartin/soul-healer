@@ -1,7 +1,16 @@
 @import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
 
 .root {
   .section {
     padding: 0 40px;
+
+    @media screen and (max-width: $medium) {
+      padding: 0 20px;
+    }
+
+    @media screen and (max-width: $small) {
+      padding: 0 10px;
+    }
   }
 }

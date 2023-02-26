@@ -28,7 +28,7 @@ type IState = {};
 
 export default class Text extends Component<IProps, IState> {
   public static defaultProps = {
-    font: "roboto",
+    font: "cabin",
   };
 
   public render() {
@@ -38,11 +38,5 @@ export default class Text extends Component<IProps, IState> {
         {this.props.children}
       </CustomTag>
     );
-  }
-
-  public componentDidMount() {
-    if (this.props.tag === "h1") {
-      console.log(this.props.font);
-    }
   }
 }

@@ -2,15 +2,33 @@
 @import "/styles/breakpoints.scss";
 
 .root {
-  height: 100vh;
-
   .presentation-container {
+    max-width: 1400px;
+    margin: 20px auto;
     padding: 20px;
     display: flex;
+    background-color: $White;
+    background-image: url("/images/background.png");
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    @media screen and (max-width: $large) {
+      flex-direction: column;
+    }
 
     .video-container {
-      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
       width: 50%;
+      transform: translateX(-100%);
+      transition: transform 1s ease-in-out;
+
+      @media screen and (max-width: $large) {
+        margin: 0;
+        width: 100%;
+      }
 
       .video {
         max-width: 700px;
@@ -21,6 +39,20 @@
 
     .text-container {
       width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 1s ease-in-out;
+
+      @media screen and (max-width: $large) {
+        margin-top: 50px;
+        width: 100%;
+      }
+
+      @media screen and (max-width: $medium) {
+        margin-top: 20px;
+      }
 
       .tag {
         white-space: nowrap;
@@ -28,17 +60,83 @@
       }
 
       .title {
-        margin: 20px 0;
+        margin-top: 20px;
         font-size: 40px;
         font-weight: 700;
         letter-spacing: -1px;
         line-height: 1;
+
+        @media screen and (max-width: $xlarge) {
+          font-size: 30px;
+        }
       }
 
       .description {
+        margin: 20px 0;
         font-size: 16px;
         color: $DarkGray;
       }
+
+      .icons-container {
+        display: flex;
+        justify-content: space-around;
+
+        @media screen and (max-width: $small) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+
+          .icon {
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            background-color: $PastelGray;
+            border-radius: 10px;
+            fill: $White;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+              background-color: $DirtyWhite;
+            }
+
+            @media screen and (max-width: $xlarge) {
+              width: 50px;
+              height: 50px;
+            }
+
+            @media screen and (max-width: $medium) {
+              padding: 5px;
+              width: 40px;
+              height: 40px;
+            }
+
+            @media screen and (max-width: $small) {
+              padding: 10px;
+              width: 60px;
+              height: 60px;
+            }
+          }
+
+          .text {
+            text-align: center;
+            font-size: 18px;
+
+            @media screen and (max-width: $medium) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .is-visible {
+      transform: translateX(0);
     }
   }
 }
