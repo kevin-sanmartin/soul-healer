@@ -62,12 +62,12 @@ export default class SecondSection extends Component<IProps, IState> {
             </Tag>
 
             <Text tag={ETextTag.H2} font="cabin" className={classes["title"]}>
-              J'aide les individus à devenir leur meilleure version.
+              J&apos;aide les individus à devenir leur meilleure version.
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
               I am glad that you have made it here to send a distress signal, and inform the Senate that all on board
-              were killed. Dantooine. I'm not going to Alderaan. I really got to go. But that to me.
+              were killed. Dantooine. I&apos;m not going to Alderaan. I really got to go. But that to me.
             </Text>
 
             <div className={classes["icons-container"]}>
