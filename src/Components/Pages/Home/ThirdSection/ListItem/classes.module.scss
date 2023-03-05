@@ -1,0 +1,48 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: calc(100% / 3.33);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $medium) {
+    width: 100%;
+  }
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+    .title {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: $Black;
+    }
+  }
+
+  .items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+
+    .item {
+      .text {
+        font-size: 18px;
+        color: $Black;
+      }
+    }
+  }
+}

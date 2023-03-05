@@ -1,0 +1,82 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  .healing-presentation-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    padding: 20px;
+    gap: 20px;
+    margin: 0 auto;
+    display: flex;
+    background-color: $White;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    .title {
+      position: relative;
+      z-index: 1;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(148, 62, 0, 0.1);
+      border-radius: 10px;
+      color: black;
+    }
+    // .tag {
+    //   position: relative;
+    //   margin: 0 auto 20px;
+    //   z-index: 1;
+
+    //   .title {
+    //     white-space: nowrap;
+    //     font-weight: bold;
+    //     color: white;
+    //   }
+    // }
+
+    .container {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+
+      .list-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @media (max-width: $medium) {
+          gap: 20px;
+          flex-direction: column;
+        }
+
+        .icon {
+          width: 40px;
+          height: 40px;
+          fill: $PastelGray;
+          background-color: white;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .image {
+      z-index: 0;
+      position: absolute;
+      object-fit: cover;
+      border-radius: 10px;
+      opacity: 0.3;
+    }
+  }
+
+  .button {
+    position: relative;
+    margin: 0 auto;
+  }
+}
