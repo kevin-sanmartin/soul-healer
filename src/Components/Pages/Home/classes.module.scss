@@ -23,5 +23,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: $medium) {
+      justify-content: center;
+      background-position: 70%;
+      background-attachment: scroll;
+    }
   }
 }
