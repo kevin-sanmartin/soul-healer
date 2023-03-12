@@ -36,7 +36,7 @@ export default class SecondSection extends Component<IProps, IState> {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  override render() {
+  public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
         <div className={classes["presentation-container"]} ref={this._presentationContainerRef}>
@@ -98,15 +98,15 @@ export default class SecondSection extends Component<IProps, IState> {
     );
   }
 
-  override componentDidMount() {
+  public componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  override componentDidUpdate() {
+  public componentDidUpdate() {
     console.log(this.state);
   }
 
-  override componentWillUnmount() {
+  public componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
 

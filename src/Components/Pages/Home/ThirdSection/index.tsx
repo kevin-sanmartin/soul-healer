@@ -20,7 +20,7 @@ type IProps = {
 type IState = {};
 
 export default class ThirdSection extends Component<IProps, IState> {
-  override render() {
+  public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
         <div className={classes["healing-presentation-container"]}>

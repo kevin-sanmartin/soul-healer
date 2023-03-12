@@ -15,7 +15,7 @@ type IProps = {
 type IState = {};
 
 export default class ListItem extends Component<IProps, IState> {
-  override render() {
+  public render() {
     return (
       <div className={classNames(classes["root"], this.props.className)}>
         <div className={classes["title-container"]}>
