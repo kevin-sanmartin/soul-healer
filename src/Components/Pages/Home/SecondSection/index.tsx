@@ -102,10 +102,6 @@ export default class SecondSection extends Component<IProps, IState> {
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  public componentDidUpdate() {
-    console.log(this.state);
-  }
-
   public componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
