@@ -35,7 +35,7 @@ export default class Headers extends Component<IProps, IState> {
   }
 
   private onWindowResize() {
-    const isMobileView = this.isWindowWidthLessThan(EBreakpoints.MOBILE);
+    const isMobileView = this.isWindowWidthLessThan(EBreakpoints.SMALL);
 
     // Prevent unnecessary re-rendering
     if (this.state.isMobileView === isMobileView) return;

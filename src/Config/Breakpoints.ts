@@ -1,5 +1,6 @@
 export enum EBreakpoints {
-  DESKTOP = 1024,
-  TABLET = 768,
-  MOBILE = 480,
+  XLARGE = 1440,
+  LARGE = 1024,
+  MEDIUM = 768,
+  SMALL = 480,
 }
