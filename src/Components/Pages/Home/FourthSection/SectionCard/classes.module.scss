@@ -17,7 +17,7 @@
     fill: $DarkGray;
     border-radius: 30px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    transition: backgroundColor 0.3s, fill 0.3s;
 
     @media screen and (max-width: $medium) {
       width: 100px;
