@@ -15,6 +15,7 @@ import { MdOutlineHealthAndSafety as HealthIcon } from "react-icons/md";
 
 // Styles
 import classes from "./classes.module.scss";
+import Observer from "@/src/Components/Observer";
 
 type IProps = {
   className?: string;
@@ -33,14 +34,15 @@ export default class SecondSection extends Component<IProps, IState> {
       isPresentationContainerVisible: false,
     };
 
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
 
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
         <div className={classes["presentation-container"]} ref={this._presentationContainerRef}>
-          <div
+          <Observer
+            onVisibilityChange={this.handleVisibilityChange}
             className={classNames(classes["video-container"], {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
@@ -48,9 +50,10 @@ export default class SecondSection extends Component<IProps, IState> {
             <video controls controlsList="nodownload" className={classes["video"]}>
               <source src="/tmp.mp4" type="video/mp4" />
             </video>
-          </div>
+          </Observer>
 
-          <div
+          <Observer
+            onVisibilityChange={this.handleVisibilityChange}
             className={classNames(classes["text-container"], {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
@@ -92,40 +95,13 @@ export default class SecondSection extends Component<IProps, IState> {
                 </Text>
               </div>
             </div>
-          </div>
+          </Observer>
         </div>
       </section>
     );
   }
 
-  public componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  public componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  private handleScroll() {
-    const presentationContainer = this._presentationContainerRef.current;
-    if (!presentationContainer) return;
-
-    const presentationContainerRect = presentationContainer.getBoundingClientRect();
-    // if presentationContainer is in the viewport and is not visible yet then set it to visible
-    if (
-      presentationContainerRect.top < window.innerHeight &&
-      presentationContainerRect.bottom > 0 &&
-      !this.state.isPresentationContainerVisible
-    ) {
-      this.setState({ isPresentationContainerVisible: true });
-    }
-
-    // if presentationContainer is not in the viewport and is visible then set it to not visible
-    if (
-      (presentationContainerRect.top > window.innerHeight || presentationContainerRect.bottom < 0) &&
-      this.state.isPresentationContainerVisible
-    ) {
-      this.setState({ isPresentationContainerVisible: false });
-    }
+  private handleVisibilityChange(isVisible: boolean) {
+    this.setState({ isPresentationContainerVisible: isVisible });
   }
 }
