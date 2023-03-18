@@ -1,0 +1,10 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  .section-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+}
