@@ -1,9 +1,11 @@
-import { Component } from "react";
+import { Component, ReactNode } from "react";
+import Image from "next/image";
 import classNames from "classnames";
 import { IconType } from "react-icons";
 
 // Components
 import SectionCard from "./SectionCard";
+import CardOneContent from "./SectionContent/CardOneContent";
 
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
@@ -13,11 +15,18 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 // Styles
 import classes from "./classes.module.scss";
 
+enum ESectionCardName {
+  CARD1 = "card1",
+  CARD2 = "card2",
+  CARD3 = "card3",
+}
+
 interface ISectionCard {
-  name: string;
+  name: ESectionCardName;
   text: string;
   icon: IconType;
   isSelected: boolean;
+  content: ReactNode;
 }
 
 type IProps = {
@@ -33,22 +42,25 @@ export default class FourthSection extends Component<IProps, IState> {
     this.state = {
       cards: [
         {
-          name: "card1",
+          name: ESectionCardName.CARD1,
           text: "Qui peut bénéficier de soins énergétiques ?",
           icon: AiOutlineQuestionCircle,
           isSelected: false,
+          content: <CardOneContent />,
         },
         {
-          name: "card2",
+          name: ESectionCardName.CARD2,
           text: "Qu'est-ce qu'un soin énergétique intuitif ?",
           icon: FaHandSparkles,
           isSelected: true,
+          content: <div>test</div>,
         },
         {
-          name: "card3",
+          name: ESectionCardName.CARD3,
           text: "En toute transparence",
           icon: BsPersonBoundingBox,
           isSelected: false,
+          content: <div>test</div>,
         },
       ],
     };
@@ -70,11 +82,24 @@ export default class FourthSection extends Component<IProps, IState> {
             />
           ))}
         </div>
+
+        {this.state.cards.map(
+          (card) =>
+            card.isSelected && (
+              <div
+                className={classNames(classes["section-content"], {
+                  [classes["selected"]]: this.state.cards.some((card) => card.isSelected),
+                })}
+              >
+                {card.content}
+              </div>
+            )
+        )}
       </div>
     );
   }
 
-  private handleCardClick(name: string) {
+  private handleCardClick(name: string): void {
     const cards = this.state.cards.map((card) => {
       if (card.name === name) {
         card.isSelected = !card.isSelected;
