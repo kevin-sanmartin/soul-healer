@@ -4,6 +4,7 @@ import classNames from "classnames";
 // Components
 import Text from "@/src/Components/Text";
 import Tag, { ETagColor } from "@/src/Components/Tag";
+import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -15,7 +16,6 @@ import { MdOutlineHealthAndSafety as HealthIcon } from "react-icons/md";
 
 // Styles
 import classes from "./classes.module.scss";
-import Observer from "@/src/Components/Observer";
 
 type IProps = {
   className?: string;
