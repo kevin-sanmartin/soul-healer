@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { Component } from "react";
+import Image from "next/image";
+import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
@@ -12,7 +13,6 @@ import HealingSeance from "/public/images/healingSeance/portrait-professionnel-0
 
 // Styles
 import classes from "./classes.module.scss";
-import Image from "next/image";
 
 type IProps = {};
 type IState = {};
@@ -22,13 +22,13 @@ export default class CardOneContent extends Component<IProps, IState> {
     return (
       <div className={classes["root"]}>
         <Text tag={ETextTag.P} className={classes["text"]}>
-          Absolument tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l'âge ou la
-          situation. bébés, enfants et adultes.
+          Absolument tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l&apos;âge
+          ou la situation. bébés, enfants et adultes.
         </Text>
 
         <Text tag={ETextTag.P} className={classes["text"]}>
-          Donc, si vous êtes dans une démarche d'accompagnement et de travail sur soi, c'est le soin à faire en première
-          intention.
+          Donc, si vous êtes dans une démarche d&apos;accompagnement et de travail sur soi, c&apos;est le soin à faire
+          en première intention.
         </Text>
 
         <Image src={HealingSeance} className={classes["image"]} alt="" />

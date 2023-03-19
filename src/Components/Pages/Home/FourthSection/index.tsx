@@ -90,6 +90,7 @@ export default class FourthSection extends Component<IProps, IState> {
                 className={classNames(classes["section-content"], {
                   [classes["selected"]]: this.state.cards.some((card) => card.isSelected),
                 })}
+                key={card.name}
               >
                 {card.content}
               </div>
