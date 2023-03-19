@@ -6,6 +6,7 @@ import { IconType } from "react-icons";
 // Components
 import SectionCard from "./SectionCard";
 import CardOneContent from "./SectionContent/CardOneContent";
+import CardTwoContent from "./SectionContent/CardTwoContent";
 
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
@@ -53,7 +54,7 @@ export default class FourthSection extends Component<IProps, IState> {
           text: "Qu'est-ce qu'un soin énergétique intuitif ?",
           icon: FaHandSparkles,
           isSelected: true,
-          content: <div>test</div>,
+          content: <CardTwoContent />,
         },
         {
           name: ESectionCardName.CARD3,
