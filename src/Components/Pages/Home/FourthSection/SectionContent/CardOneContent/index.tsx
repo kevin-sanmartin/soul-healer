@@ -8,7 +8,7 @@ import Text from "@/src/Components/Text";
 import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
-import HealingSeance from "/public/images/healingSeance/portrait-professionnel-021-min.jpg";
+import HealingSeance from "/public/images/healingSeance/portrait-professionnel-027-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
