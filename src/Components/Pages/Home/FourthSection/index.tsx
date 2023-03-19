@@ -7,6 +7,7 @@ import { IconType } from "react-icons";
 import SectionCard from "./SectionCard";
 import CardOneContent from "./SectionContent/CardOneContent";
 import CardTwoContent from "./SectionContent/CardTwoContent";
+import CardThreeContent from "./SectionContent/CardThreeContent";
 
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
@@ -61,7 +62,7 @@ export default class FourthSection extends Component<IProps, IState> {
           text: "En toute transparence",
           icon: BsPersonBoundingBox,
           isSelected: false,
-          content: <div>test</div>,
+          content: <CardThreeContent />,
         },
       ],
     };
