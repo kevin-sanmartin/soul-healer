@@ -2,17 +2,20 @@ import { Component } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 
+// Components
+import Button from "@/src/Components/Button";
+import Text from "@/src/Components/Text";
+import ListItem from "./ListItem";
+
+// Entities
+import { ETextTag } from "@/src/Entities/Text";
+
 // Assets
 import HealingSeance from "/public/images/healingSeance/portrait-professionnel-021-min.jpg";
 import { AiFillCheckCircle as CheckIcon } from "react-icons/ai";
 
 // Styles
 import classes from "./classes.module.scss";
-import Text from "@/src/Components/Text";
-import { ETextTag } from "@/src/Entities/Text";
-import Tag, { ETagColor } from "@/src/Components/Tag";
-import ListItem from "./ListItem";
-import Button from "@/src/Components/Button";
 
 type IProps = {
   className?: string;
