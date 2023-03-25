@@ -14,10 +14,14 @@ import { RiMentalHealthLine as MentalHealthIcon } from "react-icons/ri";
 import { GiHealing as HealingIcon } from "react-icons/gi";
 import { MdOutlineHealthAndSafety as HealthIcon } from "react-icons/md";
 
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
 // Styles
 import classes from "./classes.module.scss";
 
 type IProps = {
+  id: EWebsiteLinks;
   className?: string;
 };
 type IState = {
@@ -39,7 +43,7 @@ export default class SecondSection extends Component<IProps, IState> {
 
   public render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)}>
+      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["presentation-container"]} ref={this._presentationContainerRef}>
           <Observer
             onVisibilityChange={this.handleVisibilityChange}

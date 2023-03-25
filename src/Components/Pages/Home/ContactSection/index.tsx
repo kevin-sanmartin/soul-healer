@@ -14,8 +14,10 @@ import ForestImage from "/public/images/outside/portrait-professionnel-054-min.j
 
 // Styles
 import classes from "./classes.module.scss";
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 type IProps = {
+  id: EWebsiteLinks;
   className?: string;
 };
 type IState = {};
@@ -23,7 +25,7 @@ type IState = {};
 export default class ContactSection extends Component<IProps, IState> {
   override render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)}>
+      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["image-container"]}>
           <Image src={ForestImage} className={classes["image"]} fill alt="" />
         </div>

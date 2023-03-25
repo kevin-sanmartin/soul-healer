@@ -16,6 +16,7 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 
 // Styles
 import classes from "./classes.module.scss";
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 enum ESectionCardName {
   CARD1 = "card1",
@@ -32,6 +33,7 @@ interface ISectionCard {
 }
 
 type IProps = {
+  id: EWebsiteLinks;
   className?: string;
 };
 type IState = {
@@ -71,7 +73,7 @@ export default class FourthSection extends Component<IProps, IState> {
 
   override render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)}>
+      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["section-cards"]}>
           {this.state.cards.map((card) => (
             <SectionCard

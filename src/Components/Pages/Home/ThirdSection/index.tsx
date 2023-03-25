@@ -14,10 +14,14 @@ import { ETextTag } from "@/src/Entities/Text";
 import HealingSeance from "/public/images/healingSeance/portrait-professionnel-021-min.jpg";
 import { AiFillCheckCircle as CheckIcon } from "react-icons/ai";
 
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
 // Styles
 import classes from "./classes.module.scss";
 
 type IProps = {
+  id: EWebsiteLinks;
   className?: string;
 };
 type IState = {};
@@ -25,7 +29,7 @@ type IState = {};
 export default class ThirdSection extends Component<IProps, IState> {
   public render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)}>
+      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["healing-presentation-container"]}>
           <Image src={HealingSeance} className={classes["image"]} fill alt="" />
 

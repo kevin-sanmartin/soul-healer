@@ -41,7 +41,7 @@ export default class MobileMenu extends Component<IProps, IState> {
             [classes["menu-open"]]: this.state.isBurgerMenuOpen,
           })}
         >
-          <div className={classes["menu-mobile"]}>
+          <div className={classes["menu-mobile"]} onClick={this.closeBurgerMenu}>
             <CustomLink text={EWebsiteLinksNames.ABOUT} to={EWebsiteLinks.ABOUT} className={classes["link"]} />
             <CustomLink
               text={EWebsiteLinksNames.HEALING_BENEFITS}
