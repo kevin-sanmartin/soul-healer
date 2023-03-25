@@ -1,0 +1,76 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  display: flex;
+  max-width: 1400px;
+  width: calc(100% - 80px); // 80px = 40px * 2 (padding)
+  margin: 20px auto;
+  background-color: $White;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
+    width: calc(100% - 40px); // 40px = 20px * 2 (padding)
+  }
+
+  @media screen and (max-width: $small) {
+    width: calc(100% - 20px); // 20px = 10px * 2 (padding)
+  }
+
+  .image-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+
+    @media screen and (max-width: $medium) {
+      flex: unset;
+      height: 300px;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+
+      @media screen and (max-width: $medium) {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+
+  .form-container {
+    padding: 20px;
+    flex: 1;
+
+    .description {
+      margin: 10px 0 20px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .form-group {
+        .input {
+          border: 1px solid $DarkGray;
+          border-radius: 5px;
+          padding: 10px;
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 16px;
+          color: $DarkGray;
+          transition: all 0.3s ease-in-out;
+
+          &:focus {
+            border: 1px solid $Crayola;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

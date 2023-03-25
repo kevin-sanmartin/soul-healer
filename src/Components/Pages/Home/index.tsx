@@ -4,6 +4,7 @@ import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 import FourthSection from "./FourthSection";
+import ContactSection from "./ContactSection";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <ThirdSection className={classes["section"]} />
       <div className={classes["parralax"]} />
       <FourthSection className={classes["section"]} />
+      <ContactSection />
     </Layout>
   );
 }
