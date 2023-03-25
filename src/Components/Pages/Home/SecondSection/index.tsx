@@ -52,7 +52,7 @@ export default class SecondSection extends Component<IProps, IState> {
             })}
           >
             <video controls controlsList="nodownload" className={classes["video"]}>
-              <source src="/tmp.mp4" type="video/mp4" />
+              <source src="/presentation-video.mp4" type="video/mp4" />
             </video>
           </Observer>
 
