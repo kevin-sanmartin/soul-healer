@@ -1,15 +1,13 @@
 export enum EWebsiteLinks {
-  HOME = "#",
-  ABOUT = "#about",
-  PROJECTS = "#projects",
-  CONTACT = "#contact",
-  RESUME = "#resume",
+  ABOUT = "#ABOUT",
+  HEALING_BENEFITS = "#HEALING_BENEFITS",
+  HEALING_INFOS = "#HEALING_INFOS",
+  CONTACT = "#CONTACT",
 }
 
 export enum EWebsiteLinksNames {
-  HOME = "Home",
-  ABOUT = "About",
-  PROJECTS = "Projects",
-  CONTACT = "Contact",
-  RESUME = "Resume",
+  ABOUT = "À propos de moi",
+  HEALING_BENEFITS = "Bienfaits des soins",
+  HEALING_INFOS = "Les soins énergétiques",
+  CONTACT = "Contactez-moi",
 }

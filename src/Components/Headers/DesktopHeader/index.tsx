@@ -37,11 +37,9 @@ export default class DesktopHeader extends Component<IProps, IState> {
           <Logo />
 
           <div className={classes["links-container"]}>
-            <CustomLink to={EWebsiteLinks.HOME} text={EWebsiteLinksNames.HOME} />
             <CustomLink to={EWebsiteLinks.ABOUT} text={EWebsiteLinksNames.ABOUT} />
-            <CustomLink to={EWebsiteLinks.PROJECTS} text={EWebsiteLinksNames.PROJECTS} />
-            <CustomLink to={EWebsiteLinks.RESUME} text={EWebsiteLinksNames.RESUME} />
-            <CustomLink to={EWebsiteLinks.CONTACT} text={EWebsiteLinksNames.CONTACT} />
+            <CustomLink to={EWebsiteLinks.HEALING_BENEFITS} text={EWebsiteLinksNames.HEALING_BENEFITS} />
+            <CustomLink to={EWebsiteLinks.HEALING_INFOS} text={EWebsiteLinksNames.HEALING_INFOS} />
           </div>
         </div>
       </header>
