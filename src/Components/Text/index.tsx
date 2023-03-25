@@ -1,4 +1,3 @@
-import { NextFont } from "@next/font";
 import { Component } from "react";
 import classNames from "classnames";
 
