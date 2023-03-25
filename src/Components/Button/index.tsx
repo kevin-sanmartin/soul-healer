@@ -13,6 +13,7 @@ type IProps = {
   isSubmitButton?: boolean;
   className?: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 };
 type IState = {};
 
@@ -25,6 +26,7 @@ export default class Button extends Component<IProps, IState> {
   public render() {
     return (
       <button
+        onClick={this.props.onClick}
         type={this.props.isSubmitButton ? "submit" : "button"}
         className={classNames(
           classes["root"],
