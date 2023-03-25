@@ -11,8 +11,6 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Styles
 import classes from "./classes.module.scss";
-import Image from "next/image";
-import ForestImage from "public/images/outside/portrait-professionnel-054-min.jpg";
 
 type IProps = {
   className?: string;
@@ -23,8 +21,6 @@ export default class FirstSection extends Component<IProps, IState> {
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
-        {/* <Image className={classes["image"]} src={ForestImage} alt="" /> */}
-
         <div className={classes["container"]}>
           <Logo />
 
