@@ -65,7 +65,11 @@ export default class ContactSection extends Component<IProps, IState> {
               <textarea id="message" name="message" rows={5} className={classes["input"]} />
             </div>
 
-            <Button isSubmitButton>Envoyer</Button>
+            <Button isSubmitButton>
+              <Text tag={ETextTag.SPAN} className={classes["text"]}>
+                Envoyer
+              </Text>
+            </Button>
           </form>
         </div>
       </section>
