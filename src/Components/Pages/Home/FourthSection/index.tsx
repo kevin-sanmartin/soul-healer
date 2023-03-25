@@ -71,7 +71,7 @@ export default class FourthSection extends Component<IProps, IState> {
 
   override render() {
     return (
-      <div className={classNames(classes["root"], this.props.className)}>
+      <section className={classNames(classes["root"], this.props.className)}>
         <div className={classes["section-cards"]}>
           {this.state.cards.map((card) => (
             <SectionCard
@@ -98,7 +98,7 @@ export default class FourthSection extends Component<IProps, IState> {
               </div>
             )
         )}
-      </div>
+      </section>
     );
   }
 
