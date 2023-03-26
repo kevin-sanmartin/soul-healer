@@ -73,8 +73,16 @@ export default class SecondSection extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              I am glad that you have made it here to send a distress signal, and inform the Senate that all on board
-              were killed. Dantooine. I&apos;m not going to Alderaan. I really got to go. But that to me.
+              J'ai été assistante maternelle pendant 8 ans, j'ai adoré mon métier, le contact avec les enfants, tout ce
+              qu'ils nous apprennent, leur façon naturelle et authentique d'être et de ressentir, mais après un atelier
+              énergétique d'une journée tout a basculé
+            </Text>
+
+            <Text tag={ETextTag.P} className={classes["description"]}>
+              J'ai pris conscience que ce métier n'était plus pour moi, j'avais besoin de donner une autre forme de
+              service et j'ai laissé faire la vie, l'univers me guider. J'ai donc fait une formation de coaching qui m'a
+              appris à être qui je suis et moins introverti, puis mes mains ont commencé à chauffer et vibrer. Tout
+              s'est enchaîné…
             </Text>
 
             <div className={classes["icons-container"]}>

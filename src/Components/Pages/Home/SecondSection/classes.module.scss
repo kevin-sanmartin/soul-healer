@@ -42,6 +42,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      gap: 12px;
       transform: translateX(100%);
       transition: transform 1s ease-in-out;
 
@@ -60,7 +61,7 @@
       }
 
       .title {
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 40px;
         font-weight: 700;
         letter-spacing: -1px;
@@ -72,7 +73,6 @@
       }
 
       .description {
-        margin: 20px 0;
         font-size: 16px;
         color: $DarkGray;
       }
