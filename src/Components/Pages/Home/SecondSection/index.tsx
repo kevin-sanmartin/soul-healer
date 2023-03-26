@@ -73,16 +73,16 @@ export default class SecondSection extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              J'ai été assistante maternelle pendant 8 ans, j'ai adoré mon métier, le contact avec les enfants, tout ce
-              qu'ils nous apprennent, leur façon naturelle et authentique d'être et de ressentir, mais après un atelier
-              énergétique d'une journée tout a basculé
+              J&apos;ai été assistante maternelle pendant 8 ans, j&apos;ai adoré mon métier, le contact avec les
+              enfants, tout ce qu&apos;ils nous apprennent, leur façon naturelle et authentique d&apos;être et de
+              ressentir, mais après un atelier énergétique d&apos;une journée tout a basculé
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              J'ai pris conscience que ce métier n'était plus pour moi, j'avais besoin de donner une autre forme de
-              service et j'ai laissé faire la vie, l'univers me guider. J'ai donc fait une formation de coaching qui m'a
-              appris à être qui je suis et moins introverti, puis mes mains ont commencé à chauffer et vibrer. Tout
-              s'est enchaîné…
+              J&apos;ai pris conscience que ce métier n&apos;était plus pour moi, j&apos;avais besoin de donner une
+              autre forme de service et j&apos;ai laissé faire la vie, l&apos;univers me guider. J&apos;ai donc fait une
+              formation de coaching qui m&apos;a appris à être qui je suis et moins introverti, puis mes mains ont
+              commencé à chauffer et vibrer. Tout s&apos;est enchaîné…
             </Text>
 
             <div className={classes["icons-container"]}>
