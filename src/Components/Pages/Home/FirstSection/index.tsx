@@ -29,8 +29,8 @@ export default class FirstSection extends Component<IProps, IState> {
           </Text>
 
           <Text tag={ETextTag.P} className={classes["description"]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse assumenda obcaecati error? Placeat odio,
-            necessitatibus rem, saepe facilis illo cumque alias vel sunt eos voluptatibus nemo deserunt quae ullam!
+            Si vous cherchez une alternative aux traitements médicamenteux traditionnels, sachez que vous pouvez prendre
+            votre santé en main et vous soigner vous-même.
           </Text>
 
           <Button className={classes["button"]}>
