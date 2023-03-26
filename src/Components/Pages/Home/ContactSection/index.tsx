@@ -12,9 +12,11 @@ import { ETextTag } from "@/src/Entities/Text";
 // Assets
 import ForestImage from "/public/images/outside/portrait-professionnel-054-min.jpg";
 
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
 // Styles
 import classes from "./classes.module.scss";
-import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 type IProps = {
   id: EWebsiteLinks;
@@ -46,16 +48,16 @@ export default class ContactSection extends Component<IProps, IState> {
                   Nom & Prénom
                 </Text>
               </label>
-              <input type="text" id="name" name="name" className={classes["input"]} />
+              <input type="text" id="name" name="name" className={classes["input"]} required />
             </div>
 
             <div className={classes["form-group"]}>
-              <label htmlFor="email">
+              <label htmlFor="tel">
                 <Text tag={ETextTag.SPAN} className={classes["text"]}>
-                  Email
+                  Téléphone
                 </Text>
               </label>
-              <input type="email" id="email" name="email" className={classes["input"]} />
+              <input type="tel" id="tel" name="tel" className={classes["input"]} required />
             </div>
 
             <div className={classes["form-group"]}>
@@ -64,7 +66,7 @@ export default class ContactSection extends Component<IProps, IState> {
                   Message
                 </Text>
               </label>
-              <textarea id="message" name="message" rows={5} className={classes["input"]} />
+              <textarea id="message" name="message" rows={5} className={classes["input"]} required />
             </div>
 
             <Button isSubmitButton>
