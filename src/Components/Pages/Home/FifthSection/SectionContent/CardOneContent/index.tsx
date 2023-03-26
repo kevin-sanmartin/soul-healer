@@ -1,0 +1,73 @@
+import Image from "next/image";
+import { Component } from "react";
+
+// Components
+import Text from "@/src/Components/Text";
+
+// Entities
+import { ETextTag } from "@/src/Entities/Text";
+
+// Assets
+import HandOutside from "/public/images/outside/portrait-professionnel-085.jpg";
+
+// Styles
+import classes from "./classes.module.scss";
+
+type IProps = {};
+type IState = {};
+
+export default class CardOneContent extends Component<IProps, IState> {
+  override render() {
+    return (
+      <div className={classes["root"]}>
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Les soins énergétiques intuitifs à distance se font uniquement sur réservation. Ils sont disponibles le jour
+          de la réservation.
+        </Text>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Il suffit de me contacter par mail et me donner vos disponibilités afin que je puisse organiser notre
+          rendez-vous téléphonique dans un premier temps pour faire connaissance et convenir d&apos;une date ensuite
+          pour le soin à distance et du paiement.
+        </Text>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Je vous demanderai alors de m&apos;envoyer une photo récente debout, claire, prise de face, sans filtre, les
+          yeux bien visibles. Je conserverai la photo afin d&apos;être en mesure d&apos;effectuer un suivi complet et
+          précieux pour tous pour tout nouveau rendez-vous futur. Je vous confirmerai la réservation et les
+          recommandations nécessaires au bon déroulement du soin par mail la veille du rendez-vous.
+        </Text>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Vous devrez être aussi détendu et à l&apos;aise que possible lors de cette séance à distance, en choisissant
+          un lieu prédisposé pour cela. Que vous optiez pour la position assise dans un fauteuil ou allongée sur un lit,
+          cela ne changera pas tant que vous êtes ouvert au soin.
+        </Text>
+
+        <div className={classes["image-container"]}>
+          <Image src={HandOutside} className={classes["image"]} fill alt="" />
+        </div>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Comme en présentiel, je vous demanderai de prendre de profondes inspirations et expirations comme lors
+          d&apos;une méditation afin de faire le vide, une musique pour vous accompagner serait l&apos;idéal, pour vous
+          permettre de vous détendre et de pouvoir accueillir le soin avec facilité. Je vous enverrai alors un message
+          sur votre portable pour vous avertir de la fin du soin.
+        </Text>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Nous pourrons donc échanger par mail afin d&apos;avoir une trace écrite chacun, pour effectuer un retour sur
+          le soin, les ressentis, l&apos;évaluation de « vos douleurs » s&apos;il y en a sur une échelle de 1 à 10 afin
+          de déterminer s&apos;il est nécessaire de reprendre rendez-vous.
+        </Text>
+
+        <Text tag={ETextTag.P} className={classes["text"]}>
+          Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin.Je vous demanderai le lendemain, de
+          m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? sur une échelle de 1 à 10 où
+          se situe « votre douleur », votre état et donc voir s&apos;il est nécessaire de reprendre rendez-vous pour un
+          deuxième soin.
+        </Text>
+      </div>
+    );
+  }
+}
