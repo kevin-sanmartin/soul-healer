@@ -3,7 +3,7 @@
 
 .root {
   display: flex;
-  max-width: 1400px;
+  max-width: calc(1400px - 80px); // 80px = 40px * 2 (padding)
   width: calc(100% - 80px); // 80px = 40px * 2 (padding)
   margin: 20px auto;
   background-color: $White;
