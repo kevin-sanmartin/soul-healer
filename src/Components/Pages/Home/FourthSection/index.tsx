@@ -20,13 +20,13 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 // Styles
 import classes from "./classes.module.scss";
 
-enum ESectionCardName {
+export enum ESectionCardName {
   CARD1 = "card1",
   CARD2 = "card2",
   CARD3 = "card3",
 }
 
-interface ISectionCard {
+export interface ISectionCard {
   name: ESectionCardName;
   text: string;
   icon: IconType;
