@@ -106,10 +106,13 @@ export default class FourthSection extends Component<IProps, IState> {
 
   private handleCardClick(name: string): void {
     const cards = this.state.cards.map((card) => {
-      if (card.name === name) {
-        card.isSelected = !card.isSelected;
+      if (card.name === name && card.isSelected) return card;
+
+      if (card.name === name && !card.isSelected) {
+        card.isSelected = true;
         return card;
       }
+
       card.isSelected = false;
       return card;
     });
