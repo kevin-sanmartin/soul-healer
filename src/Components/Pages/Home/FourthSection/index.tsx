@@ -9,6 +9,9 @@ import CardOneContent from "./SectionContent/CardOneContent";
 import CardTwoContent from "./SectionContent/CardTwoContent";
 import CardThreeContent from "./SectionContent/CardThreeContent";
 
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
@@ -16,7 +19,6 @@ import { BsPersonBoundingBox } from "react-icons/bs";
 
 // Styles
 import classes from "./classes.module.scss";
-import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 enum ESectionCardName {
   CARD1 = "card1",
