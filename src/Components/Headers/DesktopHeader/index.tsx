@@ -1,11 +1,17 @@
-import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 import classNames from "classnames";
-import Link from "next/link";
 import { Component } from "react";
 
 // Components
 import Logo from "../../Logo";
 import CustomLink from "../CustomLink";
+import Text from "../../Text";
+import Button from "../../Button";
+
+// Entities
+import { ETextTag } from "@/src/Entities/Text";
+
+// Config
+import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -40,6 +46,12 @@ export default class DesktopHeader extends Component<IProps, IState> {
             <CustomLink to={EWebsiteLinks.ABOUT} text={EWebsiteLinksNames.ABOUT} />
             <CustomLink to={EWebsiteLinks.HEALING_BENEFITS} text={EWebsiteLinksNames.HEALING_BENEFITS} />
             <CustomLink to={EWebsiteLinks.HEALING_INFOS} text={EWebsiteLinksNames.HEALING_INFOS} />
+            <CustomLink to={EWebsiteLinks.HEALING_SEANCES} text={EWebsiteLinksNames.HEALING_SEANCES} />
+            <CustomLink to={EWebsiteLinks.CONTACT} className={classes["link"]}>
+              <Button>
+                <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
+              </Button>
+            </CustomLink>
           </div>
         </div>
       </header>

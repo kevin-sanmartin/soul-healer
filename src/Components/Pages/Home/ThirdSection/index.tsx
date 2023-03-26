@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Button from "@/src/Components/Button";
 import Text from "@/src/Components/Text";
 import ListItem from "./ListItem";
+import CustomLink from "@/src/Components/Headers/CustomLink";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -68,9 +69,11 @@ export default class ThirdSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          <Button className={classes["button"]}>
-            <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-          </Button>
+          <CustomLink to={EWebsiteLinks.CONTACT} className={classes["button"]}>
+            <Button>
+              <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
+            </Button>
+          </CustomLink>
         </div>
       </section>
     );

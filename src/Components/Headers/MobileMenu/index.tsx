@@ -1,4 +1,3 @@
-import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 import classNames from "classnames";
 import { Component } from "react";
 
@@ -10,6 +9,9 @@ import CustomLink from "../CustomLink";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+
+// Config
+import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -43,19 +45,30 @@ export default class MobileMenu extends Component<IProps, IState> {
         >
           <div className={classes["menu-mobile"]} onClick={this.closeBurgerMenu}>
             <CustomLink text={EWebsiteLinksNames.ABOUT} to={EWebsiteLinks.ABOUT} className={classes["link"]} />
+
             <CustomLink
               text={EWebsiteLinksNames.HEALING_BENEFITS}
               to={EWebsiteLinks.HEALING_BENEFITS}
               className={classes["link"]}
             />
+
             <CustomLink
               text={EWebsiteLinksNames.HEALING_INFOS}
               to={EWebsiteLinks.HEALING_INFOS}
               className={classes["link"]}
             />
-            <Button onClick={() => console.log("click")}>
-              <Text tag={ETextTag.SPAN}>Contactez-moi</Text>
-            </Button>
+
+            <CustomLink
+              text={EWebsiteLinksNames.HEALING_SEANCES}
+              to={EWebsiteLinks.HEALING_SEANCES}
+              className={classes["link"]}
+            />
+
+            <CustomLink to={EWebsiteLinks.CONTACT} className={classes["link"]}>
+              <Button>
+                <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
+              </Button>
+            </CustomLink>
           </div>
         </div>
       </div>

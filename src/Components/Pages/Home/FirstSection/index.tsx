@@ -5,9 +5,13 @@ import classNames from "classnames";
 import Button from "@/src/Components/Button";
 import Logo from "@/src/Components/Logo";
 import Text from "@/src/Components/Text";
+import CustomLink from "@/src/Components/Headers/CustomLink";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -33,9 +37,11 @@ export default class FirstSection extends Component<IProps, IState> {
             votre santé en main et vous soigner vous-même.
           </Text>
 
-          <Button className={classes["button"]}>
-            <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-          </Button>
+          <CustomLink to={EWebsiteLinks.CONTACT} className={classes["button"]}>
+            <Button>
+              <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
+            </Button>
+          </CustomLink>
         </div>
       </section>
     );

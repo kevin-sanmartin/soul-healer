@@ -17,7 +17,8 @@ import classes from "./classes.module.scss";
 
 type IProps = {
   to: EWebsiteLinks;
-  text: EWebsiteLinksNames;
+  text?: EWebsiteLinksNames;
+  children?: React.ReactNode;
   className?: string;
 };
 type IState = {};
@@ -36,7 +37,8 @@ export default class CustomLink extends Component<IProps, IState> {
         scroll={false}
         onClick={this.onClick}
       >
-        <Text tag={ETextTag.SPAN}>{this.props.text}</Text>
+        {this.props.text && <Text tag={ETextTag.SPAN}>{this.props.text}</Text>}
+        {this.props.children}
       </Link>
     );
   }

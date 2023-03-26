@@ -26,10 +26,11 @@
 
     .links-container {
       display: flex;
+      justify-content: center;
       align-items: center;
 
       & > *:not(:last-child) {
-        margin-right: 40px;
+        margin: 0 20px;
       }
     }
   }

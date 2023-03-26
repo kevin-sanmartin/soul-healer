@@ -1,5 +1,4 @@
 import { Component, ReactNode } from "react";
-import Image from "next/image";
 import classNames from "classnames";
 import { IconType } from "react-icons";
 
@@ -8,6 +7,12 @@ import SectionCard from "./SectionCard";
 import CardOneContent from "./SectionContent/CardOneContent";
 import CardTwoContent from "./SectionContent/CardTwoContent";
 import CardThreeContent from "./SectionContent/CardThreeContent";
+import Text from "@/src/Components/Text";
+import CustomLink from "@/src/Components/Headers/CustomLink";
+import Button from "@/src/Components/Button";
+
+// Entities
+import { ETextTag } from "@/src/Entities/Text";
 
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
@@ -99,6 +104,11 @@ export default class FourthSection extends Component<IProps, IState> {
                 key={card.name}
               >
                 {card.content}
+                <CustomLink to={EWebsiteLinks.CONTACT}>
+                  <Button className={classes["contact-button"]}>
+                    <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
+                  </Button>
+                </CustomLink>
               </div>
             )
         )}

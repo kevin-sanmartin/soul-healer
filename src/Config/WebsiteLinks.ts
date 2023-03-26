@@ -10,6 +10,6 @@ export enum EWebsiteLinksNames {
   ABOUT = "À propos de moi",
   HEALING_BENEFITS = "Bienfaits des soins",
   HEALING_INFOS = "Les soins énergétiques",
-  HEALING_SEANCES = "Séances à domicile et à distance",
+  HEALING_SEANCES = "Séances",
   CONTACT = "Contactez-moi",
 }

@@ -35,6 +35,11 @@
     &.selected {
       animation: fadeIn 0.5s ease-in-out forwards;
     }
+
+    .contact-button {
+      margin-top: 20px;
+      width: 100%;
+    }
   }
 }
 
