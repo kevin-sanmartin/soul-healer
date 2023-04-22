@@ -10,7 +10,7 @@ import Button from "@/src/Components/Button";
 import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
-import ForestImage from "/public/images/outside/portrait-professionnel-054-min.jpg";
+import HandHeartOutside from "/public/images/outside/portrait-professionnel-041-min.jpg";
 
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
@@ -29,7 +29,7 @@ export default class ContactSection extends Component<IProps, IState> {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["image-container"]}>
-          <Image src={ForestImage} className={classes["image"]} fill alt="" />
+          <Image src={HandHeartOutside} className={classes["image"]} fill alt="" />
         </div>
 
         <div className={classes["form-container"]}>

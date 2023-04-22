@@ -27,7 +27,7 @@ type IState = {};
 
 export default class Text extends Component<IProps, IState> {
   public static defaultProps = {
-    font: "cabin",
+    font: "xiaoWei",
   };
 
   public render() {

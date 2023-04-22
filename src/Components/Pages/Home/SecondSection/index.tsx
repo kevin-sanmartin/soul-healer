@@ -68,7 +68,7 @@ export default class SecondSection extends Component<IProps, IState> {
               </Text>
             </Tag>
 
-            <Text tag={ETextTag.H2} font="cabin" className={classes["title"]}>
+            <Text tag={ETextTag.H2} className={classes["title"]}>
               Je vous aide à devenir la meilleure version de vous-même.
             </Text>
 
