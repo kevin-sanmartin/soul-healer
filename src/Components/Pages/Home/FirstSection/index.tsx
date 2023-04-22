@@ -33,8 +33,8 @@ export default class FirstSection extends Component<IProps, IState> {
           </Text>
 
           <Text tag={ETextTag.P} className={classes["description"]}>
-            Si vous cherchez une alternative aux traitements médicamenteux traditionnels, sachez que vous pouvez prendre
-            votre santé en main et vous soigner vous-même.
+            Si vous cherchez une complémentarité a la médecine traditionnelle, sachez que vous pouvez prendre votre
+            santé en main et vous soigner vous-même.
           </Text>
 
           <CustomLink to={EWebsiteLinks.CONTACT} className={classes["button"]}>
