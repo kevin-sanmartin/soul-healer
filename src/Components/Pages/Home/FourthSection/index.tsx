@@ -19,8 +19,7 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
-import { AiOutlineQuestionCircle } from "react-icons/ai";
-import { BsPersonBoundingBox } from "react-icons/bs";
+import { MdFamilyRestroom as FamilyIcon } from "react-icons/md";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -55,7 +54,7 @@ export default class FourthSection extends Component<IProps, IState> {
         {
           name: ESectionCardName.CARD1,
           text: "Qui peut bénéficier de soins énergétiques ?",
-          icon: AiOutlineQuestionCircle,
+          icon: FamilyIcon,
           isSelected: false,
           content: <CardOneContent />,
         },
