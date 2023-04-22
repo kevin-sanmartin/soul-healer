@@ -64,49 +64,31 @@ export default class SecondSection extends Component<IProps, IState> {
           >
             <Tag color={ETagColor.BLANCHED_ALMOND}>
               <Text tag={ETextTag.SPAN} font="xiaoWei" className={classes["tag"]}>
-                A propos de moi
+                En toute transparence
               </Text>
             </Tag>
 
             <Text tag={ETextTag.H2} font="cabin" className={classes["title"]}>
-              J&apos;aide les individus à devenir leur meilleure version.
+              Je vous aide à devenir la meilleure version de vous-même.
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              J&apos;ai été assistante maternelle pendant 8 ans, j&apos;ai adoré mon métier, le contact avec les
-              enfants, tout ce qu&apos;ils nous apprennent, leur façon naturelle et authentique d&apos;être et de
-              ressentir, mais après un atelier énergétique d&apos;une journée tout a basculé
+              Aujourd&apos;hui, avec mes outils et mes qualités, je vous accompagne pour que vous puissiez accéder, à
+              votre rythme à la meilleure version de vous-même, à mon domicile dans une pièce qui vous est dédiée, pour
+              un instant de bien-être, une pause pour soi.
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              J&apos;ai pris conscience que ce métier n&apos;était plus pour moi, j&apos;avais besoin de donner une
-              autre forme de service et j&apos;ai laissé faire la vie, l&apos;univers me guider. J&apos;ai donc fait une
-              formation de coaching qui m&apos;a appris à être qui je suis et moins introverti, puis mes mains ont
-              commencé à chauffer et vibrer. Tout s&apos;est enchaîné…
+              Soulager les personnes par mes soins énergétiques est source de bien-être pour moi, mais également pour
+              elles. Je suis comme une enfant qui découvre l&apos;immense possibilité que j&apos;ai, à chaque soin qui
+              ne se ressemble pas. Mes capacités se développent au fil du temps (ma clair voyance, ma clair audience, ma
+              clair ressenti), j&apos;évolue et tout est juste, tout arrive quand ça doit arriver.
             </Text>
 
-            <div className={classes["icons-container"]}>
-              <div className={classes["container"]}>
-                <MentalHealthIcon className={classes["icon"]} />
-                <Text tag={ETextTag.P} className={classes["text"]}>
-                  Heal your troubles
-                </Text>
-              </div>
-
-              <div className={classes["container"]}>
-                <HealingIcon className={classes["icon"]} />
-                <Text tag={ETextTag.P} className={classes["text"]}>
-                  Heal your troubles
-                </Text>
-              </div>
-
-              <div className={classes["container"]}>
-                <HealthIcon className={classes["icon"]} />
-                <Text tag={ETextTag.P} className={classes["text"]}>
-                  Heal your troubles
-                </Text>
-              </div>
-            </div>
+            <Text tag={ETextTag.P} className={classes["description"]}>
+              J&apos;expérimente la cocréation angélique, et j&apos;observe tout simplement ce qui se passe pour moi,
+              dans ma vie et chez les personnes que je soigne.
+            </Text>
           </Observer>
         </div>
       </section>
