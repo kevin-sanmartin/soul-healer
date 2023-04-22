@@ -1,13 +1,38 @@
 @import "/styles/colors.scss";
 @import "/styles/breakpoints.scss";
 
+.input-container {
+  position: relative;
+
+  .label {
+    position: absolute;
+    top: 24px;
+    left: 12px;
+    padding: 0 4px;
+    font-size: 14px;
+    color: $DarkGray;
+    background-color: $White;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+
+    .text {
+      font-size: 14px;
+    }
+
+    &.active {
+      top: 0;
+      color: $Crayola;
+    }
+  }
+}
+
 .input {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   outline: none;
-  border: 1px solid $Black;
-  border-radius: 4px;
-  font-size: 20px;
+  border: 1px solid $DarkGray;
+  border-radius: 12px;
+  font-size: 14px;
 
   &:focus {
     border: 1px solid $Crayola;

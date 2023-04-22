@@ -9,19 +9,24 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Styles
 import classes from "./classes.module.scss";
+import { Cabin } from "@next/font/google";
+const cabin = Cabin({ weight: ["400", "500", "600", "700"], subsets: ["latin"], display: "swap" });
 
 type IProps = {
   value: string;
   name: string;
-  placeholder: string;
   type: string;
-  onChange: (name: string, value: string) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => void;
+  placeholder?: string;
   label?: string;
   labelClassName?: string;
   inputClassName?: string;
   isTextArea?: boolean;
+  required?: boolean;
 };
-type IState = {};
+type IState = {
+  isFocused: boolean;
+};
 
 export default class Input extends Component<IProps, IState> {
   static defaultProps = {
@@ -31,7 +36,10 @@ export default class Input extends Component<IProps, IState> {
 
   constructor(props: IProps) {
     super(props);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.state = {
+      isFocused: false,
+    };
+    this.toggleFocus = this.toggleFocus.bind(this);
   }
 
   public render() {
@@ -40,39 +48,57 @@ export default class Input extends Component<IProps, IState> {
 
   private renderTextArea() {
     return (
-      <textarea
-        className={classNames(classes["input"])}
-        placeholder={this.props.placeholder}
-        onChange={this.handleInputChange}
-        value={this.props.value}
-        name={this.props.name}
-        id={this.props.name}
-      />
+      <div className={classes["input-container"]}>
+        {this.renderLabel()}
+        <textarea
+          onFocus={this.toggleFocus}
+          onBlur={this.toggleFocus}
+          style={{ fontFamily: cabin.style.fontFamily }}
+          className={classNames(classes["input"])}
+          placeholder={this.props.placeholder}
+          onChange={this.props.onChange}
+          required={this.props.required}
+          value={this.props.value}
+          name={this.props.name}
+          id={this.props.name}
+        />
+      </div>
     );
   }
 
   private renderInput() {
     return (
-      <>
+      <div className={classes["input-container"]}>
         {this.renderLabel()}
         <input
-          type={this.props.type}
+          onFocus={this.toggleFocus}
+          onBlur={this.toggleFocus}
           className={classNames(classes["input"], this.props.inputClassName)}
+          style={{ fontFamily: cabin.style.fontFamily }}
+          onChange={this.props.onChange}
+          required={this.props.required}
           value={this.props.value}
+          type={this.props.type}
           name={this.props.name}
-          onChange={this.handleInputChange}
-          placeholder={this.props.placeholder}
           id={this.props.name}
         />
-      </>
+      </div>
     );
   }
 
   private renderLabel() {
     return (
       this.props.label && (
-        <label htmlFor={this.props.name} className={this.props.labelClassName}>
-          <Text tag={ETextTag.SPAN}>{this.props.label}</Text>
+        <label
+          htmlFor={this.props.name}
+          className={classNames(classes["label"], {
+            [classes["active"]]: this.state.isFocused,
+          })}
+        >
+          <Text tag={ETextTag.SPAN} className={classes["text"]} font="cabin">
+            {this.props.label}
+            {this.props.required && "*"}
+          </Text>
         </label>
       )
     );
@@ -82,8 +108,7 @@ export default class Input extends Component<IProps, IState> {
     return this.props.isTextArea ? this.renderTextArea() : this.renderInput();
   }
 
-  private handleInputChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { name, value } = event.target;
-    this.props.onChange(name, value);
+  private toggleFocus() {
+    this.setState({ isFocused: !this.state.isFocused });
   }
 }

@@ -46,6 +46,9 @@
   }
 
   .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     padding: 20px;
     flex: 1;
 
@@ -55,14 +58,40 @@
     }
 
     .description {
-      margin: 6px 0 20px;
+      margin-top: 6px;
       color: $DarkGray;
+    }
+
+    .contact-infos {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+
+      .contact-info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .icon {
+          font-size: 24px;
+          color: $Crayola;
+        }
+
+        .text {
+          text-align: center;
+          font-size: 18px;
+          color: $DarkGray;
+        }
+      }
     }
 
     .form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 18px;
 
       .form-group {
         .input {
@@ -80,6 +109,11 @@
             outline: none;
           }
         }
+      }
+      .text {
+        position: relative;
+        left: 4px;
+        font-size: 14px;
       }
     }
   }

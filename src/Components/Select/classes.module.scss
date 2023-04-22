@@ -1,0 +1,15 @@
+@import "/styles/colors.scss";
+@import "/styles/breakpoints.scss";
+
+.root {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: 1px solid $DarkGray;
+  border-radius: 12px;
+  font-size: 14px;
+
+  &:focus {
+    border: 1px solid $Crayola;
+  }
+}
