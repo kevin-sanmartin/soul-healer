@@ -42,7 +42,14 @@ export default class ThirdSection extends Component<IProps, IState> {
             <div className={classes["list-container"]}>
               <ListItem
                 title="Maux physiques"
-                listItems={["Soulager vos maux", "Problèmes de peaux", "Brûlures"]}
+                listItems={[
+                  "Douleurs de dos",
+                  "Problèmes de peaux",
+                  "Brûlures",
+                  "Tendinite",
+                  "Sciatique",
+                  "Soins personnalisés pour diverses douleurs physiques",
+                ]}
                 icon={<CheckIcon className={classes["icon"]} />}
               />
               <ListItem
