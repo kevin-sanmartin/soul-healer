@@ -69,9 +69,9 @@ export default class ContactSection extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              N'hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je suis là pour vous aider à
-              soulager vos douleurs physiques, améliorer votre bien-être émotionnel et spirituel, et vous accompagner
-              dans votre cheminement personnel
+              N&apos;hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je suis là pour vous
+              aider à soulager vos douleurs physiques, améliorer votre bien-être émotionnel et spirituel, et vous
+              accompagner dans votre cheminement personnel
             </Text>
           </div>
 
