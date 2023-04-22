@@ -34,7 +34,7 @@ export default class Input extends Component<IProps, IState> {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  override render() {
+  public render() {
     return this.renderInputContainer();
   }
 

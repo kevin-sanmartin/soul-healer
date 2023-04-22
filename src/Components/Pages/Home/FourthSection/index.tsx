@@ -78,7 +78,7 @@ export default class FourthSection extends Component<IProps, IState> {
     this.handleCardClick = this.handleCardClick.bind(this);
   }
 
-  override render() {
+  public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["section-cards"]}>

@@ -19,7 +19,7 @@ type IProps = {};
 type IState = {};
 
 export default class CardTwoContent extends Component<IProps, IState> {
-  override render() {
+  public render() {
     return (
       <div className={classes["root"]}>
         <div className={classes["container"]}>

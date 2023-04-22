@@ -25,7 +25,7 @@ type IProps = {
 type IState = {};
 
 export default class ContactSection extends Component<IProps, IState> {
-  override render() {
+  public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["image-container"]}>
@@ -38,7 +38,9 @@ export default class ContactSection extends Component<IProps, IState> {
           </Text>
 
           <Text tag={ETextTag.P} className={classes["description"]}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia.
+            N'hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je suis là pour vous aider à
+            soulager vos douleurs physiques, améliorer votre bien-être émotionnel et spirituel, et vous accompagner dans
+            votre cheminement personnel
           </Text>
 
           <form className={classes["form"]}>

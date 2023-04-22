@@ -27,7 +27,7 @@ export default class SectionCard extends Component<IProps, IState> {
     this.onClick = this.onClick.bind(this);
   }
 
-  override render() {
+  public render() {
     return (
       <div className={classNames(classes["root"], this.props.className)} onClick={this.onClick}>
         {this.props.icon({

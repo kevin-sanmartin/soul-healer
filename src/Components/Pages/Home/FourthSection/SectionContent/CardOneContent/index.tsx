@@ -18,7 +18,7 @@ type IProps = {};
 type IState = {};
 
 export default class CardOneContent extends Component<IProps, IState> {
-  override render() {
+  public render() {
     return (
       <div className={classes["root"]}>
         <Text tag={ETextTag.P} className={classes["text"]}>
