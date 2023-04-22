@@ -11,7 +11,7 @@ import { ETextTag } from "@/src/Entities/Text";
 // Assets
 import MusicOutside from "/public/images/outside/portrait-professionnel-117.jpg";
 import ChakraObject from "/public/images/roomDetails/portrait-professionnel-003-min.jpg";
-import oui from "/public/images/roomDetails/portrait-professionnel-005-min.jpg";
+import oui from "/public/images/outside/portrait-professionnel-034-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -47,7 +47,7 @@ export default class CardTwoContent extends Component<IProps, IState> {
           </div>
 
           <div className={classes["image-container"]}>
-            <Image src={MusicOutside} className={classes["image"]} fill alt="" />
+            <Image src={oui} className={classes["image"]} fill alt="" />
           </div>
         </div>
 
@@ -134,7 +134,7 @@ export default class CardTwoContent extends Component<IProps, IState> {
           </div>
 
           <div className={classes["image-container"]}>
-            <Image src={oui} className={classes["image"]} fill alt="" />
+            <Image src={MusicOutside} className={classes["image"]} fill alt="" />
           </div>
         </div>
       </div>

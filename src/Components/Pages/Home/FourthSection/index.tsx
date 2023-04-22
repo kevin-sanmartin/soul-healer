@@ -66,13 +66,13 @@ export default class FourthSection extends Component<IProps, IState> {
           isSelected: true,
           content: <CardTwoContent />,
         },
-        {
-          name: ESectionCardName.CARD3,
-          text: "En toute transparence",
-          icon: BsPersonBoundingBox,
-          isSelected: false,
-          content: <CardThreeContent />,
-        },
+        // {
+        //   name: ESectionCardName.CARD3,
+        //   text: "En toute transparence",
+        //   icon: BsPersonBoundingBox,
+        //   isSelected: false,
+        //   content: <CardThreeContent />,
+        // },
       ],
     };
     this.handleCardClick = this.handleCardClick.bind(this);

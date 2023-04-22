@@ -8,7 +8,7 @@ import Text from "@/src/Components/Text";
 import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
-import OutsidePortrait from "/public/images/outside/portrait-professionnel-101.jpg";
+import OutsidePortrait from "/public/images/outside/portrait-professionnel-034-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
