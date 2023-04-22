@@ -7,7 +7,7 @@ export enum EWebsiteLinks {
 }
 
 export enum EWebsiteLinksNames {
-  ABOUT = "À propos de moi",
+  ABOUT = "En toute transparence",
   HEALING_BENEFITS = "Bienfaits des soins",
   HEALING_INFOS = "Les soins énergétiques",
   HEALING_SEANCES = "Séances",
