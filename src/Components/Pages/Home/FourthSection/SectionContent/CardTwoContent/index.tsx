@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -15,7 +16,6 @@ import oui from "/public/images/outside/portrait-professionnel-034-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
-import Observer from "@/src/Components/Observer";
 
 type IProps = {};
 type IState = {
@@ -29,9 +29,9 @@ export default class CardTwoContent extends Component<IProps, IState> {
     super(props);
 
     this.state = {
-      isFirstBlockVisible: false,
-      isSecondBlockVisible: false,
-      isThirdBlockVisible: false,
+      isFirstBlockVisible: true,
+      isSecondBlockVisible: true,
+      isThirdBlockVisible: true,
     };
 
     this.handleFirstBlockVisibilityChange = this.handleFirstBlockVisibilityChange.bind(this);

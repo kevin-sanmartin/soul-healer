@@ -25,7 +25,7 @@ export default class CardOneContent extends Component<IProps, IState> {
     super(props);
 
     this.state = {
-      isContainerVisible: false,
+      isContainerVisible: true,
     };
 
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
