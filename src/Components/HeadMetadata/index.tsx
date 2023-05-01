@@ -8,9 +8,31 @@ export default class HeadMetadata extends Component<IProps, IState> {
   public render() {
     return (
       <Head>
-        <title>Nadia Richard - L&apos;Âme Guerisseuse</title>
-        <meta name="description" content="Soins energetiques" />
+        <title>Soins énergétique à domicile ou à distance - Nadia Richard</title>
+        <meta
+          name="description"
+          content="Retrouvez un équilibre énergétique optimal grâce à mes soins. Soulagez le stress et l'anxiété pour une vie plus harmonieuse. Prenez rendez-vous maintenant."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Nadia Richard" />
+        <meta name="canonical" content="https://l-ame-guerrisseuse.fr/" />
+
+        <meta property="og:title" content="Soins énergétique à domicile ou à distance - Nadia Richard" />
+        <meta
+          name="keywords"
+          content="soins énergétiques, bien-être, stress, anxiété, douleur, équilibre, thérapie, harmonie, méditation"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://l-ame-guerrisseuse.fr/" />
+        <meta
+          property="og:description"
+          content="Retrouvez un équilibre énergétique optimal grâce à mes soins. Soulagez le stress et l'anxiété pour une vie plus harmonieuse. Prenez rendez-vous maintenant."
+        />
+        <meta
+          property="og:image"
+          content="https://l-ame-guerrisseuse.fr/images/healingSeance/portrait-professionnel-021-min.jpg"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
     );
