@@ -24,8 +24,6 @@ type IState = {
 };
 
 export default class SecondSection extends Component<IProps, IState> {
-  private _presentationContainerRef = createRef<HTMLDivElement>();
-
   constructor(props: IProps) {
     super(props);
 
@@ -39,9 +37,8 @@ export default class SecondSection extends Component<IProps, IState> {
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
-        <div className={classes["presentation-container"]} ref={this._presentationContainerRef}>
-          <Observer
-            onVisibilityChange={this.handleVisibilityChange}
+        <Observer onVisibilityChange={this.handleVisibilityChange} className={classes["presentation-container"]}>
+          <div
             className={classNames(classes["video-container"], {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
@@ -49,10 +46,9 @@ export default class SecondSection extends Component<IProps, IState> {
             <video controls controlsList="nodownload" className={classes["video"]}>
               <source src="/presentation-video.mp4" type="video/mp4" />
             </video>
-          </Observer>
+          </div>
 
-          <Observer
-            onVisibilityChange={this.handleVisibilityChange}
+          <div
             className={classNames(classes["text-container"], {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
@@ -84,8 +80,8 @@ export default class SecondSection extends Component<IProps, IState> {
               J&apos;expérimente la cocréation angélique, et j&apos;observe tout simplement ce qui se passe pour moi,
               dans ma vie et chez les personnes que je soigne.
             </Text>
-          </Observer>
-        </div>
+          </div>
+        </Observer>
       </section>
     );
   }
