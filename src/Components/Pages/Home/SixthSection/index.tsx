@@ -34,7 +34,7 @@ export default class SixthSection extends Component<IProps, IState> {
 
               <Text tag={ETextTag.P} className={classes["text"]}>
                 Je suis Nadia, l&apos;Äme Guerrisseuse, j&apos;habite grasse (06), maman de deux grandes filles : Mégane
-                28 ans photographe et Julie 20 ans en école d&apos;infirmière, avec mon mari nous avons ce même point
+                29 ans photographe et Julie 20 ans en école d&apos;infirmière, avec mon mari nous avons ce même point
                 commun d&apos;aimer communiquer avec les autres .je souhaite vous apporter avec toute ma bienveillance,
                 toute mon aide à travers mes soins énergétiques intuitifs que je peux vous prodiguer.
               </Text>
