@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { PopupButton } from "react-calendly";
+import classNames from "classnames";
 
 // Entities
 import { EButtonSize } from "@/src/Entities/Button";
@@ -31,7 +32,7 @@ export default class ContactButton extends Component<IProps, IState> {
         url="https://calendly.com/kevinsanmartin/30min"
         rootElement={this.state.rootElement}
         styles={{ fontFamily: xiaoWei.style.fontFamily }}
-        className={classes["root"]}
+        className={classNames(classes["root"], classes[this.props.size])}
         text="CONTACTEZ-MOI"
       />
     );
