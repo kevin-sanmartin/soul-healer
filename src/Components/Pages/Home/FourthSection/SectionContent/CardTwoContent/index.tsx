@@ -15,15 +15,39 @@ import oui from "/public/images/outside/portrait-professionnel-034-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
+import Observer from "@/src/Components/Observer";
 
 type IProps = {};
-type IState = {};
+type IState = {
+  isFirstBlockVisible: boolean;
+  isSecondBlockVisible: boolean;
+  isThirdBlockVisible: boolean;
+};
 
 export default class CardTwoContent extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      isFirstBlockVisible: false,
+      isSecondBlockVisible: false,
+      isThirdBlockVisible: false,
+    };
+
+    this.handleFirstBlockVisibilityChange = this.handleFirstBlockVisibilityChange.bind(this);
+    this.handleSecondBlockVisibilityChange = this.handleSecondBlockVisibilityChange.bind(this);
+    this.handleThirdBlockVisibilityChange = this.handleThirdBlockVisibilityChange.bind(this);
+  }
+
   public render() {
     return (
       <div className={classes["root"]}>
-        <div className={classes["container"]}>
+        <Observer
+          onVisibilityChange={this.handleFirstBlockVisibilityChange}
+          className={classNames(classes["container"], {
+            [classes["is-visible"]]: this.state.isFirstBlockVisible,
+          })}
+        >
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Nous possédons tous en nous les clés de notre bien être intérieur, il suffit d&apos;être à l&apos;écoute
@@ -49,9 +73,14 @@ export default class CardTwoContent extends Component<IProps, IState> {
           <div className={classes["image-container"]}>
             <Image src={oui} className={classes["image"]} fill alt="" />
           </div>
-        </div>
+        </Observer>
 
-        <div className={classes["container"]}>
+        <Observer
+          onVisibilityChange={this.handleSecondBlockVisibilityChange}
+          className={classNames(classes["container"], {
+            [classes["is-visible"]]: this.state.isSecondBlockVisible,
+          })}
+        >
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Au-delà de notre corps physique, notre être se compose de 7 corps subtils, imbriqués les uns dans les
@@ -107,9 +136,14 @@ export default class CardTwoContent extends Component<IProps, IState> {
           <div className={classes["image-container"]}>
             <Image src={ChakraObject} className={classNames(classes["image"], classes["image--bottom"])} fill alt="" />
           </div>
-        </div>
+        </Observer>
 
-        <div className={classes["container"]}>
+        <Observer
+          onVisibilityChange={this.handleThirdBlockVisibilityChange}
+          className={classNames(classes["container"], {
+            [classes["is-visible"]]: this.state.isThirdBlockVisible,
+          })}
+        >
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Les soins énergétiques intuitifs se pratiquent, en individuel, par impositions des mains, en étant
@@ -136,8 +170,23 @@ export default class CardTwoContent extends Component<IProps, IState> {
           <div className={classes["image-container"]}>
             <Image src={MusicOutside} className={classes["image"]} fill alt="" />
           </div>
-        </div>
+        </Observer>
       </div>
     );
+  }
+
+  private handleFirstBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isFirstBlockVisible === isVisible) return;
+    this.setState({ isFirstBlockVisible: isVisible });
+  }
+
+  private handleSecondBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isSecondBlockVisible === isVisible) return;
+    this.setState({ isSecondBlockVisible: isVisible });
+  }
+
+  private handleThirdBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isThirdBlockVisible === isVisible) return;
+    this.setState({ isThirdBlockVisible: isVisible });
   }
 }

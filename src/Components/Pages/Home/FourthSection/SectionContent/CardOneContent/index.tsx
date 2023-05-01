@@ -13,14 +13,32 @@ import HealingSeance from "/public/images/healingSeance/portrait-professionnel-0
 
 // Styles
 import classes from "./classes.module.scss";
+import Observer from "@/src/Components/Observer";
 
 type IProps = {};
-type IState = {};
+type IState = {
+  isContainerVisible: boolean;
+};
 
 export default class CardOneContent extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      isContainerVisible: false,
+    };
+
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+  }
+
   public render() {
     return (
-      <div className={classes["root"]}>
+      <Observer
+        onVisibilityChange={this.handleVisibilityChange}
+        className={classNames(classes["root"], {
+          [classes["is-visible"]]: this.state.isContainerVisible,
+        })}
+      >
         <Text tag={ETextTag.P} className={classes["text"]}>
           Absolument tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l&apos;âge
           ou la situation. bébés, enfants et adultes.
@@ -36,7 +54,12 @@ export default class CardOneContent extends Component<IProps, IState> {
         <Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
           Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
         </Text>
-      </div>
+      </Observer>
     );
+  }
+
+  private handleVisibilityChange(isVisible: boolean) {
+    if (this.state.isContainerVisible === isVisible) return;
+    this.setState({ isContainerVisible: isVisible });
   }
 }

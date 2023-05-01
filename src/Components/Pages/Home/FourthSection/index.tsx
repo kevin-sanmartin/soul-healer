@@ -1,35 +1,29 @@
 import { Component, ReactNode } from "react";
 import classNames from "classnames";
 import { IconType } from "react-icons";
+import { MdFamilyRestroom as FamilyIcon } from "react-icons/md";
 
 // Components
 import SectionCard from "./SectionCard";
 import CardOneContent from "./SectionContent/CardOneContent";
 import CardTwoContent from "./SectionContent/CardTwoContent";
-import CardThreeContent from "./SectionContent/CardThreeContent";
-import Text from "@/src/Components/Text";
-import CustomLink from "@/src/Components/Headers/CustomLink";
-import Button from "@/src/Components/Button";
+import ContactButton from "@/src/Components/ContactButton";
 
 // Entities
-import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Icons
 import { FaHandSparkles } from "react-icons/fa";
-import { MdFamilyRestroom as FamilyIcon } from "react-icons/md";
 
 // Styles
 import classes from "./classes.module.scss";
-import ContactButton from "@/src/Components/ContactButton";
-import { EButtonSize } from "@/src/Entities/Button";
 
 export enum ESectionCardName {
   CARD1 = "card1",
   CARD2 = "card2",
-  CARD3 = "card3",
 }
 
 export interface ISectionCard {
