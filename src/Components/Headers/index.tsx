@@ -9,20 +9,20 @@ import { EBreakpoints } from "@/src/Config/Breakpoints";
 
 type IProps = {};
 type IState = {
-  isMobileView: boolean;
+  isMediumView: boolean;
 };
 
 export default class Headers extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      isMobileView: false,
+      isMediumView: false,
     };
     this.onWindowResize = this.onWindowResize.bind(this);
   }
 
   public render() {
-    return this.state.isMobileView ? <MobileMenu /> : <DesktopHeader />;
+    return this.state.isMediumView ? <MobileMenu /> : <DesktopHeader />;
   }
 
   componentDidMount(): void {
@@ -35,12 +35,12 @@ export default class Headers extends Component<IProps, IState> {
   }
 
   private onWindowResize() {
-    const isMobileView = this.isWindowWidthLessThan(EBreakpoints.MEDIUM);
+    const isMediumView = this.isWindowWidthLessThan(EBreakpoints.LARGE);
 
     // Prevent unnecessary re-rendering
-    if (this.state.isMobileView === isMobileView) return;
+    if (this.state.isMediumView === isMediumView) return;
 
-    this.setState({ isMobileView });
+    this.setState({ isMediumView });
   }
 
   private isWindowWidthLessThan(breakpoint: EBreakpoints) {

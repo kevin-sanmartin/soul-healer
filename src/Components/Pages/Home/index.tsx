@@ -12,16 +12,18 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 // Styles
 import classes from "./classes.module.scss";
 import FifthSection from "./FifthSection";
+import SixthSection from "./SixthSection";
 
 export default function HomePage() {
   return (
     <Layout className={classes["root"]}>
       <FirstSection className={classes["section"]} />
-      <SecondSection className={classes["section"]} id={EWebsiteLinks.ABOUT} />
+      <SecondSection className={classes["section"]} id={EWebsiteLinks.TRANSPARENCY} />
       <ThirdSection className={classes["section"]} id={EWebsiteLinks.HEALING_BENEFITS} />
       <div className={classes["parralax"]} />
       <FourthSection className={classes["section"]} id={EWebsiteLinks.HEALING_INFOS} />
       <FifthSection className={classes["section"]} id={EWebsiteLinks.HEALING_SEANCES} />
+      <SixthSection className={classes["section"]} id={EWebsiteLinks.ABOUT_ME} />
       <ContactSection id={EWebsiteLinks.CONTACT} />
     </Layout>
   );
