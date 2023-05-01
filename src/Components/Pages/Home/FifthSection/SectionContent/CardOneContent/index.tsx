@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { Component } from "react";
+import Image from "next/image";
+import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
@@ -13,15 +14,32 @@ import IllustrationImage from "/public/images/illustration.png";
 
 // Styles
 import classes from "./classes.module.scss";
-import classNames from "classnames";
+import Observer from "@/src/Components/Observer";
 
 type IProps = {};
-type IState = {};
+type IState = {
+  isContainerVisible: boolean;
+};
 
 export default class CardOneContent extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      isContainerVisible: true,
+    };
+
+    this.handleContainerVisibilityChange = this.handleContainerVisibilityChange.bind(this);
+  }
+
   public render() {
     return (
-      <div className={classes["root"]}>
+      <Observer
+        onVisibilityChange={this.handleContainerVisibilityChange}
+        className={classNames(classes["root"], {
+          [classes["is-visible"]]: this.state.isContainerVisible,
+        })}
+      >
         <div className={classes["container"]}>
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
@@ -81,7 +99,12 @@ export default class CardOneContent extends Component<IProps, IState> {
             <Image src={IllustrationImage} className={classes["image"]} fill alt="" />
           </div>
         </div>
-      </div>
+      </Observer>
     );
+  }
+
+  private handleContainerVisibilityChange(isVisible: boolean) {
+    if (this.state.isContainerVisible === isVisible) return;
+    this.setState({ isContainerVisible: isVisible });
   }
 }
