@@ -23,6 +23,9 @@
   }
 
   .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     position: relative;
     padding: 20px;
     background-color: $White;

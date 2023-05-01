@@ -23,6 +23,8 @@ import { MdFamilyRestroom as FamilyIcon } from "react-icons/md";
 
 // Styles
 import classes from "./classes.module.scss";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 export enum ESectionCardName {
   CARD1 = "card1",
@@ -65,13 +67,6 @@ export default class FourthSection extends Component<IProps, IState> {
           isSelected: true,
           content: <CardTwoContent />,
         },
-        // {
-        //   name: ESectionCardName.CARD3,
-        //   text: "En toute transparence",
-        //   icon: BsPersonBoundingBox,
-        //   isSelected: false,
-        //   content: <CardThreeContent />,
-        // },
       ],
     };
     this.handleCardClick = this.handleCardClick.bind(this);
@@ -103,11 +98,7 @@ export default class FourthSection extends Component<IProps, IState> {
                 key={card.name}
               >
                 {card.content}
-                <CustomLink to={EWebsiteLinks.CONTACT}>
-                  <Button className={classes["contact-button"]}>
-                    <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-                  </Button>
-                </CustomLink>
+                <ContactButton size={EButtonSize.MEDIUM} />
               </div>
             )
         )}

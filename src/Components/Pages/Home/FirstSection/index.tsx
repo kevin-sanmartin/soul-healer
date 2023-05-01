@@ -2,16 +2,13 @@ import { Component } from "react";
 import classNames from "classnames";
 
 // Components
-import Button from "@/src/Components/Button";
 import Logo from "@/src/Components/Logo";
 import Text from "@/src/Components/Text";
-import CustomLink from "@/src/Components/Headers/CustomLink";
+import ContactButton from "@/src/Components/ContactButton";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
-
-// Config
-import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -37,11 +34,7 @@ export default class FirstSection extends Component<IProps, IState> {
             santé en main et vous soigner vous-même.
           </Text>
 
-          <CustomLink to={EWebsiteLinks.CONTACT} className={classes["button"]}>
-            <Button>
-              <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-            </Button>
-          </CustomLink>
+          <ContactButton size={EButtonSize.LARGE} />
         </div>
       </section>
     );

@@ -24,6 +24,7 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 import classes from "./classes.module.scss";
 import Input from "@/src/Components/Input";
 import Select from "@/src/Components/Select";
+import { InlineWidget } from "react-calendly";
 
 enum ESeanceType {
   DISTANT = "Distance",
@@ -69,9 +70,8 @@ export default class ContactSection extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              N&apos;hésitez pas à me contacter pour toute question ou pour prendre rendez-vous. Je suis là pour vous
-              aider à soulager vos douleurs physiques, améliorer votre bien-être émotionnel et spirituel, et vous
-              accompagner dans votre cheminement personnel
+              N&apos;hésitez pas à prendre rendez-vous. Je suis là pour vous aider à soulager vos douleurs physiques,
+              améliorer votre bien-être émotionnel et spirituel, et vous accompagner dans votre cheminement personnel
             </Text>
           </div>
 
@@ -79,83 +79,12 @@ export default class ContactSection extends Component<IProps, IState> {
             <div className={classes["contact-info"]}>
               <LocalisationIcon className={classes["icon"]} />
               <Text tag={ETextTag.P} className={classes["text"]}>
-                70 Route de Pegomas, 06130 Grasse
-              </Text>
-            </div>
-
-            <div className={classes["contact-info"]}>
-              <PhoneIcon className={classes["icon"]} />
-              <Text tag={ETextTag.P} className={classes["text"]}>
-                <a href="tel:+33665472490">06.65.47.24.90</a>
-              </Text>
-            </div>
-
-            <div className={classes["contact-info"]}>
-              <EmailIcon className={classes["icon"]} />
-              <Text tag={ETextTag.P} className={classes["text"]}>
-                <a href="mailto:richnad06@gmail.com">richnad06@gmail.com</a>
+                06130 Grasse
               </Text>
             </div>
           </div>
 
-          <form
-            className={classes["form"]}
-            onSubmit={(e) => {
-              e.preventDefault();
-              console.log(this.state);
-            }}
-          >
-            <div className={classes["form-group"]}>
-              <Input
-                name="name"
-                required
-                onChange={this.handleInputChange}
-                label="Nom & Prénom"
-                value={this.state.name}
-              />
-            </div>
-
-            <div className={classes["form-group"]}>
-              <Input
-                name="phoneNumber"
-                required
-                onChange={this.handleInputChange}
-                label="Téléphone"
-                value={this.state.phoneNumber}
-              />
-            </div>
-
-            <div className={classes["form-group"]}>
-              <Input name="email" required onChange={this.handleInputChange} label="Email" value={this.state.email} />
-            </div>
-
-            <Select
-              onChange={(e) => console.log(e)}
-              options={[ESeanceType.PRESENTIEL, ESeanceType.DISTANT]}
-              label="Type de soin"
-            />
-
-            <Text tag={ETextTag.SPAN} font="cabin" className={classes["text"]}>
-              Décrivez moi au mieux vos besoins et vos attentes.
-            </Text>
-
-            <div className={classes["form-group"]}>
-              <Input
-                required
-                isTextArea
-                name="message"
-                onChange={this.handleInputChange}
-                label="Message"
-                value={this.state.message}
-              />
-            </div>
-
-            <Button isSubmitButton>
-              <Text tag={ETextTag.SPAN} font="cabin">
-                ENVOYER
-              </Text>
-            </Button>
-          </form>
+          <InlineWidget url="https://calendly.com/kevinsanmartin/decouverte" />
         </div>
       </section>
     );

@@ -15,6 +15,8 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 import classes from "./classes.module.scss";
 import CardOneContent from "./SectionContent/CardOneContent";
 import CardTwoContent from "./SectionContent/CardTwoContent";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {
   id: EWebsiteLinks;
@@ -74,6 +76,7 @@ export default class FifthSection extends Component<IProps, IState> {
                 key={card.name}
               >
                 {card.content}
+                <ContactButton size={EButtonSize.MEDIUM} />
               </div>
             )
         )}

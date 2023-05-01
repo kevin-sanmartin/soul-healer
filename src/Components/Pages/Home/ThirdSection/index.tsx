@@ -20,6 +20,8 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {
   id: EWebsiteLinks;
@@ -76,11 +78,7 @@ export default class ThirdSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          <CustomLink to={EWebsiteLinks.CONTACT} className={classes["button"]}>
-            <Button>
-              <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-            </Button>
-          </CustomLink>
+          <ContactButton size={EButtonSize.MEDIUM} />
         </div>
       </section>
     );

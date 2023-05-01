@@ -3,12 +3,11 @@ import { Component } from "react";
 
 // Components
 import BurgerMenu from "./BurgerMenu";
-import Button from "../../Button";
-import Text from "../../Text";
 import CustomLink from "../CustomLink";
+import ContactButton from "../../ContactButton";
 
 // Entities
-import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Config
 import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
@@ -64,11 +63,7 @@ export default class MobileMenu extends Component<IProps, IState> {
               className={classes["link"]}
             />
 
-            <CustomLink to={EWebsiteLinks.CONTACT} className={classes["link"]}>
-              <Button>
-                <Text tag={ETextTag.SPAN}>CONTACTEZ-MOI</Text>
-              </Button>
-            </CustomLink>
+            <ContactButton size={EButtonSize.MEDIUM} />
           </div>
         </div>
       </div>
