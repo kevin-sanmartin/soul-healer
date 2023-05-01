@@ -3,13 +3,14 @@ import Image from "next/image";
 import classNames from "classnames";
 
 // Components
-import Button from "@/src/Components/Button";
 import Text from "@/src/Components/Text";
 import ListItem from "./ListItem";
-import CustomLink from "@/src/Components/Headers/CustomLink";
+import Observer from "@/src/Components/Observer";
+import ContactButton from "@/src/Components/ContactButton";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Assets
 import HealingSeance from "/public/images/healingSeance/portrait-professionnel-021-min.jpg";
@@ -20,16 +21,26 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
-import ContactButton from "@/src/Components/ContactButton";
-import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {
   id: EWebsiteLinks;
   className?: string;
 };
-type IState = {};
+type IState = {
+  isListItemContainerVisible: boolean;
+};
 
 export default class ThirdSection extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      isListItemContainerVisible: false,
+    };
+
+    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+  }
+
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
@@ -41,8 +52,11 @@ export default class ThirdSection extends Component<IProps, IState> {
           </Text>
 
           <div className={classes["container"]}>
-            <div className={classes["list-container"]}>
+            <Observer onVisibilityChange={this.handleVisibilityChange} className={classes["list-container"]}>
               <ListItem
+                className={classNames(classes["list-item"], {
+                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
+                })}
                 title="Maux physiques"
                 listItems={[
                   "Douleurs de dos",
@@ -55,6 +69,9 @@ export default class ThirdSection extends Component<IProps, IState> {
                 icon={<CheckIcon className={classes["icon"]} />}
               />
               <ListItem
+                className={classNames(classes["list-item"], {
+                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
+                })}
                 title="Maux psychologiques"
                 listItems={[
                   "Libérer vos angoisses",
@@ -66,6 +83,9 @@ export default class ThirdSection extends Component<IProps, IState> {
                 icon={<CheckIcon className={classes["icon"]} />}
               />
               <ListItem
+                className={classNames(classes["list-item"], {
+                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
+                })}
                 title="Energetiques"
                 listItems={[
                   "Équilibrage de la circulation de l'énergie vitale dans le corps physique et les corps subtils",
@@ -75,12 +95,18 @@ export default class ThirdSection extends Component<IProps, IState> {
                 ]}
                 icon={<CheckIcon className={classes["icon"]} />}
               />
-            </div>
+            </Observer>
           </div>
 
           <ContactButton size={EButtonSize.MEDIUM} />
         </div>
       </section>
     );
+  }
+
+  private handleVisibilityChange(isVisible: boolean) {
+    if (this.state.isListItemContainerVisible === isVisible) return;
+    console.log("isVisible", isVisible);
+    this.setState({ isListItemContainerVisible: isVisible });
   }
 }

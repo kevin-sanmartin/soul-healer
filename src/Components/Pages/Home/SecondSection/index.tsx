@@ -9,11 +9,6 @@ import Observer from "@/src/Components/Observer";
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
 
-// Icons
-import { RiMentalHealthLine as MentalHealthIcon } from "react-icons/ri";
-import { GiHealing as HealingIcon } from "react-icons/gi";
-import { MdOutlineHealthAndSafety as HealthIcon } from "react-icons/md";
-
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
@@ -96,6 +91,7 @@ export default class SecondSection extends Component<IProps, IState> {
   }
 
   private handleVisibilityChange(isVisible: boolean) {
+    if (this.state.isPresentationContainerVisible === isVisible) return;
     this.setState({ isPresentationContainerVisible: isVisible });
   }
 }
