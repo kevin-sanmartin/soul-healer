@@ -33,7 +33,7 @@ export default class Dropdown extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      isOpen: false,
+      isOpen: true,
       scrollHeight: 0,
     };
 
@@ -67,6 +67,17 @@ export default class Dropdown extends Component<IProps, IState> {
   public componentDidMount(): void {
     document.addEventListener("click", this.handleClickOutside);
     window.addEventListener("resize", this.onResize);
+
+    if (!this.contentRef.current) return;
+
+    let scrollHeight = 0;
+    if (this.state.isOpen) {
+      scrollHeight = this.contentRef.current.scrollHeight;
+    }
+
+    if (scrollHeight !== this.state.scrollHeight) {
+      this.setState({ scrollHeight });
+    }
   }
 
   public componentDidUpdate(): void {

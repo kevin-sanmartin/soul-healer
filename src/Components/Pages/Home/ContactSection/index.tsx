@@ -4,27 +4,23 @@ import Image from "next/image";
 
 // Components
 import Text from "@/src/Components/Text";
-import Button from "@/src/Components/Button";
+import ContactButton from "@/src/Components/ContactButton";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Assets
 import HandHeartOutside from "/public/images/outside/portrait-professionnel-041-min.jpg";
 
 // Icons
 import { FaMapMarkerAlt as LocalisationIcon } from "react-icons/fa";
-import { BsTelephoneFill as PhoneIcon } from "react-icons/bs";
-import { MdEmail as EmailIcon } from "react-icons/md";
 
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
-import Input from "@/src/Components/Input";
-import Select from "@/src/Components/Select";
-import { InlineWidget } from "react-calendly";
 
 enum ESeanceType {
   DISTANT = "Distance",
@@ -84,7 +80,7 @@ export default class ContactSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          <InlineWidget url="https://calendly.com/kevinsanmartin/decouverte" />
+          <ContactButton size={EButtonSize.MEDIUM} />
         </div>
       </section>
     );
