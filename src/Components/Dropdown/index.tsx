@@ -92,6 +92,8 @@ export default class Dropdown extends Component<IProps, IState> {
   }
 
   private toggleOpen() {
+    if (!this.dropdownRef.current) return;
+    window.scrollTo({ top: this.dropdownRef.current.offsetTop - 90, behavior: "smooth" });
     this.setState((prevState) => ({
       isOpen: !prevState.isOpen,
     }));
