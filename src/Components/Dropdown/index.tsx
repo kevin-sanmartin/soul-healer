@@ -103,8 +103,8 @@ export default class Dropdown extends Component<IProps, IState> {
   }
 
   private handleClickOutside(event: MouseEvent) {
-    if (this.dropdownRef.current && !this.dropdownRef.current.contains(event.target as Node)) {
-      this.setState({ isOpen: false });
-    }
+    // if (this.dropdownRef.current && !this.dropdownRef.current.contains(event.target as Node)) {
+    //   this.setState({ isOpen: false });
+    // }
   }
 }
