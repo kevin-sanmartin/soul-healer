@@ -24,7 +24,7 @@ export default class AboutMe extends Component<IProps, IState> {
           <div className={classes["container"]}>
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Pour devenir thérapeute en soins énergétiques, il n'existe pas de diplôme reconnu. Magnétiseur ?
+                Pour devenir thérapeute en soins énergétiques, il n&apos;existe pas de diplôme reconnu. Magnétiseur ?
                 Énergéticien ? Thérapeute ? Les appellations sont nombreuses. Mais est-ce si important au fond ?
               </Text>
 
