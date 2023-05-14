@@ -11,6 +11,8 @@
     height: 100%;
     width: 80%;
     background-color: $Crayola;
+    display: flex;
+    align-items: center;
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
     border-right: 1px solid $White;
@@ -21,7 +23,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: fit-content;
       width: 100%;
 
       & > *:not(:last-child) {
