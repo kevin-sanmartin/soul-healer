@@ -24,22 +24,22 @@ export default class AboutMe extends Component<IProps, IState> {
           <div className={classes["container"]}>
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Pour devenir thérapeute en soins énergétiques, il n&apos;existe pas de diplôme reconnu. Magnétiseur ?
+                Pour devenir thérapeute en soins énergétiques, il n'existe pas de diplôme reconnu. Magnétiseur ?
                 Énergéticien ? Thérapeute ? Les appellations sont nombreuses. Mais est-ce si important au fond ?
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
                 Je suis Nadia, l&apos;Äme Guerrisseuse, j&apos;habite grasse (06), maman de deux grandes filles : Mégane
                 29 ans photographe et Julie 20 ans en école d&apos;infirmière, avec mon mari nous avons ce même point
-                commun d&apos;aimer communiquer avec les autres .je souhaite vous apporter avec toute ma bienveillance,
+                commun d&apos;aimer communiquer avec les autres. Je souhaite vous apporter avec toute ma bienveillance,
                 toute mon aide à travers mes soins énergétiques intuitifs que je peux vous prodiguer.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
                 Adolescente, je me sentais toujours différentes, pas à ma place, en retrait, pas comprise. J&apos;ai eu
                 plus tard des périodes de grosses souffrances ou il me suffisait d&apos;aller dans la nature pour
-                évacuer le trop plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans l‘expliquer.je
-                sais pourquoi aujourd&apos;hui…
+                évacuer le trop plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans l&apos;expliquer.
+                Je sais pourquoi aujourd&apos;hui...
               </Text>
             </div>
 
@@ -89,7 +89,7 @@ export default class AboutMe extends Component<IProps, IState> {
               <Text tag={ETextTag.P} className={classes["text"]}>
                 J&apos;ai donc fait une formation de coaching qui m&apos;a mis sur la voix : « de prendre conscience que
                 nous avons tous beaucoup de possibilités en nous », à être qui je suis et moins introverti, puis mes
-                mains ont commencé à chauffer et vibrer. Tout s&apos;est enchainé…
+                mains ont commencé à chauffer et vibrer. Tout s&apos;est enchainé...
               </Text>
             </div>
 
@@ -108,10 +108,10 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J&apos;ai donc décidé de mettre mes techniques de guérison naturelles au profit du bien-être commun.
-                J&apos;observe, je me laisse guider et je suis comme une enfant remplie de joie à chaque fois que je
-                fais un soin et que cela fonctionne, aucun ne se ressemble. Je suis tellement reconnaissante de pouvoir
-                vivre cela.
+                J&apos;ai donc décidé « d&apos;expérimenter », de mettre mes techniques de guérison naturelles au profit
+                du bien-être commun. J&apos;observe, je me laisse guider et je suis comme une enfant remplie de joie à
+                chaque fois que je fais un soin et que cela fonctionne, aucun ne se ressemble. Je suis tellement
+                reconnaissante de pouvoir vivre cela. NAMASTE
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>

@@ -4,17 +4,18 @@ import classNames from "classnames";
 // Components
 import Dropdown from "@/src/Components/Dropdown";
 import WhatIsEnergyHealing from "./WhatIsEnergyHealing";
-
-// Icons
-import { FaHandSparkles } from "react-icons/fa";
-import { MdFamilyRestroom, MdSocialDistance, MdHome } from "react-icons/md";
-
-// Styles
-import classes from "./classes.module.scss";
 import WhoCanDoEnergyHealing from "./WhoCanDoEnergyHealing";
 import HomeHealing from "./HomeHealing";
 import RemoteHealing from "./RemoteHealing";
 import AboutMe from "./AboutMe";
+
+// Icons
+import { FaHandSparkles } from "react-icons/fa";
+import { MdFamilyRestroom, MdSocialDistance, MdHome } from "react-icons/md";
+import { BsPersonFill } from "react-icons/bs";
+
+// Styles
+import classes from "./classes.module.scss";
 
 type IProps = {
   id: string;
@@ -38,7 +39,7 @@ export default class FAQ extends Component<IProps, IState> {
         <Dropdown title="Soin à distance" icon={MdSocialDistance}>
           <RemoteHealing />
         </Dropdown>
-        <Dropdown title="A propos de moi" icon={MdSocialDistance}>
+        <Dropdown title="A propos de moi" icon={BsPersonFill}>
           <AboutMe />
         </Dropdown>
       </section>
