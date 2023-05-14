@@ -21,7 +21,7 @@ type IState = {
   isContainerVisible: boolean;
 };
 
-export default class CardOneContent extends Component<IProps, IState> {
+export default class RemoteHealing extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 

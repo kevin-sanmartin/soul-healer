@@ -4,10 +4,12 @@ import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import ContactButton from "@/src/Components/ContactButton";
 import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Assets
 import MusicOutside from "/public/images/outside/portrait-professionnel-117.jpg";
@@ -24,7 +26,7 @@ type IState = {
   isThirdBlockVisible: boolean;
 };
 
-export default class CardTwoContent extends Component<IProps, IState> {
+export default class WhatIsEnergyHealing extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 
@@ -171,6 +173,8 @@ export default class CardTwoContent extends Component<IProps, IState> {
             <Image src={MusicOutside} className={classes["image"]} fill alt="" />
           </div>
         </Observer>
+
+        <ContactButton size={EButtonSize.MEDIUM} />
       </div>
     );
   }

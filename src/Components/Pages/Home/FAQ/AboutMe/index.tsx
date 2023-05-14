@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Image from "next/image";
-import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
@@ -14,16 +13,13 @@ import MusicOutside from "/public/images/outside/portrait-professionnel-117.jpg"
 // Styles
 import classes from "./classes.module.scss";
 
-type IProps = {
-  id: string;
-  className?: string;
-};
+type IProps = {};
 type IState = {};
 
-export default class SixthSection extends Component<IProps, IState> {
+export default class AboutMe extends Component<IProps, IState> {
   override render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
+      <section className={classes["root"]}>
         <div className={classes["section-content"]}>
           <div className={classes["container"]}>
             <div className={classes["text-container"]}>

@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -13,14 +14,13 @@ import HealingSeance from "/public/images/healingSeance/portrait-professionnel-0
 
 // Styles
 import classes from "./classes.module.scss";
-import Observer from "@/src/Components/Observer";
 
 type IProps = {};
 type IState = {
   isContainerVisible: boolean;
 };
 
-export default class CardOneContent extends Component<IProps, IState> {
+export default class WhoCanDoEnergyHealing extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 

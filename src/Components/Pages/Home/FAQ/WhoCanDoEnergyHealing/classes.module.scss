@@ -8,6 +8,7 @@
   opacity: 0;
   transform: translateY(34px);
   transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  padding: 18px;
 
   &.is-visible {
     opacity: 1;

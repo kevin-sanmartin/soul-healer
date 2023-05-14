@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import classNames from "classnames";
+import { IconType } from "react-icons";
 
 // Components
 import Text from "../Text";
@@ -8,11 +9,15 @@ import Text from "../Text";
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
 
+// Icons
+import { IoIosArrowDown as ArrowIcon } from "react-icons/io";
+
 // Styles
 import classes from "./classes.module.scss";
 
 type IProps = {
   title: string;
+  icon?: IconType;
   className?: string;
   children?: React.ReactNode;
 };
@@ -34,17 +39,23 @@ export default class Dropdown extends Component<IProps, IState> {
 
     this.toggleOpen = this.toggleOpen.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.onResize = this.onResize.bind(this);
   }
 
   public render() {
+    const Icon = this.props.icon;
     return (
-      <div ref={this.dropdownRef}>
+      <div ref={this.dropdownRef} className={classes["root"]}>
         <button
           type="button"
           className={classNames(classes["collapsible"], this.props.className, { [classes["open"]]: this.state.isOpen })}
           onClick={this.toggleOpen}
         >
-          <Text tag={ETextTag.P}>{this.props.title}</Text>
+          {Icon && <Icon className={classes["icon"]} />}
+          <Text tag={ETextTag.P} className={classes["title"]}>
+            {this.props.title}
+          </Text>
+          <ArrowIcon className={classNames(classes["arrow"], { [classes["open"]]: this.state.isOpen })} />
         </button>
         <div ref={this.contentRef} style={{ maxHeight: this.state.scrollHeight }} className={classes["content"]}>
           {this.props.children}
@@ -55,6 +66,7 @@ export default class Dropdown extends Component<IProps, IState> {
 
   public componentDidMount(): void {
     document.addEventListener("click", this.handleClickOutside);
+    window.addEventListener("resize", this.onResize);
   }
 
   public componentDidUpdate(): void {
@@ -72,6 +84,11 @@ export default class Dropdown extends Component<IProps, IState> {
 
   public componentWillUnmount(): void {
     document.removeEventListener("click", this.handleClickOutside);
+    window.removeEventListener("resize", this.onResize);
+  }
+
+  private onResize() {
+    this.setState({ isOpen: false });
   }
 
   private toggleOpen() {
