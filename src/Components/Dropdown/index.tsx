@@ -88,7 +88,7 @@ export default class Dropdown extends Component<IProps, IState> {
   }
 
   private onResize() {
-    this.setState({ isOpen: false });
+    this.setState({ scrollHeight: this.contentRef.current?.scrollHeight || 0 });
   }
 
   private toggleOpen() {
