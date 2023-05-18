@@ -39,7 +39,7 @@ export default class FAQ extends Component<IProps, IState> {
         <Dropdown title="Soin à distance" icon={MdSocialDistance}>
           <RemoteHealing />
         </Dropdown>
-        <Dropdown title="A propos de moi" icon={BsPersonFill}>
+        <Dropdown title="Faisons connaissance" icon={BsPersonFill}>
           <AboutMe />
         </Dropdown>
       </section>

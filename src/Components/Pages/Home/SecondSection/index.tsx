@@ -1,4 +1,4 @@
-import { Component, createRef } from "react";
+import { Component } from "react";
 import classNames from "classnames";
 
 // Components
@@ -11,6 +11,9 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Config
 import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
+// Assets
+import VideoPoster from "public/images/outside/portrait-professionnel-101.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -43,7 +46,13 @@ export default class SecondSection extends Component<IProps, IState> {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
           >
-            <video controls controlsList="nodownload" className={classes["video"]}>
+            <video
+              controls
+              controlsList="nodownload"
+              className={classes["video"]}
+              playsInline
+              poster={"/images/outside/portrait-professionnel-046-min.jpg"}
+            >
               <source src="/presentation-video.mp4" type="video/mp4" />
             </video>
           </div>
@@ -55,7 +64,7 @@ export default class SecondSection extends Component<IProps, IState> {
           >
             <Tag color={ETagColor.BLANCHED_ALMOND}>
               <Text tag={ETextTag.SPAN} font="xiaoWei" className={classes["tag"]}>
-                En toute transparence
+                Bienvenue
               </Text>
             </Tag>
 

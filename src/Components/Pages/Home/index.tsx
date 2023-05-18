@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <Layout className={classes["root"]}>
       <FirstSection className={classes["section"]} />
-      <SecondSection className={classes["section"]} id={EWebsiteLinks.TRANSPARENCY} />
+      <SecondSection className={classes["section"]} id={EWebsiteLinks.WELCOME} />
       <ThirdSection className={classes["section"]} id={EWebsiteLinks.HEALING_BENEFITS} />
       <div className={classes["parralax"]} />
       <FAQ className={classes["section"]} id={EWebsiteLinks.FAQ} />

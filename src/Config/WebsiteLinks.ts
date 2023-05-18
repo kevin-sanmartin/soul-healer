@@ -1,12 +1,12 @@
 export enum EWebsiteLinks {
-  TRANSPARENCY = "TRANSPARENCY",
+  WELCOME = "WELCOME",
   HEALING_BENEFITS = "HEALING_BENEFITS",
   FAQ = "FAQ",
   CONTACT = "CONTACT",
 }
 
 export enum EWebsiteLinksNames {
-  TRANSPARENCY = "En toute transparence",
+  WELCOME = "Bienvenue",
   HEALING_BENEFITS = "Bienfaits des soins",
   FAQ = "FAQ",
   CONTACT = "Contactez-moi",

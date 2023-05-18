@@ -42,7 +42,7 @@ export default class DesktopHeader extends Component<IProps, IState> {
           <Logo />
 
           <div className={classes["links-container"]}>
-            <CustomLink to={EWebsiteLinks.TRANSPARENCY} text={EWebsiteLinksNames.TRANSPARENCY} />
+            <CustomLink to={EWebsiteLinks.WELCOME} text={EWebsiteLinksNames.WELCOME} />
             <CustomLink to={EWebsiteLinks.HEALING_BENEFITS} text={EWebsiteLinksNames.HEALING_BENEFITS} />
             <CustomLink to={EWebsiteLinks.FAQ} text={EWebsiteLinksNames.FAQ} />
             <ContactButton size={EButtonSize.MEDIUM} />

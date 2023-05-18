@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -14,7 +15,6 @@ import IllustrationImage from "/public/images/illustration.png";
 
 // Styles
 import classes from "./classes.module.scss";
-import Observer from "@/src/Components/Observer";
 
 type IProps = {};
 type IState = {
@@ -92,6 +92,10 @@ export default class RemoteHealing extends Component<IProps, IState> {
               de m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? sur une échelle de 1
               à 10 où se situe « votre douleur », votre état et donc voir s&apos;il est nécessaire de reprendre
               rendez-vous pour un deuxième soin.
+            </Text>
+
+            <Text tag={ETextTag.P} className={classes["price"]}>
+              Prix de la séance : 50€
             </Text>
           </div>
 
