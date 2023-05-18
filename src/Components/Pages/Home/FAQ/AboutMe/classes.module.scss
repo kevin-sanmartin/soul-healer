@@ -73,6 +73,25 @@
             object-position: 0 82%;
           }
         }
+
+        .position-top {
+          object-position: 0 100%;
+
+          @media screen and (max-width: $large) {
+            object-position: 0 70%;
+          }
+        }
+      }
+      .portrait {
+        min-height: 600px;
+
+        @media screen and (max-width: $medium) {
+          min-height: 400px;
+        }
+
+        .image {
+          object-position: 0 20%;
+        }
       }
     }
   }

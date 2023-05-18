@@ -11,7 +11,7 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
 import HandOutside from "/public/images/outside/portrait-professionnel-085.jpg";
-import IllustrationImage from "/public/images/illustration.png";
+import IllustrationImage from "/public/images/outside/portrait-professionnel-042-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
