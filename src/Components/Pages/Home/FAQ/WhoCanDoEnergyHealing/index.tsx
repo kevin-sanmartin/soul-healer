@@ -14,6 +14,8 @@ import HealingSeance from "/public/images/healingSeance/portrait-professionnel-0
 
 // Styles
 import classes from "./classes.module.scss";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {};
 type IState = {
@@ -54,6 +56,8 @@ export default class WhoCanDoEnergyHealing extends Component<IProps, IState> {
         <Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
           Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
         </Text>
+
+        <ContactButton size={EButtonSize.MEDIUM} />
       </Observer>
     );
   }

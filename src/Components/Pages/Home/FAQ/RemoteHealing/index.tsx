@@ -15,6 +15,8 @@ import IllustrationImage from "/public/images/outside/portrait-professionnel-042
 
 // Styles
 import classes from "./classes.module.scss";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {};
 type IState = {
@@ -103,6 +105,8 @@ export default class RemoteHealing extends Component<IProps, IState> {
             <Image src={IllustrationImage} className={classes["image"]} fill alt="" />
           </div>
         </div>
+
+        <ContactButton size={EButtonSize.MEDIUM} />
       </Observer>
     );
   }

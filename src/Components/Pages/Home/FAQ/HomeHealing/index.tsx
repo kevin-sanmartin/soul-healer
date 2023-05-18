@@ -15,6 +15,8 @@ import HandInside from "/public/images/healingSeance/portrait-professionnel-023-
 
 // Styles
 import classes from "./classes.module.scss";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {};
 type IState = {
@@ -99,6 +101,8 @@ export default class HomeHealing extends Component<IProps, IState> {
             <Image src={HandInside} className={classes["image"]} fill alt="" />
           </div>
         </div>
+
+        <ContactButton size={EButtonSize.MEDIUM} />
       </Observer>
     );
   }

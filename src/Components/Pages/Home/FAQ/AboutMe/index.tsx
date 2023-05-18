@@ -15,6 +15,8 @@ import Outside2 from "/public/images/portraits/portrait-professionnel-032-min.jp
 // Styles
 import classes from "./classes.module.scss";
 import classNames from "classnames";
+import ContactButton from "@/src/Components/ContactButton";
+import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {};
 type IState = {};
@@ -108,6 +110,8 @@ export default class AboutMe extends Component<IProps, IState> {
               <Image src={Outside2} className={classes["image"]} fill alt="" />
             </div>
           </div>
+
+          <ContactButton size={EButtonSize.MEDIUM} />
         </div>
       </section>
     );
