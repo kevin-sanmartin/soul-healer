@@ -1,11 +1,15 @@
 import { Component } from "react";
 import Image from "next/image";
+import classNames from "classnames";
 
 // Components
 import Text from "@/src/Components/Text";
+import ContactButton from "@/src/Components/ContactButton";
+import Observer from "@/src/Components/Observer";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
+import { EButtonSize } from "@/src/Entities/Button";
 
 // Assets
 import MusicOutside from "/public/images/outside/portrait-professionnel-108.jpg";
@@ -14,19 +18,37 @@ import Outside2 from "/public/images/portraits/portrait-professionnel-032-min.jp
 
 // Styles
 import classes from "./classes.module.scss";
-import classNames from "classnames";
-import ContactButton from "@/src/Components/ContactButton";
-import { EButtonSize } from "@/src/Entities/Button";
 
 type IProps = {};
-type IState = {};
+type IState = {
+  isFirstBlockVisible: boolean;
+  isSecondBlockVisible: boolean;
+  isThirdBlockVisible: boolean;
+};
 
 export default class AboutMe extends Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+    this.state = {
+      isFirstBlockVisible: true,
+      isSecondBlockVisible: true,
+      isThirdBlockVisible: true,
+    };
+    this.handleFirstBlockVisibilityChange = this.handleFirstBlockVisibilityChange.bind(this);
+    this.handleSecondBlockVisibilityChange = this.handleSecondBlockVisibilityChange.bind(this);
+    this.handleThirdBlockVisibilityChange = this.handleThirdBlockVisibilityChange.bind(this);
+  }
+
   override render() {
     return (
       <section className={classes["root"]}>
         <div className={classes["section-content"]}>
-          <div className={classes["container"]}>
+          <Observer
+            onVisibilityChange={this.handleFirstBlockVisibilityChange}
+            className={classNames(classes["container"], {
+              [classes["is-visible"]]: this.state.isFirstBlockVisible,
+            })}
+          >
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
                 Pour devenir thérapeute en soins énergétiques, il n&apos;existe pas de diplôme reconnu. Magnétiseur ?
@@ -42,9 +64,14 @@ export default class AboutMe extends Component<IProps, IState> {
             <div className={classes["image-container"]}>
               <Image src={MusicOutside} className={classes["image"]} fill alt="" />
             </div>
-          </div>
+          </Observer>
 
-          <div className={classes["container"]}>
+          <Observer
+            onVisibilityChange={this.handleSecondBlockVisibilityChange}
+            className={classNames(classes["container"], {
+              [classes["is-visible"]]: this.state.isSecondBlockVisible,
+            })}
+          >
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.H3} className={classes["title"]}>
                 Comment je suis venue à faire des soins énergétiques ?
@@ -66,9 +93,15 @@ export default class AboutMe extends Component<IProps, IState> {
             <div className={classes["image-container"]}>
               <Image src={Outside} className={classNames(classes["image"], classes["position-top"])} fill alt="" />
             </div>
-          </div>
+          </Observer>
 
-          <div className={classes["container"]}>
+          <Observer
+            onVisibilityChange={this.handleThirdBlockVisibilityChange}
+            className={classNames(classes["container"], {
+              [classes["is-visible"]]: this.state.isThirdBlockVisible,
+            })}
+          >
+            {" "}
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
                 J&apos;ai été assistante maternelle pendant 8 ans, j&apos;ai adoré mon métier, le contact avec les
@@ -105,15 +138,29 @@ export default class AboutMe extends Component<IProps, IState> {
                 m&apos;autoriser à vous soigner ? Envie de se rencontrer ?
               </Text>
             </div>
-
             <div className={classNames(classes["image-container"], classes["portrait"])}>
               <Image src={Outside2} className={classes["image"]} fill alt="" />
             </div>
-          </div>
+          </Observer>
 
           <ContactButton size={EButtonSize.MEDIUM} />
         </div>
       </section>
     );
+  }
+
+  private handleFirstBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isFirstBlockVisible === isVisible) return;
+    this.setState({ isFirstBlockVisible: isVisible });
+  }
+
+  private handleSecondBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isSecondBlockVisible === isVisible) return;
+    this.setState({ isSecondBlockVisible: isVisible });
+  }
+
+  private handleThirdBlockVisibilityChange(isVisible: boolean): void {
+    if (this.state.isThirdBlockVisible === isVisible) return;
+    this.setState({ isThirdBlockVisible: isVisible });
   }
 }
