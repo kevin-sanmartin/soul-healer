@@ -46,13 +46,8 @@ export default class SecondSection extends Component<IProps, IState> {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
           >
-            <video
-              controls
-              controlsList="nodownload"
-              className={classes["video"]}
-              playsInline
-              poster={"/images/outside/portrait-professionnel-046-min.jpg"}
-            >
+            <video controls controlsList="nodownload" className={classes["video"]} playsInline>
+              <img src="public/images/outside/portrait-professionnel-034-min.jpg" alt="Portrait professionnel" />
               <source src="/presentation-video.mp4" type="video/mp4" />
             </video>
           </div>
