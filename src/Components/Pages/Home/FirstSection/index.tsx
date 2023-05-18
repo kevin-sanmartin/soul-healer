@@ -30,8 +30,8 @@ export default class FirstSection extends Component<IProps, IState> {
           </Text>
 
           <Text tag={ETextTag.P} className={classes["description"]}>
-            Si vous cherchez une complémentarité a la médecine traditionnelle, sachez que vous pouvez prendre votre
-            santé en main et vous soigner vous-même.
+            Je m&apos;appelle Nadia Richard, l&apos;âme guérisseuse, si vous cherchez une complémentarité a la médecine
+            traditionnelle, sachez que vous pouvez prendre votre santé en main et vous soigner vous-même.
           </Text>
 
           <ContactButton size={EButtonSize.LARGE} />
