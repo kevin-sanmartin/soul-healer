@@ -32,8 +32,8 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Je suis Nadia, l’Äme Guerrisseuse, j’habite grasse (06), maman de deux grandes filles, avec mon mari
-                nous avons ce même point commun d’aimer communiquer avec les autres.
+                Je suis Nadia, l&apos;Äme Guerrisseuse, j&apos;habite grasse (06), maman de deux grandes filles, avec
+                mon mari nous avons ce même point commun d&apos;aimer communiquer avec les autres.
               </Text>
             </div>
 
@@ -53,11 +53,11 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J’ai eu : Des périodes de grosses souffrances ou il me suffisait d’aller dans la nature pour évacuer le
-                trop plein. Je disais souvent à ma mère « j’en ai marre de tout » sans l‘expliquer.je sais pourquoi
-                aujourd’hui… J’ai eu des flashs souvent négatifs mais qui m’annonçaient le futur, donc un jour j’ai dit
-                stop et ça s’est arrêté. Par la suite, j’ai réalisé que c’était une bénédiction de savoir à l’avance ce
-                qui allait se passer.
+                J&apos;ai eu : Des périodes de grosses souffrances ou il me suffisait d&apos;aller dans la nature pour
+                évacuer le trop plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans
+                l&apos;expliquer.je sais pourquoi aujourd&apos;hui… J&apos;ai eu des flashs souvent négatifs mais qui
+                m&apos;annonçaient le futur, donc un jour j&apos;ai dit stop et ça s&apos;est arrêté. Par la suite,
+                j&apos;ai réalisé que c&apos;était une bénédiction de savoir à l&apos;avance ce qui allait se passer.
               </Text>
             </div>
 
@@ -69,38 +69,38 @@ export default class AboutMe extends Component<IProps, IState> {
           <div className={classes["container"]}>
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J’ai été assistante maternelle pendant 8 ans, j’ai adoré mon métier, le contact avec les enfants, tout
-                ce qu’ils nous apprennent, leur façon naturelle et authentique d’être et de ressentir, mais après un
-                atelier énergétique tout a basculé.
+                J&apos;ai été assistante maternelle pendant 8 ans, j&apos;ai adoré mon métier, le contact avec les
+                enfants, tout ce qu&apos;ils nous apprennent, leur façon naturelle et authentique d&apos;être et de
+                ressentir, mais après un atelier énergétique tout a basculé.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J’ai réalisé que ce métier n’était plus pour moi, j’avais besoin de donner une autre forme de service et
-                j’ai laissé faire la vie, l’univers me guider.
+                J&apos;ai réalisé que ce métier n&apos;était plus pour moi, j&apos;avais besoin de donner une autre
+                forme de service et j&apos;ai laissé faire la vie, l&apos;univers me guider.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J’ai donc fait une formation de l’âme et du cœur, qui m’a mis sur la voix : « de prendre conscience que
-                nous avons tous beaucoup de possibilités en nous », à être qui je suis, puis mes mains ont commencé à
-                chauffer et vibrer. Tout s’est enchainé…
+                J&apos;ai donc fait une formation de l&apos;âme et du cœur, qui m&apos;a mis sur la voix : « de prendre
+                conscience que nous avons tous beaucoup de possibilités en nous », à être qui je suis, puis mes mains
+                ont commencé à chauffer et vibrer. Tout s&apos;est enchainé…
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Actuellement en formation dans une école de guérisseuse, j’apprends mais je sais qu’on apprend tout au
-                long de notre vie. J’arrête de vouloir être parfaite, de rentrer dans une case, et je lâche prise, tout
-                arrive quand c’est le bon moment.
+                Actuellement en formation dans une école de guérisseuse, j&apos;apprends mais je sais qu&apos;on apprend
+                tout au long de notre vie. J&apos;arrête de vouloir être parfaite, de rentrer dans une case, et je lâche
+                prise, tout arrive quand c&apos;est le bon moment.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J’ai donc décidé de mettre mes techniques de guérison naturelles au profit du bien-être commun.
-                J’observe, je me laisse guider et je suis comme une enfant remplie de joie à chaque fois que je fais un
-                soin et que cela fonctionne, aucun ne se ressemble. Je suis tellement reconnaissante de pouvoir vivre
-                cela. NAMASTE.
+                J&apos;ai donc décidé de mettre mes techniques de guérison naturelles au profit du bien-être commun.
+                J&apos;observe, je me laisse guider et je suis comme une enfant remplie de joie à chaque fois que je
+                fais un soin et que cela fonctionne, aucun ne se ressemble. Je suis tellement reconnaissante de pouvoir
+                vivre cela. NAMASTE.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Alors qu’en dites-vous ? Envie de communiquer et d’apprendre à se guérir soi -même ? Envie de
-                m’autoriser à vous soigner ? Envie de se rencontrer ?
+                Alors qu&apos;en dites-vous ? Envie de communiquer et d&apos;apprendre à se guérir soi -même ? Envie de
+                m&apos;autoriser à vous soigner ? Envie de se rencontrer ?
               </Text>
             </div>
 
