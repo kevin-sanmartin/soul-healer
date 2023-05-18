@@ -29,7 +29,7 @@ export default class ContactButton extends Component<IProps, IState> {
     if (!this.state.rootElement) return null;
     return (
       <PopupButton
-        url="https://calendly.com/kevinsanmartin/decouverte"
+        url="https://calendly.com/ame-guerrisseuse/premier-contact"
         rootElement={this.state.rootElement}
         styles={{ fontFamily: xiaoWei.style.fontFamily }}
         className={classNames(classes["root"], classes[this.props.size])}
