@@ -42,7 +42,7 @@ export default class AboutMe extends Component<IProps, IState> {
 
   override render() {
     return (
-      <section className={classes["root"]} id={EWebsiteLinks.ABOUT}>
+      <section className={classes["root"]}>
         <div className={classes["section-content"]}>
           <Observer
             onVisibilityChange={this.handleFirstBlockVisibilityChange}

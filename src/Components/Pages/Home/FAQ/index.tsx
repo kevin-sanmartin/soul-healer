@@ -14,6 +14,9 @@ import { FaHandSparkles } from "react-icons/fa";
 import { MdFamilyRestroom, MdSocialDistance, MdHome } from "react-icons/md";
 import { BsPersonFill } from "react-icons/bs";
 
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
+
 // Styles
 import classes from "./classes.module.scss";
 
@@ -39,7 +42,7 @@ export default class FAQ extends Component<IProps, IState> {
         <Dropdown title="Soin à distance" icon={MdSocialDistance}>
           <RemoteHealing />
         </Dropdown>
-        <Dropdown title="Faisons connaissance" icon={BsPersonFill}>
+        <Dropdown title="Faisons connaissance" icon={BsPersonFill} id={EWebsiteLinks.ABOUT}>
           <AboutMe />
         </Dropdown>
       </section>

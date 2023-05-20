@@ -16,6 +16,7 @@ import { IoIosArrowDown as ArrowIcon } from "react-icons/io";
 import classes from "./classes.module.scss";
 
 type IProps = {
+  id?: string;
   title: string;
   icon?: IconType;
   className?: string;
@@ -45,7 +46,7 @@ export default class Dropdown extends Component<IProps, IState> {
   public render() {
     const Icon = this.props.icon;
     return (
-      <div ref={this.dropdownRef} className={classes["root"]}>
+      <div ref={this.dropdownRef} className={classes["root"]} id={this.props.id}>
         <button
           type="button"
           className={classNames(classes["collapsible"], this.props.className, { [classes["open"]]: this.state.isOpen })}
