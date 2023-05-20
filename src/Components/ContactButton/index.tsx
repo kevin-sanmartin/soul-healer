@@ -34,7 +34,7 @@ export default class ContactButton extends Component<IProps, IState> {
         rootElement={this.state.rootElement}
         styles={{ fontFamily: xiaoWei.style.fontFamily }}
         className={classNames(classes["root"], classes[this.props.size])}
-        text={this.props.text}
+        text={this.props.text.toUpperCase()}
       />
     );
   }
