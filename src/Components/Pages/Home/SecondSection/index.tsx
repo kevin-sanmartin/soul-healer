@@ -80,8 +80,7 @@ export default class SecondSection extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              J&apos;expérimente la cocréation angélique, et j&apos;observe tout simplement ce qui se passe pour moi,
-              dans ma vie et chez les personnes que je soigne.
+              J&apos;observe tout simplement ce qui se passe pour moi, dans ma vie et chez les personnes que je soigne.
             </Text>
           </div>
         </Observer>

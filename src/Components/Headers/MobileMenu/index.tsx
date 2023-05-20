@@ -51,6 +51,8 @@ export default class MobileMenu extends Component<IProps, IState> {
               className={classes["link"]}
             />
 
+            <CustomLink text={EWebsiteLinksNames.ABOUT} to={EWebsiteLinks.ABOUT} className={classes["link"]} />
+
             <CustomLink text={EWebsiteLinksNames.FAQ} to={EWebsiteLinks.FAQ} className={classes["link"]} />
 
             <ContactButton size={EButtonSize.MEDIUM} />

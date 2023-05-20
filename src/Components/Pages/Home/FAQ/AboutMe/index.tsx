@@ -18,6 +18,7 @@ import Outside2 from "/public/images/portraits/portrait-professionnel-032-min.jp
 
 // Styles
 import classes from "./classes.module.scss";
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 type IProps = {};
 type IState = {
@@ -41,7 +42,7 @@ export default class AboutMe extends Component<IProps, IState> {
 
   override render() {
     return (
-      <section className={classes["root"]}>
+      <section className={classes["root"]} id={EWebsiteLinks.ABOUT}>
         <div className={classes["section-content"]}>
           <Observer
             onVisibilityChange={this.handleFirstBlockVisibilityChange}
