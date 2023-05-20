@@ -50,7 +50,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Il suffit de me contacter par mail et me donner vos disponibilités afin que je puisse organiser notre
+              Il suffit de me contacter par mail et de me donner vos disponibilités afin que je puisse organiser notre
               rendez-vous téléphonique dans un premier temps pour faire connaissance et convenir d&apos;une date ensuite
               pour le soin à distance et du paiement.
             </Text>
@@ -90,8 +90,8 @@ export default class RemoteHealing extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin.Je vous demanderai le lendemain,
-              de m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? sur une échelle de 1
+              Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin. Je vous demanderai le lendemain,
+              de m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? Sur une échelle de 1
               à 10 où se situe « votre douleur », votre état et donc voir s&apos;il est nécessaire de reprendre
               rendez-vous pour un deuxième soin.
             </Text>

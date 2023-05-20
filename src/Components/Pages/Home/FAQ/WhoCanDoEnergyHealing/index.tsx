@@ -43,7 +43,7 @@ export default class WhoCanDoEnergyHealing extends Component<IProps, IState> {
       >
         <Text tag={ETextTag.P} className={classes["text"]}>
           Absolument tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l&apos;âge
-          ou la situation. bébés, enfants et adultes.
+          ou la situation. Bébés, enfants et adultes.
         </Text>
 
         <Text tag={ETextTag.P} className={classes["text"]}>

@@ -63,7 +63,7 @@ export default class HomeHealing extends Component<IProps, IState> {
             <Text tag={ETextTag.P} className={classes["text"]}>
               Ensuite, vous passerez au soin proprement dit. Confortablement allongé sur la table de massage, je vous
               inviterai à la détente, en vous indiquant par exemple d&apos;adopter une respiration profonde de fixer
-              votre attention soit sur la musique ou votre respiration, et je surtout vous encouragerai à accueillir vos
+              votre attention soit sur la musique ou votre respiration, et surtout je vous encouragerai à accueillir vos
               pensées telles qu&apos;elles vous viennent à l&apos;esprit, sans aucune interruption avec une musique
               douce propice à la détente.
             </Text>
@@ -86,8 +86,8 @@ export default class HomeHealing extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin.Je vous demanderai le lendemain,
-              de m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? sur une échelle de 1
+              Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin. Je vous demanderai le lendemain,
+              de m&apos;expliquer précisément vos ressentis, comment s&apos;est passé votre nuit ? Sur une échelle de 1
               à 10 où se situe « votre douleur », votre état et donc voir s&apos;il est nécessaire de reprendre
               rendez-vous pour un deuxième soin.
             </Text>

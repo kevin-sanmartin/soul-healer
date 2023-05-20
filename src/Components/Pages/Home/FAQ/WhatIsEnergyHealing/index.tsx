@@ -52,7 +52,7 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
         >
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Nous possédons tous en nous les clés de notre bien être intérieur, il suffit d&apos;être à l&apos;écoute
+              Nous possédons tous en nous les clés de notre bien-être intérieur, il suffit d&apos;être à l&apos;écoute
               de notre corps par nos ressentis.
             </Text>
 
@@ -67,7 +67,7 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Restaurer le lien que nous avons tous est donc primordial ! Dans certains cas nous pourrons y parvenir
+              Restaurer le lien que nous avons tous est donc primordial ! Dans certains cas, nous pourrons y parvenir
               seul, mais parfois une aide extérieure sera nécessaire.
             </Text>
           </div>
@@ -108,7 +108,7 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
               </li>
               <li>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  4 - Chakra du coeur (Anahata) capacité à donner et recevoir de l&apos;amour. Centre de la joie et de
+                  4 - Chakra du coeur (Anahata) capacité à donner et à recevoir de l&apos;amour. Centre de la joie et de
                   la paix intérieure.
                 </Text>
               </li>
@@ -165,7 +165,7 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
               Chaque soin est unique et différent à chaque fois et pour chacun, en fonction de ce que je reçois pour
               vous dans l&apos;instant présent. Pour vous apporter la paix, l&apos;énergie, la régénération, et la
               libération de tout ce qui vous pèse, au niveau de votre corps, de votre cœur et de votre âme. Il se peut
-              qu&apos;il y est besoin de plusieurs soins selon «la problématique».
+              qu&apos;il y ait besoin de plusieurs soins selon «la problématique».
             </Text>
           </div>
 

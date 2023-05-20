@@ -79,15 +79,15 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Adolescente, je me sentais toujours différentes, pas à ma place, en retrait, pas comprise.
+                Adolescente, je me sentais toujours différente, pas à ma place, en retrait, pas comprise.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J&apos;ai eu : Des périodes de grosses souffrances ou il me suffisait d&apos;aller dans la nature pour
-                évacuer le trop plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans
-                l&apos;expliquer.je sais pourquoi aujourd&apos;hui… J&apos;ai eu des flashs souvent négatifs mais qui
-                m&apos;annonçaient le futur, donc un jour j&apos;ai dit stop et ça s&apos;est arrêté. Par la suite,
-                j&apos;ai réalisé que c&apos;était une bénédiction de savoir à l&apos;avance ce qui allait se passer.
+                J&apos;ai eu : Des périodes de grosses souffrances où il me suffisait d&apos;aller dans la nature pour
+                évacuer le trop-plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans l&apos;expliquer.
+                Je sais pourquoi aujourd&apos;hui… J&apos;ai eu des flashs souvent négatifs, mais qui m&apos;annonçaient
+                le futur, donc un jour j&apos;ai dit stop et ça s&apos;est arrêté. Par la suite, j&apos;ai réalisé que
+                c&apos;était une bénédiction de savoir à l&apos;avance ce qui allait se passer.
               </Text>
             </div>
 
@@ -118,7 +118,7 @@ export default class AboutMe extends Component<IProps, IState> {
               <Text tag={ETextTag.P} className={classes["text"]}>
                 J&apos;ai donc fait une formation de l&apos;âme et du cœur, qui m&apos;a mis sur la voix : « de prendre
                 conscience que nous avons tous beaucoup de possibilités en nous », à être qui je suis, puis mes mains
-                ont commencé à chauffer et vibrer. Tout s&apos;est enchainé…
+                ont commencé à chauffer et vibrer. Tout s&apos;est enchaîné…
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
@@ -135,7 +135,7 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Alors qu&apos;en dites-vous ? Envie de communiquer et d&apos;apprendre à se guérir soi -même ? Envie de
+                Alors qu&apos;en dites-vous ? Envie de communiquer et d&apos;apprendre à se guérir soi-même ? Envie de
                 m&apos;autoriser à vous soigner ? Envie de se rencontrer ?
               </Text>
             </div>

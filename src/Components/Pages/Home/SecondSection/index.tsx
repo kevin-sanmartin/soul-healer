@@ -75,7 +75,7 @@ export default class SecondSection extends Component<IProps, IState> {
             <Text tag={ETextTag.P} className={classes["description"]}>
               Soulager les personnes par mes soins énergétiques est source de bien-être pour moi, mais également pour
               elles. Je suis comme une enfant qui découvre l&apos;immense possibilité que j&apos;ai, à chaque soin qui
-              ne se ressemble pas. Mes capacités se développent au fil du temps (ma clair voyance, ma clair audience, ma
+              ne se ressemble pas. Mes capacités se développent au fil du temps (ma clairvoyance, ma clairaudience, mon
               clair ressenti), j&apos;évolue et tout est juste, tout arrive quand ça doit arriver.
             </Text>
 
