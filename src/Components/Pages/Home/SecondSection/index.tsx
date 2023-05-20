@@ -56,7 +56,7 @@ export default class SecondSection extends Component<IProps, IState> {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
           >
-            <Tag color={ETagColor.BLANCHED_ALMOND}>
+            <Tag color={ETagColor.CRAYOLA}>
               <Text tag={ETextTag.SPAN} font="xiaoWei" className={classes["tag"]}>
                 Bienvenue
               </Text>
