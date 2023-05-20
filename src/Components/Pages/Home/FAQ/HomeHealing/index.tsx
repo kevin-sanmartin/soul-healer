@@ -102,7 +102,7 @@ export default class HomeHealing extends Component<IProps, IState> {
           </div>
         </div>
 
-        <ContactButton size={EButtonSize.MEDIUM} />
+        <ContactButton size={EButtonSize.MEDIUM} text="Explorez les bienfaits d'un soin intuitif. Prêt à essayer ?" />
       </Observer>
     );
   }

@@ -144,7 +144,7 @@ export default class AboutMe extends Component<IProps, IState> {
             </div>
           </Observer>
 
-          <ContactButton size={EButtonSize.MEDIUM} />
+          <ContactButton size={EButtonSize.MEDIUM} text="Travaillons ensemble pour une harmonie de vos énergies" />
         </div>
       </section>
     );

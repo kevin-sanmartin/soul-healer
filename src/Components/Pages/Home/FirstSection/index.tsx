@@ -34,7 +34,7 @@ export default class FirstSection extends Component<IProps, IState> {
             traditionnelle, sachez que vous pouvez prendre votre santé en main et vous soigner vous-même.
           </Text>
 
-          <ContactButton size={EButtonSize.LARGE} />
+          <ContactButton size={EButtonSize.LARGE} text="Contactez-moi" />
         </div>
       </section>
     );

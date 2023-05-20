@@ -98,7 +98,7 @@ export default class ThirdSection extends Component<IProps, IState> {
             </Observer>
           </div>
 
-          <ContactButton size={EButtonSize.MEDIUM} />
+          <ContactButton size={EButtonSize.MEDIUM} text="Explorez votre potentiel de guérison. Contactez-moi." />
         </div>
       </section>
     );

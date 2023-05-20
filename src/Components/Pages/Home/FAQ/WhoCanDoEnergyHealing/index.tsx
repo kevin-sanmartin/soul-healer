@@ -57,7 +57,7 @@ export default class WhoCanDoEnergyHealing extends Component<IProps, IState> {
           Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
         </Text>
 
-        <ContactButton size={EButtonSize.MEDIUM} />
+        <ContactButton size={EButtonSize.MEDIUM} text="Besoin d'une aide énergétique ? Contactez-moi" />
       </Observer>
     );
   }

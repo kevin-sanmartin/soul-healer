@@ -11,6 +11,7 @@ import { ZCOOL_XiaoWei } from "@next/font/google";
 const xiaoWei = ZCOOL_XiaoWei({ weight: ["400"], subsets: ["latin"], display: "swap" });
 
 type IProps = {
+  text: string;
   size: EButtonSize;
 };
 type IState = {
@@ -33,7 +34,7 @@ export default class ContactButton extends Component<IProps, IState> {
         rootElement={this.state.rootElement}
         styles={{ fontFamily: xiaoWei.style.fontFamily }}
         className={classNames(classes["root"], classes[this.props.size])}
-        text="CONTACTEZ-MOI"
+        text={this.props.text}
       />
     );
   }

@@ -46,7 +46,7 @@ export default class DesktopHeader extends Component<IProps, IState> {
             <CustomLink to={EWebsiteLinks.HEALING_BENEFITS} text={EWebsiteLinksNames.HEALING_BENEFITS} />
             <CustomLink to={EWebsiteLinks.ABOUT} text={EWebsiteLinksNames.ABOUT} />
             <CustomLink to={EWebsiteLinks.FAQ} text={EWebsiteLinksNames.FAQ} />
-            <ContactButton size={EButtonSize.MEDIUM} />
+            <ContactButton size={EButtonSize.MEDIUM} text="Alors, convaincus ?" />
           </div>
         </div>
       </header>

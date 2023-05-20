@@ -106,7 +106,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
           </div>
         </div>
 
-        <ContactButton size={EButtonSize.MEDIUM} />
+        <ContactButton size={EButtonSize.MEDIUM} text="Soin intuitif, énergie régénératrice. Essayez ?" />
       </Observer>
     );
   }

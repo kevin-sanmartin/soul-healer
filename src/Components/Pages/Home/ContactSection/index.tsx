@@ -80,7 +80,7 @@ export default class ContactSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          <ContactButton size={EButtonSize.MEDIUM} />
+          <ContactButton size={EButtonSize.MEDIUM} text="Contactez-moi" />
         </div>
       </section>
     );
