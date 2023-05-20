@@ -6,6 +6,8 @@
   flex-direction: column;
   gap: 32px;
   padding: 18px;
+  background-color: $tmp;
+  background-image: url("/images/background.png");
 
   .container {
     display: flex;

@@ -19,6 +19,9 @@
     border-radius: 10px;
     background-image: url("/images/background.png");
 
+    background-color: $tmp;
+    background-image: url("/images/background.png");
+
     .container {
       display: flex;
       align-items: center;
