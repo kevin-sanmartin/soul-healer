@@ -20,6 +20,7 @@ export const Fonts = {
 type IProps = {
   tag: ETextTag;
   font: "roboto" | "xiaoWei" | "cabin";
+  onClick?: () => void;
   className?: string;
   children?: React.ReactNode;
 };
@@ -33,7 +34,10 @@ export default class Text extends Component<IProps, IState> {
   public render() {
     const CustomTag = this.props.tag;
     return (
-      <CustomTag className={classNames(classes["root"], Fonts[this.props.font].className, this.props.className)}>
+      <CustomTag
+        className={classNames(classes["root"], Fonts[this.props.font].className, this.props.className)}
+        onClick={this.props.onClick}
+      >
         {this.props.children}
       </CustomTag>
     );
