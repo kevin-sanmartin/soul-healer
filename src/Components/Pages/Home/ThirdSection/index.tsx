@@ -106,7 +106,6 @@ export default class ThirdSection extends Component<IProps, IState> {
 
   private handleVisibilityChange(isVisible: boolean) {
     if (this.state.isListItemContainerVisible === isVisible) return;
-    console.log("isVisible", isVisible);
     this.setState({ isListItemContainerVisible: isVisible });
   }
 }
