@@ -83,8 +83,8 @@ export default class LegalNotice extends Component<IProps, IState> {
             Activité:
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Nadia Richard, dite "L&apos;Âme Guérisseuse" propose des services de soins énergétiques et de guérison, dans
-            le but d&apos;améliorer le bien-être et l&apos;équilibre énergétique des individus.
+            Nadia Richard propose des services de soins énergétiques et de guérison, dans le but d&apos;améliorer le
+            bien-être et l&apos;équilibre énergétique des individus.
           </Text>
         </div>
 
