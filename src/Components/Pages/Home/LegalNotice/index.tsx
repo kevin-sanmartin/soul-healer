@@ -1,9 +1,13 @@
 import { Component, Fragment } from "react";
 
+// Components
+import Text from "@/src/Components/Text";
+
+// Entities
+import { ETextTag } from "@/src/Entities/Text";
+
 // Styles
 import classes from "./classes.module.scss";
-import Text from "@/src/Components/Text";
-import { ETextTag } from "@/src/Entities/Text";
 
 type IProps = {};
 type IState = {
@@ -52,7 +56,7 @@ export default class LegalNotice extends Component<IProps, IState> {
             Informations générales:
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Le présent site est exploité par Nadia Richard en tant qu'entreprise individuelle.
+            Le présent site est exploité par Nadia Richard en tant qu&apos;entreprise individuelle.
           </Text>
         </div>
 
@@ -79,8 +83,8 @@ export default class LegalNotice extends Component<IProps, IState> {
             Activité:
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Nadia Richard, dite "L'Âme Guérisseuse" propose des services de soins énergétiques et de guérison, dans le
-            but d'améliorer le bien-être et l'équilibre énergétique des individus.
+            Nadia Richard, dite "L&apos;Âme Guérisseuse" propose des services de soins énergétiques et de guérison, dans
+            le but d&apos;améliorer le bien-être et l&apos;équilibre énergétique des individus.
           </Text>
         </div>
 
@@ -89,11 +93,11 @@ export default class LegalNotice extends Component<IProps, IState> {
             Responsabilité:
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Nadia Richard, en tant que propriétaire et exploitante du site, s'efforce de fournir des informations
-            précises et de qualité. Cependant, elle ne peut être tenue responsable de l'exactitude, de l'exhaustivité ou
-            de la pertinence des informations fournies sur le site. Les utilisateurs sont invités à consulter un
-            professionnel de la santé qualifié avant de prendre des décisions basées sur les informations disponibles
-            sur le site.
+            Nadia Richard, en tant que propriétaire et exploitante du site, s&apos;efforce de fournir des informations
+            précises et de qualité. Cependant, elle ne peut être tenue responsable de l&apos;exactitude, de
+            l&apos;exhaustivité ou de la pertinence des informations fournies sur le site. Les utilisateurs sont invités
+            à consulter un professionnel de la santé qualifié avant de prendre des décisions basées sur les informations
+            disponibles sur le site.
           </Text>
         </div>
 
@@ -113,8 +117,8 @@ export default class LegalNotice extends Component<IProps, IState> {
             Protection des données personnelles:
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Nadia Richard s'engage à respecter la confidentialité des données personnelles des utilisateurs du site. Les
-            informations fournies par les utilisateurs via les formulaires de contact ou tout autre moyen de
+            Nadia Richard s&apos;engage à respecter la confidentialité des données personnelles des utilisateurs du
+            site. Les informations fournies par les utilisateurs via les formulaires de contact ou tout autre moyen de
             communication ne seront utilisées que dans le but de répondre aux demandes et de fournir les services
             demandés. Les données personnelles ne seront pas partagées avec des tiers sans consentement préalable.
           </Text>
@@ -126,7 +130,7 @@ export default class LegalNotice extends Component<IProps, IState> {
           </Text>
           <Text tag={ETextTag.P} className={classes["text"]}>
             Le présent site peut contenir des liens vers des sites tiers. Ces liens sont fournis uniquement à titre
-            informatif et Nadia Richard n'assume aucune responsabilité quant au contenu de ces sites externes.
+            informatif et Nadia Richard n&apos;assume aucune responsabilité quant au contenu de ces sites externes.
           </Text>
         </div>
 
