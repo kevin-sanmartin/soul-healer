@@ -19,6 +19,11 @@
     justify-content: space-between;
     height: 100%;
 
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+
     .links-container {
       display: flex;
       justify-content: center;

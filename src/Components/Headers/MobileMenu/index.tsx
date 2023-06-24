@@ -14,6 +14,7 @@ import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 
 // Styles
 import classes from "./classes.module.scss";
+import Logo from "../../Logo";
 
 type IProps = {};
 type IState = {
@@ -56,6 +57,8 @@ export default class MobileMenu extends Component<IProps, IState> {
             <CustomLink text={EWebsiteLinksNames.FAQ} to={EWebsiteLinks.FAQ} className={classes["link"]} />
 
             <ContactButton size={EButtonSize.MEDIUM} text="Alors, convaincus ?" />
+
+            <Logo className={classes["logo"]} transparent />
           </div>
         </div>
       </div>

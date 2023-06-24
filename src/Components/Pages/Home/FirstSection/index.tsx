@@ -23,7 +23,7 @@ export default class FirstSection extends Component<IProps, IState> {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
         <div className={classes["container"]}>
-          <Logo />
+          <Logo className={classes["logo"]} />
 
           <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title"]}>
             Vous avez le pouvoir de vous soigner vous même.

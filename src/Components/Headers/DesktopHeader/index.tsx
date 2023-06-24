@@ -22,7 +22,7 @@ export default class DesktopHeader extends Component<IProps, IState> {
     return (
       <header className={classes["root"]}>
         <div className={classes["content"]}>
-          <Logo />
+          <Logo transparent className={classes["logo"]} />
 
           <div className={classes["links-container"]}>
             <CustomLink to={EWebsiteLinks.WELCOME} text={EWebsiteLinksNames.WELCOME} />
