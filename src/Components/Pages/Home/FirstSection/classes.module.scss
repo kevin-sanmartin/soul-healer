@@ -36,11 +36,8 @@
       border-radius: 5px;
 
       @media screen and (max-width: $large) {
-        position: relative;
-        top: 0;
-        right: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 10px;
+        left: 10px;
         width: 120px;
         height: 120px;
       }
