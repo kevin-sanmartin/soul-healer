@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { Component } from "react";
 
 // Components
@@ -16,28 +15,12 @@ import { EWebsiteLinks, EWebsiteLinksNames } from "@/src/Config/WebsiteLinks";
 import classes from "./classes.module.scss";
 
 type IProps = {};
-type IState = {
-  isAtTop: boolean;
-};
+type IState = {};
 
 export default class DesktopHeader extends Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-
-    this.state = {
-      isAtTop: true,
-    };
-
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
   public render() {
     return (
-      <header
-        className={classNames(classes["root"], {
-          [classes["scrolled"]]: !this.state.isAtTop,
-        })}
-      >
+      <header className={classes["root"]}>
         <div className={classes["content"]}>
           <Logo />
 
@@ -51,24 +34,5 @@ export default class DesktopHeader extends Component<IProps, IState> {
         </div>
       </header>
     );
-  }
-
-  public componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-    this.handleScroll();
-  }
-
-  public componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  private handleScroll() {
-    if (typeof window === "undefined") return;
-
-    const isAtTop = window.scrollY === 0;
-
-    if (isAtTop !== this.state.isAtTop) {
-      this.setState({ isAtTop });
-    }
   }
 }
