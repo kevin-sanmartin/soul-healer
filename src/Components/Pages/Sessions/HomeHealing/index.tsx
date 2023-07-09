@@ -47,6 +47,10 @@ export default class HomeHealing extends Component<IProps, IState> {
         </div>
 
         <div className={classes["container"]}>
+          <Text tag={ETextTag.P} className={classes["title"]}>
+            Séance à domicile
+          </Text>
+
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Les soins énergétiques intuitifs se pratiquent, en individuel, par impositions des mains, en étant

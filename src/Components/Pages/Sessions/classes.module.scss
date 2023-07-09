@@ -3,11 +3,32 @@
 
 .root {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 24px;
 
-  @media screen and (max-width: $large) {
-    flex-direction: column;
-    align-items: center;
+  .title {
+    font-size: 38px;
+    font-weight: bold;
+    color: $Black;
+
+    @media screen and (max-width: $large) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: $small) {
+      font-size: 28px;
+    }
+  }
+
+  .sessions-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    @media screen and (max-width: $large) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

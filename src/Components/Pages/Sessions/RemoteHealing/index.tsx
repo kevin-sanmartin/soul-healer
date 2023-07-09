@@ -47,6 +47,10 @@ export default class RemoteHealing extends Component<IProps, IState> {
         </div>
 
         <div className={classes["container"]}>
+          <Text tag={ETextTag.P} className={classes["title"]}>
+            Séance à distance
+          </Text>
+
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Les soins énergétiques intuitifs à distance se font uniquement sur réservation. Ils sont disponibles le
