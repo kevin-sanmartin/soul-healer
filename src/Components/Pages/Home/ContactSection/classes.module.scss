@@ -1,4 +1,4 @@
-@import "/styles/colors.scss";
+@import "/styles/constantes.scss";
 @import "/styles/breakpoints.scss";
 
 .root {
@@ -6,10 +6,10 @@
   max-width: calc(1400px - 80px); // 80px = 40px * 2 (padding)
   width: calc(100% - 80px); // 80px = 40px * 2 (padding)
   margin: 20px auto;
-  background-color: $tmp;
+  background-color: $mainColor;
   background-image: url("/images/background.png");
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: $medium) {
     flex-direction: column;

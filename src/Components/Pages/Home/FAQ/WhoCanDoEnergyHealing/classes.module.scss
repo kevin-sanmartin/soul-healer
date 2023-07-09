@@ -1,4 +1,4 @@
-@import "/styles/colors.scss";
+@import "/styles/constantes.scss";
 @import "/styles/breakpoints.scss";
 
 .root {
@@ -10,7 +10,7 @@
   transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
   padding: 18px;
 
-  background-color: $tmp;
+  background-color: $mainColor;
   background-image: url("/images/background.png");
 
   &.is-visible {

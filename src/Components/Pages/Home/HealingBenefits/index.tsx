@@ -30,7 +30,7 @@ type IState = {
   isListItemContainerVisible: boolean;
 };
 
-export default class ThirdSection extends Component<IProps, IState> {
+export default class HealingBenefits extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 
@@ -45,8 +45,6 @@ export default class ThirdSection extends Component<IProps, IState> {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["healing-presentation-container"]}>
-          <Image src={HealingSeance} className={classes["image"]} fill alt="" />
-
           <Text tag={ETextTag.H2} font="xiaoWei" className={classes["title"]}>
             Les soins énergétiques peuvent soigner :
           </Text>
@@ -98,7 +96,7 @@ export default class ThirdSection extends Component<IProps, IState> {
             </Observer>
           </div>
 
-          <ContactButton size={EButtonSize.MEDIUM} text="Explorez votre potentiel de guérison. Contactez-moi." />
+          <ContactButton size={EButtonSize.MEDIUM} text="Contactez moi pour explorer votre potentiel de guérison." />
         </div>
       </section>
     );

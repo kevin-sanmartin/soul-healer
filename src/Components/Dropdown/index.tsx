@@ -19,6 +19,7 @@ type IProps = {
   id?: string;
   title: string;
   icon?: IconType;
+  defaultOpen: boolean;
   className?: string;
   children?: React.ReactNode;
 };
@@ -31,10 +32,14 @@ export default class Dropdown extends Component<IProps, IState> {
   private contentRef = React.createRef<HTMLDivElement>();
   private dropdownRef = React.createRef<HTMLDivElement>();
 
+  static defaultProps = {
+    defaultOpen: false,
+  };
+
   constructor(props: IProps) {
     super(props);
     this.state = {
-      isOpen: true,
+      isOpen: props.defaultOpen,
       scrollHeight: 0,
     };
 

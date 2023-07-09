@@ -42,6 +42,10 @@ export default class RemoteHealing extends Component<IProps, IState> {
           [classes["is-visible"]]: this.state.isContainerVisible,
         })}
       >
+        <div className={classes["image-container"]}>
+          <Image src={HandOutside} className={classes["image"]} alt="" />
+        </div>
+
         <div className={classes["container"]}>
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
@@ -67,15 +71,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
               choisissant un lieu prédisposé pour cela. Que vous optiez pour la position assise dans un fauteuil ou
               allongée sur un lit, cela ne changera pas tant que vous êtes ouvert au soin.
             </Text>
-          </div>
 
-          <div className={classes["image-container"]}>
-            <Image src={HandOutside} className={classes["image"]} fill alt="" />
-          </div>
-        </div>
-
-        <div className={classNames(classes["container"], classes["inversed-flex"])}>
-          <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
               Comme en présentiel, je vous demanderai de prendre de profondes inspirations et expirations comme lors
               d&apos;une méditation afin de faire le vide, une musique pour vous accompagner serait l&apos;idéal, pour
@@ -95,18 +91,14 @@ export default class RemoteHealing extends Component<IProps, IState> {
               à 10 où se situe « votre douleur », votre état et donc voir s&apos;il est nécessaire de reprendre
               rendez-vous pour un deuxième soin.
             </Text>
-
-            <Text tag={ETextTag.P} className={classes["price"]}>
-              Prix de la séance : 50€
-            </Text>
           </div>
 
-          <div className={classes["image-container"]}>
-            <Image src={IllustrationImage} className={classes["image"]} fill alt="" />
-          </div>
+          <Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
+            <span className={classes["bold"]}>50€</span> par séance
+          </Text>
+
+          <ContactButton size={EButtonSize.MEDIUM} text="Soin intuitif, énergie régénératrice. Essayez ?" />
         </div>
-
-        <ContactButton size={EButtonSize.MEDIUM} text="Soin intuitif, énergie régénératrice. Essayez ?" />
       </Observer>
     );
   }

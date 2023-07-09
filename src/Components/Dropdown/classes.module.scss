@@ -1,11 +1,11 @@
-@import "styles/colors";
+@import "styles/constantes.scss";
 @import "/styles/breakpoints.scss";
 
 .root {
   background-color: $White;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   background-image: url("/images/background.png");
-  background-color: $tmp;
+  background-color: $mainColor;
 
   border-radius: 10px;
 

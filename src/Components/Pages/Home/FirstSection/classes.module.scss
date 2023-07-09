@@ -1,4 +1,4 @@
-@import "/styles/colors.scss";
+@import "/styles/constantes.scss";
 @import "/styles/breakpoints.scss";
 
 .root {
@@ -47,6 +47,7 @@
       max-width: 600px;
       font-size: 38px;
       font-weight: 800;
+      text-shadow: 2px 2px 0px $Black;
       color: $Crayola;
 
       @media screen and (min-width: $small) {

@@ -1,4 +1,4 @@
-@import "/styles/colors.scss";
+@import "/styles/constantes.scss";
 @import "/styles/breakpoints.scss";
 
 .root {
@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 32px;
   padding: 18px;
-  background-color: $tmp;
+  background-color: $mainColor;
   background-image: url("/images/background.png");
 
   .container {
