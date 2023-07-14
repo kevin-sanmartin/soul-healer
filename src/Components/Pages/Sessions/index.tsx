@@ -26,7 +26,7 @@ export default class Sessions extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      isLessThanLargeViewport: this.isLessThanLargeViewport(),
+      isLessThanLargeViewport: false,
       isHomeHealingVisible: true,
       isRemoteHealingVisible: false,
     };
@@ -105,11 +105,13 @@ export default class Sessions extends Component<IProps, IState> {
 
   private handleResize() {
     if (this.isLessThanLargeViewport() === this.state.isLessThanLargeViewport) return;
-    this.setState({ isLessThanLargeViewport: this.isLessThanLargeViewport() });
+    const isLessThanLargeViewport = this.isLessThanLargeViewport();
+    if (!isLessThanLargeViewport) return;
+    this.setState({ isLessThanLargeViewport });
   }
 
-  private isLessThanLargeViewport(): boolean {
-    if (typeof window === "undefined") return false;
+  private isLessThanLargeViewport(): boolean | void {
+    if (typeof window === "undefined") return;
     return window.innerWidth < EBreakpoints.LARGE;
   }
 }
