@@ -122,7 +122,7 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Actuellement en formation dans une école de guérisseuse, j&apos;apprends mais je sais qu&apos;on apprend
+                J'ai terminé ma formation dans une école de guérisseuse, j&apos;apprends mais je sais qu&apos;on apprend
                 tout au long de notre vie. J&apos;arrête de vouloir être parfaite, de rentrer dans une case, et je lâche
                 prise, tout arrive quand c&apos;est le bon moment.
               </Text>
