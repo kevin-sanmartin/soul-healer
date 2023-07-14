@@ -14,6 +14,7 @@ import classes from "./classes.module.scss";
 import FAQ from "./FAQ";
 import ContactSection from "./ContactSection";
 import Sessions from "../Sessions";
+import Reviews from "./Reviews";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
       <HealingBenefits id={EWebsiteLinks.HEALING_BENEFITS} className={classes["section"]} />
       <div className={classes["parralax"]} />
       <Sessions className={classes["section"]} />
+      <Reviews className={classes["section"]} />
       <FAQ id={EWebsiteLinks.FAQ} className={classes["section"]} />
       <ContactSection id={EWebsiteLinks.CONTACT} />
     </Layout>
