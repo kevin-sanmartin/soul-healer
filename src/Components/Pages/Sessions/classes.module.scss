@@ -21,6 +21,22 @@
     }
   }
 
+  .sessions-selector {
+    display: flex;
+    gap: 12px;
+
+    .selector {
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .selected {
+      background-color: $Crayola;
+      color: $White;
+    }
+  }
+
   .sessions-container {
     display: flex;
     justify-content: center;
