@@ -96,6 +96,14 @@ export default class Sessions extends Component<IProps, IState> {
   }
 
   private handleComponentVisibility() {
+    const isLessThanLargeViewport = this.isLessThanLargeViewport();
+    if (typeof isLessThanLargeViewport !== "boolean") return;
+
+    this.setState((prevState) => ({
+      ...prevState,
+      isLessThanLargeViewport,
+    }));
+
     if (this.state.isLessThanLargeViewport) {
       this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: false });
     } else {
