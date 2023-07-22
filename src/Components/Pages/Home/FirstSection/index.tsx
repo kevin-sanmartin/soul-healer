@@ -26,7 +26,7 @@ export default class FirstSection extends Component<IProps, IState> {
           <Logo className={classes["logo"]} />
 
           <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title"]}>
-            Trouvez l&apos;harminie du corps et de l&apos;esprit.
+            Trouvez l&apos;harmonie du corps et de l&apos;esprit.
           </Text>
 
           <Text tag={ETextTag.P} className={classes["description"]}>
