@@ -87,8 +87,8 @@ export default class HealingBenefits extends Component<IProps, IState> {
                 title="Energetiques"
                 listItems={[
                   "Équilibrage de la circulation de l'énergie vitale dans le corps physique et les corps subtils",
-                  "Purification et harmonisation des 7 chakras principaux",
-                  "Réparation des brèches énergétiques laissées par tous types de traumatismes physiques ou psychologiques et provoquant des fuites d'énergie vitale",
+                  "Recevoir un coup de boost énergétique",
+                  "Être mieux ancré et conscient de ta vie",
                   "Activation de la circulation énergétique dans tous les méridiens",
                 ]}
                 icon={<CheckIcon className={classes["icon"]} />}
