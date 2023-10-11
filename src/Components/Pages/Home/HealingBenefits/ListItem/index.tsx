@@ -8,7 +8,6 @@ import classNames from "classnames";
 
 type IProps = {
   title: string;
-  listItems: string[];
   icon?: ReactNode;
   className?: string;
 };
@@ -24,15 +23,6 @@ export default class ListItem extends Component<IProps, IState> {
             {this.props.title}
           </Text>
         </div>
-        <ul className={classes["items-container"]}>
-          {this.props.listItems.map((item, index) => (
-            <li key={index} className={classes["item"]}>
-              <Text tag={ETextTag.P} font="xiaoWei" className={classes["text"]}>
-                {`- ${item}`}
-              </Text>
-            </li>
-          ))}
-        </ul>
       </div>
     );
   }

@@ -56,47 +56,36 @@ export default class HealingBenefits extends Component<IProps, IState> {
                   [classes["is-visible"]]: this.state.isListItemContainerVisible,
                 })}
                 title="Maux physiques"
-                listItems={[
-                  "Douleurs de dos",
-                  "Problèmes de peaux",
-                  "Brûlures",
-                  "Tendinite",
-                  "Sciatique",
-                  "Soins personnalisés pour diverses douleurs physiques",
-                ]}
                 icon={<CheckIcon className={classes["icon"]} />}
               />
               <ListItem
                 className={classNames(classes["list-item"], {
                   [classes["is-visible"]]: this.state.isListItemContainerVisible,
                 })}
-                title="Maux psychologiques"
-                listItems={[
-                  "Libérer vos angoisses",
-                  "Atténuer le stress",
-                  "Retrouver un apaisement",
-                  "Lever des blocages émotionnels inconscients",
-                  "Couper les liens négatifs, nocifs avec des personnes toxiques de votre entourage (relation amoureuse, amicale, familiale, professionnelle, etc.)",
-                ]}
+                title="Maux emotionnels"
                 icon={<CheckIcon className={classes["icon"]} />}
               />
               <ListItem
                 className={classNames(classes["list-item"], {
                   [classes["is-visible"]]: this.state.isListItemContainerVisible,
                 })}
-                title="Energetiques"
-                listItems={[
-                  "Équilibrage de la circulation de l'énergie vitale dans le corps physique et les corps subtils",
-                  "Recevoir un coup de boost énergétique",
-                  "Être mieux ancré et conscient de ta vie",
-                  "Activation de la circulation énergétique dans tous les méridiens",
-                ]}
+                title="Maux energetiques"
                 icon={<CheckIcon className={classes["icon"]} />}
               />
             </Observer>
           </div>
 
-          <ContactButton size={EButtonSize.MEDIUM} text="Contactez moi pour explorer votre potentiel de guérison." />
+          <Text tag={ETextTag.P} className={classes["text"]}>
+            Tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l'âge ou la
+            situation. Bébés, enfants et adultes. Donc, si vous êtes dans une démarche d'accompagnement et de travail
+            sur soi, c'est le soin à faire en première intention.
+          </Text>
+
+          <Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
+            Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
+          </Text>
+
+          <ContactButton size={EButtonSize.MEDIUM} text="Prenez soin de vous dès aujourd'hui." />
         </div>
       </section>
     );

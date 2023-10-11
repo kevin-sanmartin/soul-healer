@@ -53,7 +53,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
 
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Les soins énergétiques intuitifs à distance se font uniquement sur réservation. Ils sont disponibles le
+              Mes soins énergétiques canalisés à distance se font uniquement sur réservation. Ils sont disponibles le
               jour de la réservation.
             </Text>
 
@@ -98,7 +98,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
           </div>
 
           <Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
-            <span className={classes["bold"]}>50€</span> par séance
+            <span className={classes["bold"]}>60€</span> par séance
           </Text>
 
           <ContactButton size={EButtonSize.MEDIUM} text="Soin intuitif, énergie régénératrice. Essayez ?" />

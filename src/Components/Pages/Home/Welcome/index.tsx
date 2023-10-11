@@ -63,26 +63,28 @@ export default class Welcome extends Component<IProps, IState> {
             </Tag>
 
             <Text tag={ETextTag.H2} className={classes["title"]}>
-              Je vous aide à devenir la meilleure version de vous-même.
+              Comment vous sentez-vous ? Comment puis-je vous aider ?
             </Text>
 
             <div className={classes["description-container"]}>
               <Text tag={ETextTag.P} className={classes["description"]}>
-                Aujourd&apos;hui, avec mes outils et mes qualités, je vous accompagne pour que vous puissiez accéder, à
-                votre rythme à la meilleure version de vous-même, à mon domicile dans une pièce qui vous est dédiée,
-                pour un instant de bien-être, une pause pour soi.
+                Nous possédons tous en nous les clés de notre bien-être intérieur, il suffit d'être à l'écoute de notre
+                corps par nos ressentis.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["description"]}>
-                Soulager les personnes par mes soins énergétiques est source de bien-être pour moi, mais également pour
-                elles. Je suis comme une enfant qui découvre l&apos;immense possibilité que j&apos;ai, à chaque soin qui
-                ne se ressemble pas. Mes capacités se développent au fil du temps (ma clairvoyance, ma clairaudience,
-                mon clair ressenti), j&apos;évolue et tout est juste, tout arrive quand ça doit arriver.
+                Il arrive cependant que nous ne soyons plus à l'écoute par rapport à des circonstances de la vie, ce qui
+                peut être source de mal-être, de souffrances ou de maladies.
               </Text>
 
               <Text tag={ETextTag.P} className={classes["description"]}>
-                J&apos;observe tout simplement ce qui se passe pour moi, dans ma vie et chez les personnes que je
-                soigne.
+                Savez-vous que nos pensées, nos émotions et sentiments peuvent être à l'origine de nos maladies
+                physiques ?
+              </Text>
+
+              <Text tag={ETextTag.P} className={classes["description"]}>
+                Restaurer le lien que nous avons tous est donc primordial ! Dans certains cas, nous pourrons y parvenir
+                seul, mais parfois une aide extérieure sera nécessaire.
               </Text>
             </div>
           </div>

@@ -51,14 +51,18 @@ export default class AboutMe extends Component<IProps, IState> {
             })}
           >
             <div className={classes["text-container"]}>
-              <Text tag={ETextTag.P} className={classes["text"]}>
-                Pour devenir thérapeute en soins énergétiques, il n&apos;existe pas de diplôme reconnu. Magnétiseur ?
-                Énergéticien ? Thérapeute ? Les appellations sont nombreuses. Mais est-ce si important au fond ?
+              <Text tag={ETextTag.H3} className={classes["title"]}>
+                Qu'est-ce qui m'anime et me rend heureuse ?
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Je suis Nadia, l&apos;Äme Guerrisseuse, j&apos;habite grasse (06), maman de deux grandes filles, avec
-                mon mari nous avons ce même point commun d&apos;aimer communiquer avec les autres.
+                Je suis Nadia, j&apos;habite Grasse (06), maman de deux grandes filles, avec mon mari nous avons ce même
+                point commun d&apos;aimer communiquer avec les autres.
+              </Text>
+
+              <Text tag={ETextTag.P} className={classes["text"]}>
+                Ce qui m'anime, c'est de vous aider a retrouver votre bien-être intérieur, vous soulagez de vos maux,
+                d'échanger avec vous, de vous apporter toute ma bienveillance, de discuter de vos maux émotionnels.
               </Text>
             </div>
 
@@ -83,7 +87,7 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                J&apos;ai eu : Des périodes de grosses souffrances où il me suffisait d&apos;aller dans la nature pour
+                J&apos;ai eu des périodes de grosses souffrances où il me suffisait d&apos;aller dans la nature pour
                 évacuer le trop-plein. Je disais souvent à ma mère « j&apos;en ai marre de tout » sans l&apos;expliquer.
                 Je sais pourquoi aujourd&apos;hui… J&apos;ai eu des flashs souvent négatifs, mais qui m&apos;annonçaient
                 le futur, donc un jour j&apos;ai dit stop et ça s&apos;est arrêté. Par la suite, j&apos;ai réalisé que
@@ -102,7 +106,6 @@ export default class AboutMe extends Component<IProps, IState> {
               [classes["is-visible"]]: this.state.isThirdBlockVisible,
             })}
           >
-            {" "}
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.P} className={classes["text"]}>
                 J&apos;ai été assistante maternelle pendant 8 ans, j&apos;ai adoré mon métier, le contact avec les
@@ -135,8 +138,8 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Alors qu&apos;en dites-vous ? Envie de communiquer et d&apos;apprendre à se guérir soi-même ? Envie de
-                m&apos;autoriser à vous soigner ? Envie de se rencontrer ?
+                Avez-vous le désir de communiquer, de vous autoriser à recevoir un soin énergétique, et enfin, avez-vous
+                envie que l'on se rencontre ?
               </Text>
             </div>
             <div className={classNames(classes["image-container"], classes["portrait"])}>
