@@ -52,7 +52,7 @@ export default class AboutMe extends Component<IProps, IState> {
           >
             <div className={classes["text-container"]}>
               <Text tag={ETextTag.H3} className={classes["title"]}>
-                Qu'est-ce qui m'anime et me rend heureuse ?
+                Qu&apos;est-ce qui m&apos;anime et me rend heureuse ?
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
@@ -61,8 +61,9 @@ export default class AboutMe extends Component<IProps, IState> {
               </Text>
 
               <Text tag={ETextTag.P} className={classes["text"]}>
-                Ce qui m'anime, c'est de vous aider a retrouver votre bien-être intérieur, vous soulagez de vos maux,
-                d'échanger avec vous, de vous apporter toute ma bienveillance, de discuter de vos maux émotionnels.
+                Ce qui m&apos;anime, c&apos;est de vous aider a retrouver votre bien-être intérieur, vous soulagez de
+                vos maux, d&apos;échanger avec vous, de vous apporter toute ma bienveillance, de discuter de vos maux
+                émotionnels.
               </Text>
             </div>
 
@@ -139,7 +140,7 @@ export default class AboutMe extends Component<IProps, IState> {
 
               <Text tag={ETextTag.P} className={classes["text"]}>
                 Avez-vous le désir de communiquer, de vous autoriser à recevoir un soin énergétique, et enfin, avez-vous
-                envie que l'on se rencontre ?
+                envie que l&apos;on se rencontre ?
               </Text>
             </div>
             <div className={classNames(classes["image-container"], classes["portrait"])}>

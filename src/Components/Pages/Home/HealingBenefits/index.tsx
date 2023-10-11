@@ -76,9 +76,9 @@ export default class HealingBenefits extends Component<IProps, IState> {
           </div>
 
           <Text tag={ETextTag.P} className={classes["text"]}>
-            Tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l'âge ou la
-            situation. Bébés, enfants et adultes. Donc, si vous êtes dans une démarche d'accompagnement et de travail
-            sur soi, c'est le soin à faire en première intention.
+            Tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l&apos;âge ou la
+            situation. Bébés, enfants et adultes. Donc, si vous êtes dans une démarche d&apos;accompagnement et de
+            travail sur soi, c&apos;est le soin à faire en première intention.
           </Text>
 
           <Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
