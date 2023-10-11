@@ -44,7 +44,7 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
         >
           <div className={classes["text-container"]}>
             <Text tag={ETextTag.P} className={classes["text"]}>
-              Le soin énergétique que je pratique est souvent décrit comme "intuitif", car il repose sur la
+              Le soin énergétique que je pratique est souvent décrit comme &apos;intuitif&apos;, car il repose sur la
               canalisation. C&apos;est-à-dire que j&apos;utilise ma capacité intuitive, mon ressenti, voire ma
               médiumnité pendant le soin.
             </Text>
