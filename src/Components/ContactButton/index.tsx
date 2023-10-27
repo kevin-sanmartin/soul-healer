@@ -1,6 +1,13 @@
-import { Component } from "react";
-import { PopupButton } from "react-calendly";
+import { Component, Fragment } from "react";
 import classNames from "classnames";
+
+// Components
+import Button from "../Button";
+import Modal from "../Modal";
+import ContactSection from "../Pages/Home/ContactSection";
+
+// Config
+import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Entities
 import { EButtonSize } from "@/src/Entities/Button";
@@ -15,37 +22,34 @@ type IProps = {
   size: EButtonSize;
 };
 type IState = {
-  rootElement: HTMLElement | null;
+  isModalVisible: boolean;
 };
 
 export default class ContactButton extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      rootElement: null,
+      isModalVisible: false,
     };
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   override render() {
-    if (!this.state.rootElement) return null;
     return (
-      <PopupButton
-        url="https://calendly.com/ame-guerrisseuse/premier-contact"
-        rootElement={this.state.rootElement}
-        styles={{ fontFamily: xiaoWei.style.fontFamily }}
-        className={classNames(classes["root"], classes[this.props.size])}
-        text={this.props.text.toUpperCase()}
-      />
+      <Fragment>
+        <Button className={classNames(classes["root"], classes[this.props.size])} onClick={this.toggleModal}>
+          {this.props.text.toUpperCase()}
+        </Button>
+        {this.state.isModalVisible && (
+          <Modal onClose={this.toggleModal}>
+            <ContactSection id={EWebsiteLinks.CONTACT} className={classes["contact"]} />
+          </Modal>
+        )}
+      </Fragment>
     );
   }
 
-  public componentDidMount() {
-    this.setState({ rootElement: document.getElementById("__next") });
-  }
-
-  public componentDidUpdate(_: Readonly<IProps>, prevState: Readonly<IState>): void {
-    if (!this.state.rootElement && prevState.rootElement !== this.state.rootElement) {
-      this.setState({ rootElement: document.getElementById("__next") });
-    }
+  private toggleModal() {
+    this.setState({ isModalVisible: !this.state.isModalVisible });
   }
 }
