@@ -76,7 +76,9 @@ export default class WhatIsEnergyHealing extends Component<IProps, IState> {
           </div>
         </Observer>
 
-        <ContactButton size={EButtonSize.MEDIUM} text="Restaurez votre bien-être intérieur. Intéressé ?" />
+        <div className={classes["contact"]}>
+          <ContactButton size={EButtonSize.MEDIUM} text="Restaurez votre bien-être intérieur. Intéressé ?" />
+        </div>
       </div>
     );
   }
