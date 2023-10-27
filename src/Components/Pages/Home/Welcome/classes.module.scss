@@ -39,6 +39,18 @@
         height: 100%;
         object-fit: cover;
         border-radius: $borderRadius;
+
+        @media screen and (max-width: $large) {
+          height: 350px;
+        }
+
+        @media screen and (max-width: $medium) {
+          height: 300px;
+        }
+
+        @media screen and (max-width: $small) {
+          height: 220px;
+        }
       }
     }
 

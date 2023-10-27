@@ -46,9 +46,11 @@ export default class Welcome extends Component<IProps, IState> {
               [classes["is-visible"]]: this.state.isPresentationContainerVisible,
             })}
           >
-            <video controls controlsList="nodownload" className={classes["video"]} playsInline>
-              <source src="/presentation-video.mp4" type="video/mp4" />
-            </video>
+            <iframe
+              className={classes["video"]}
+              src="https://www.youtube.com/embed/RMUx8-1GIJA?si=9AltmyasP0il9KzY"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            />
           </div>
 
           <div
