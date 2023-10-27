@@ -22,16 +22,17 @@ export default class FirstSection extends Component<IProps, IState> {
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)}>
+        <Logo className={classes["logo"]} />
+
         <div className={classes["container"]}>
-          <Logo className={classes["logo"]} />
-
-          <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title"]}>
-            Trouvez l&apos;harmonie du corps et de l&apos;esprit.
-          </Text>
-
-          <Text tag={ETextTag.P} className={classes["description"]}>
-            Je m&apos;appelle Nadia Richard, si vous cherchez une complémentarité a la médecine traditionnelle, sachez
-            que vous pouvez prendre votre santé en main.
+          <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title-container"]}>
+            <span className={classes["title"]}>
+              Trouvez l'harmonie du corps et de l'esprit avec mes soins énergétiques.
+            </span>
+            <span className={classes["description"]}>
+              Nadia Richard, energeticienne à Grasse dans les Alpes-Maritimes. Soins énergétiques à mon domicile ou à
+              distance.
+            </span>
           </Text>
 
           <ContactButton size={EButtonSize.LARGE} text="Contactez-moi" />

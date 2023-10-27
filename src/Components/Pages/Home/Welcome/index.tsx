@@ -68,6 +68,11 @@ export default class Welcome extends Component<IProps, IState> {
 
             <div className={classes["description-container"]}>
               <Text tag={ETextTag.P} className={classes["description"]}>
+                Savez-vous que nos pensées, nos émotions et sentiments peuvent être à l&apos;origine de nos maladies
+                physiques ?
+              </Text>
+
+              <Text tag={ETextTag.P} className={classes["description"]}>
                 Nous possédons tous en nous les clés de notre bien-être intérieur, il suffit d&apos;être à l&apos;écoute
                 de notre corps par nos ressentis.
               </Text>
@@ -75,11 +80,6 @@ export default class Welcome extends Component<IProps, IState> {
               <Text tag={ETextTag.P} className={classes["description"]}>
                 Il arrive cependant que nous ne soyons plus à l&apos;écoute par rapport à des circonstances de la vie,
                 ce qui peut être source de mal-être, de souffrances ou de maladies.
-              </Text>
-
-              <Text tag={ETextTag.P} className={classes["description"]}>
-                Savez-vous que nos pensées, nos émotions et sentiments peuvent être à l&apos;origine de nos maladies
-                physiques ?
               </Text>
 
               <Text tag={ETextTag.P} className={classes["description"]}>
