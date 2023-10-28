@@ -2,6 +2,8 @@
 @import "/styles/breakpoints.scss";
 
 .root {
+  display: flex;
+  align-items: center;
   position: relative;
   height: 100vh;
   background-image: url("/images/outside/portrait-professionnel-089.jpg");
@@ -13,7 +15,7 @@
   background-size: cover;
 
   @media screen and (max-width: $medium) {
-    justify-content: center;
+    align-items: flex-end;
     background-position: 70%;
     background-attachment: scroll;
   }
@@ -35,26 +37,15 @@
   }
 
   .container {
-    position: relative;
-    top: 30%;
-    left: 10%;
     width: 100%;
-    max-width: 1400px;
-
-    @media screen and (max-width: $large) {
-      left: 0;
-    }
-
-    @media screen and (max-width: $medium) {
-      top: 50%;
-    }
+    max-width: 620px;
+    padding-bottom: 50px;
 
     .title-container {
       display: flex;
       flex-direction: column;
 
       .title {
-        max-width: 620px;
         font-size: 28px;
         font-weight: 800;
         text-shadow: 2px 2px 0px $Black;
@@ -68,7 +59,6 @@
       }
 
       .description {
-        max-width: 620px;
         font-size: 18px;
         text-align: justify;
         margin-bottom: 40px;
