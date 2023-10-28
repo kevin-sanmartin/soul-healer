@@ -56,11 +56,11 @@ export default class ContactSection extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      name: "test",
-      email: "test@test.fr",
-      phoneNumber: "0606067060",
-      message: "test",
-      seanceType: ESeanceType.PRESENTIEL,
+      name: "",
+      email: "",
+      phoneNumber: "",
+      message: "",
+      seanceType: null,
       isSubmitButtonDisabled: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);

@@ -40,16 +40,14 @@ export default class ContactButton extends Component<IProps, IState> {
         <Button className={classNames(classes["root"], classes[this.props.size])} onClick={this.toggleModal}>
           {this.props.text.toUpperCase()}
         </Button>
-        {this.state.isModalVisible && (
-          <Modal onClose={this.toggleModal}>
-            <ContactSection id={EWebsiteLinks.CONTACT} className={classes["contact"]} />
-          </Modal>
-        )}
       </Fragment>
     );
   }
 
   private toggleModal() {
-    this.setState({ isModalVisible: !this.state.isModalVisible });
+    const target = document.getElementById(EWebsiteLinks.CONTACT);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   }
 }
