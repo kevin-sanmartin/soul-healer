@@ -51,6 +51,7 @@ export default class Input extends Component<IProps, IState> {
       <div className={classes["input-container"]}>
         {this.renderLabel()}
         <textarea
+          rows={5}
           onFocus={this.toggleFocus}
           onBlur={this.toggleFocus}
           style={{ fontFamily: cabin.style.fontFamily }}
@@ -92,7 +93,7 @@ export default class Input extends Component<IProps, IState> {
         <label
           htmlFor={this.props.name}
           className={classNames(classes["label"], {
-            [classes["active"]]: this.state.isFocused,
+            [classes["active"]]: this.state.isFocused || this.props.value.length > 0,
           })}
         >
           <Text tag={ETextTag.SPAN} className={classes["text"]} font="cabin">

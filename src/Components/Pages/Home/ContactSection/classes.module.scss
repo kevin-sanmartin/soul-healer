@@ -46,7 +46,7 @@
     }
   }
 
-  .form-container {
+  .info-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -68,7 +68,7 @@
       justify-content: space-around;
       gap: 20px;
 
-      @media screen and (max-width: $medium) {
+      @media screen and (max-width: $small) {
         flex-direction: column;
         gap: 10px;
       }
@@ -122,5 +122,11 @@
         font-size: 14px;
       }
     }
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 }
