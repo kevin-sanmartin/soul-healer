@@ -10,13 +10,19 @@ type IProps = {
   options: string[];
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   className?: string;
+  name: string;
 };
 type IState = {};
 
 export default class Select extends Component<IProps, IState> {
   override render() {
     return (
-      <select className={classes["root"]} onChange={this.props.onChange} style={{ fontFamily: cabin.style.fontFamily }}>
+      <select
+        className={classes["root"]}
+        onChange={this.props.onChange}
+        style={{ fontFamily: cabin.style.fontFamily }}
+        name={this.props.name}
+      >
         <option value="">--{this.props.label}--</option>
         {this.props.options.map((option, index) => (
           <option key={index} value={option}>

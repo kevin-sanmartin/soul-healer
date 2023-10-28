@@ -14,6 +14,7 @@ type IProps = {
   className?: string;
   children?: React.ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
 };
 type IState = {};
 
@@ -26,6 +27,7 @@ export default class Button extends Component<IProps, IState> {
   public render() {
     return (
       <button
+        disabled={this.props.disabled}
         onClick={this.props.onClick}
         type={this.props.isSubmitButton ? "submit" : "button"}
         className={classNames(

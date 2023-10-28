@@ -16,6 +16,9 @@ import { EButtonSize } from "@/src/Entities/Button";
 // Assets
 import HandHeartOutside from "/public/images/outside/portrait-professionnel-041-min.jpg";
 
+// Utils
+import reCAPTCHA from "@/src/Utils/reCaptcha";
+
 // Icons
 import { FaMapMarkerAlt as LocalisationIcon } from "react-icons/fa";
 import { GrMail as MailIcon } from "react-icons/gr";
@@ -38,19 +41,27 @@ type IProps = {
 };
 type IState = {
   name: string;
+  email: string;
   seanceType: ESeanceType | null;
   phoneNumber: string;
   message: string;
+  isSubmitButtonDisabled: boolean;
 };
 
+type TUserInfo = Omit<IState, "isSubmitButtonDisabled">;
+
 export default class ContactSection extends Component<IProps, IState> {
+  private readonly reCaptcha = new reCAPTCHA("6LcyIdgoAAAAAB4Fb62iKeuE6rk1QIxIyBfVvv0T", "contact");
+
   constructor(props: IProps) {
     super(props);
     this.state = {
-      name: "",
-      phoneNumber: "",
-      message: "",
-      seanceType: null,
+      name: "test",
+      email: "test@test.fr",
+      phoneNumber: "0606067060",
+      message: "test",
+      seanceType: ESeanceType.PRESENTIEL,
+      isSubmitButtonDisabled: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.sendEmail = this.sendEmail.bind(this);
@@ -95,8 +106,24 @@ export default class ContactSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          {/* <div className={classes["form-container"]}>
-            <Input name="name" onChange={this.handleInputChange} value={this.state.name} label="Nom & Prénom" />
+          <div className={classes["form-container"]}>
+            <Input
+              name="name"
+              onChange={this.handleInputChange}
+              value={this.state.name}
+              label="Nom & Prénom"
+              required
+            />
+
+            <Input
+              name="email"
+              onChange={this.handleInputChange}
+              value={this.state.email}
+              label="Email"
+              type="email"
+              required
+            />
+
             <Input
               name="phoneNumber"
               onChange={this.handleInputChange}
@@ -104,6 +131,7 @@ export default class ContactSection extends Component<IProps, IState> {
               label="Numéro de téléphone"
             />
             <Select
+              name="seanceType"
               label="Type de préstation"
               onChange={this.handleInputChange}
               options={[ESeanceType.PRESENTIEL, ESeanceType.DISTANT]}
@@ -111,27 +139,75 @@ export default class ContactSection extends Component<IProps, IState> {
 
             <Input
               name="message"
+              required
               onChange={this.handleInputChange}
               value={this.state.message}
               label="Message"
               isTextArea
             />
 
-            <Button size={EButtonSize.LARGE} onClick={this.sendEmail}>
+            <Button size={EButtonSize.LARGE} onClick={this.sendEmail} disabled={this.state.isSubmitButtonDisabled}>
               <Text tag={ETextTag.P} font="cabin">
                 ENVOYER
               </Text>
             </Button>
-          </div> */}
+          </div>
         </div>
       </section>
     );
   }
 
-  private sendEmail() {}
+  public override componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js?render=6LcyIdgoAAAAAB4Fb62iKeuE6rk1QIxIyBfVvv0T";
+    document.body.appendChild(script);
+  }
+
+  private async sendEmail() {
+    if (!this.state.email || !this.state.name || !this.state.message || !this.state.seanceType) {
+      alert("Veuillez remplir tous les champs obligatoires");
+      return;
+    }
+
+    const userInfo: TUserInfo = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+      phoneNumber: this.state.phoneNumber,
+      seanceType: this.state.seanceType,
+    };
+    try {
+      const reCaptchaToken: string = await this.reCaptcha.getToken();
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...userInfo, reCaptchaToken }),
+      });
+
+      const data = await response.json();
+
+      this.setState({
+        isSubmitButtonDisabled: false,
+        name: "",
+        email: "",
+        message: "",
+        phoneNumber: "",
+        seanceType: null,
+      });
+
+      alert(data.message);
+    } catch (error) {
+      console.error(error);
+      alert("Une erreur est survenue lors de l'envoi du mail");
+      this.setState({ isSubmitButtonDisabled: false });
+    }
+  }
 
   private handleInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     const { name, value } = e.target;
-    this.setState({ [name]: value } as Pick<IState, keyof IState>);
+    this.setState({ [name]: value } as Pick<IState, keyof TUserInfo>);
   }
 }
