@@ -46,7 +46,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
         <div className={classes["healing-presentation-container"]}>
           <Text tag={ETextTag.H2} font="xiaoWei" className={classes["title"]}>
-            Les soins énergétiques peuvent soigner :
+            Les soins énergétiques peuvent soulager:
           </Text>
 
           <div className={classes["container"]}>
