@@ -19,8 +19,6 @@ const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_U
 
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-console.log({ CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, REFRESH_TOKEN });
-
 const createTransporter = (accessToken: any) => {
   return Nodemail.createTransport({
     service: "gmail",
