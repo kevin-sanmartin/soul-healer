@@ -19,6 +19,8 @@ const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_U
 
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
+console.log({ CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, REFRESH_TOKEN });
+
 const createTransporter = (accessToken: any) => {
   return Nodemail.createTransport({
     service: "gmail",
@@ -47,7 +49,6 @@ const createOptions = (data: TData) => {
 
 const verifyCaptcha = async (req: NextApiRequest) => {
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.reCaptchaToken}`;
-  console.log({ verifyUrl });
   const response = await fetch(verifyUrl, {
     method: "POST",
     headers: {
