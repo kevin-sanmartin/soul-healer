@@ -47,7 +47,7 @@ const createOptions = (data: TData) => {
 
 const verifyCaptcha = async (req: NextApiRequest) => {
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${req.body.reCaptchaToken}`;
-
+  console.log({ verifyUrl });
   const response = await fetch(verifyUrl, {
     method: "POST",
     headers: {
@@ -66,7 +66,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let captchaScore;
       try {
         captchaScore = await verifyCaptcha(req);
-        console.log({ captchaScore });
       } catch (error) {
         console.error("Error while fetching captcha score", error);
         return res.status(500).send(error);
