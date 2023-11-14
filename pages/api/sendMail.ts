@@ -63,22 +63,40 @@ const verifyCaptcha = async (req: NextApiRequest) => {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
     case "POST":
+      let captchaScore;
       try {
-        if ((await verifyCaptcha(req)) < 0.5) {
-          return res
-            .status(400)
-            .json({ message: "Oups, il y a eu un problème ! N'hesitez pas a me contacter directement par portable." });
-        }
-        const accessToken = await oAuth2Client.getAccessToken();
-        const transporter = createTransporter(accessToken);
-        const mailOptions = createOptions(req.body);
-
-        await transporter.sendMail(mailOptions);
-        return res.status(200).json({ message: "Merci pour votre message, je vous réponds au plus vite !" });
+        captchaScore = await verifyCaptcha(req);
+        console.log({ captchaScore });
       } catch (error) {
-        console.error(error);
+        console.error("Error while fetching captcha score", error);
         return res.status(500).send(error);
       }
+
+      if (captchaScore < 0.5) {
+        return res
+          .status(400)
+          .json({ message: "Oups, il y a eu un problème ! N'hesitez pas a me contacter directement par portable." });
+      }
+
+      let accessToken;
+      try {
+        accessToken = await oAuth2Client.getAccessToken();
+      } catch (error) {
+        console.error("Error while fetching accessToken OAuth2é", error);
+        return res.status(500).send(error);
+      }
+
+      const transporter = createTransporter(accessToken);
+      const mailOptions = createOptions(req.body);
+
+      try {
+        await transporter.sendMail(mailOptions);
+      } catch (error) {
+        console.error("Error while sending mail", error);
+        return res.status(500).send(error);
+      }
+
+      return res.status(200).json({ message: "Merci pour votre message, je vous réponds au plus vite !" });
     default:
       break;
   }
