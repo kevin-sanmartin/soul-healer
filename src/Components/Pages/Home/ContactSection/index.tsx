@@ -1,13 +1,10 @@
 import { Component } from "react";
 import classNames from "classnames";
 import Image from "next/image";
-import nodemailer from "nodemailer";
 
 // Components
 import Text from "@/src/Components/Text";
-import Input from "@/src/Components/Input";
-import Select from "@/src/Components/Select";
-import Button from "@/src/Components/Button";
+import ContactButton from "@/src/Components/ContactButton";
 
 // Entities
 import { ETextTag } from "@/src/Entities/Text";
@@ -15,9 +12,6 @@ import { EButtonSize } from "@/src/Entities/Button";
 
 // Assets
 import HandHeartOutside from "/public/images/outside/portrait-professionnel-041-min.jpg";
-
-// Utils
-import reCAPTCHA from "@/src/Utils/reCaptcha";
 
 // Icons
 import { FaMapMarkerAlt as LocalisationIcon } from "react-icons/fa";
@@ -30,43 +24,12 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 // Styles
 import classes from "./classes.module.scss";
 
-enum ESeanceType {
-  DISTANT = "Distance",
-  PRESENTIEL = "Présentiel",
-}
-
 type IProps = {
   id: EWebsiteLinks;
   className?: string;
 };
-type IState = {
-  name: string;
-  email: string;
-  seanceType: ESeanceType | null;
-  phoneNumber: string;
-  message: string;
-  isSubmitButtonDisabled: boolean;
-};
 
-type TUserInfo = Omit<IState, "isSubmitButtonDisabled">;
-
-export default class ContactSection extends Component<IProps, IState> {
-  private readonly reCaptcha = new reCAPTCHA("6LcyIdgoAAAAAB4Fb62iKeuE6rk1QIxIyBfVvv0T", "contact");
-
-  constructor(props: IProps) {
-    super(props);
-    this.state = {
-      name: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
-      seanceType: null,
-      isSubmitButtonDisabled: false,
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.sendEmail = this.sendEmail.bind(this);
-  }
-
+export default class ContactSection extends Component<IProps> {
   public render() {
     return (
       <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
@@ -106,108 +69,9 @@ export default class ContactSection extends Component<IProps, IState> {
             </div>
           </div>
 
-          <div className={classes["form-container"]}>
-            <Input
-              name="name"
-              onChange={this.handleInputChange}
-              value={this.state.name}
-              label="Nom & Prénom"
-              required
-            />
-
-            <Input
-              name="email"
-              onChange={this.handleInputChange}
-              value={this.state.email}
-              label="Email"
-              type="email"
-              required
-            />
-
-            <Input
-              name="phoneNumber"
-              onChange={this.handleInputChange}
-              value={this.state.phoneNumber}
-              label="Numéro de téléphone"
-            />
-            <Select
-              name="seanceType"
-              label="Type de préstation"
-              onChange={this.handleInputChange}
-              options={[ESeanceType.PRESENTIEL, ESeanceType.DISTANT]}
-            />
-
-            <Input
-              name="message"
-              required
-              onChange={this.handleInputChange}
-              value={this.state.message}
-              label="Message"
-              isTextArea
-            />
-
-            <Button size={EButtonSize.LARGE} onClick={this.sendEmail} disabled={this.state.isSubmitButtonDisabled}>
-              <Text tag={ETextTag.P} font="cabin">
-                ENVOYER
-              </Text>
-            </Button>
-          </div>
+          <ContactButton size={EButtonSize.MEDIUM} text="Prenez RDV" />
         </div>
       </section>
     );
-  }
-
-  public override componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js?render=6LcyIdgoAAAAAB4Fb62iKeuE6rk1QIxIyBfVvv0T";
-    document.body.appendChild(script);
-  }
-
-  private async sendEmail() {
-    if (!this.state.email || !this.state.name || !this.state.message || !this.state.seanceType) {
-      alert("Veuillez remplir tous les champs obligatoires");
-      return;
-    }
-
-    const userInfo: TUserInfo = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message,
-      phoneNumber: this.state.phoneNumber,
-      seanceType: this.state.seanceType,
-    };
-    try {
-      const reCaptchaToken: string = await this.reCaptcha.getToken();
-      const response = await fetch("/api/sendMail", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...userInfo, reCaptchaToken }),
-      });
-
-      const data = await response.json();
-
-      this.setState({
-        isSubmitButtonDisabled: false,
-        name: "",
-        email: "",
-        message: "",
-        phoneNumber: "",
-        seanceType: null,
-      });
-
-      alert(data.message);
-    } catch (error) {
-      console.error(error);
-      alert("Une erreur est survenue lors de l'envoi du mail");
-      this.setState({ isSubmitButtonDisabled: false });
-    }
-  }
-
-  private handleInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
-    const { name, value } = e.target;
-    this.setState({ [name]: value } as Pick<IState, keyof TUserInfo>);
   }
 }

@@ -1,13 +1,6 @@
-import { Component, Fragment } from "react";
+import { Component } from "react";
+import { PopupButton } from "react-calendly";
 import classNames from "classnames";
-
-// Components
-import Button from "../Button";
-import Modal from "../Modal";
-import ContactSection from "../Pages/Home/ContactSection";
-
-// Config
-import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 
 // Entities
 import { EButtonSize } from "@/src/Entities/Button";
@@ -22,32 +15,37 @@ type IProps = {
   size: EButtonSize;
 };
 type IState = {
-  isModalVisible: boolean;
+  rootElement: HTMLElement | null;
 };
 
 export default class ContactButton extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      isModalVisible: false,
+      rootElement: null,
     };
-    this.toggleModal = this.toggleModal.bind(this);
   }
 
   override render() {
+    if (!this.state.rootElement) return null;
     return (
-      <Fragment>
-        <Button className={classNames(classes["root"], classes[this.props.size])} onClick={this.toggleModal}>
-          {this.props.text.toUpperCase()}
-        </Button>
-      </Fragment>
+      <PopupButton
+        url="https://calendly.com/ame-guerrisseuse/premier-contact"
+        rootElement={this.state.rootElement}
+        styles={{ fontFamily: xiaoWei.style.fontFamily }}
+        className={classNames(classes["root"], classes[this.props.size])}
+        text={this.props.text.toUpperCase()}
+      />
     );
   }
 
-  private toggleModal() {
-    const target = document.getElementById(EWebsiteLinks.CONTACT);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+  public componentDidMount() {
+    this.setState({ rootElement: document.getElementById("__next") });
+  }
+
+  public componentDidUpdate(_: Readonly<IProps>, prevState: Readonly<IState>): void {
+    if (!this.state.rootElement && prevState.rootElement !== this.state.rootElement) {
+      this.setState({ rootElement: document.getElementById("__next") });
     }
   }
 }
