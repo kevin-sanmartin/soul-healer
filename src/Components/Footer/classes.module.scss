@@ -4,15 +4,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 12px;
   width: 100%;
-  height: 100px;
+  padding: 12px;
   background-color: $Crayola;
 
   .social-media-container {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px;
 
     .icon {
       width: 30px;

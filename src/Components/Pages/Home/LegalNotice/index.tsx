@@ -45,6 +45,9 @@ export default class LegalNotice extends Component<IProps, IState> {
                 <Text tag={ETextTag.P} className={classes["text"]}>
                   Le présent site est exploité par Nadia Richard en tant qu&apos;entreprise individuelle.
                 </Text>
+                <Text tag={ETextTag.P} className={classes["text"]}>
+                  N° Siret : 92486444000012
+                </Text>
               </div>
 
               <div className={classes["section"]}>

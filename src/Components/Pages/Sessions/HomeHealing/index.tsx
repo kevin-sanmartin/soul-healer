@@ -94,7 +94,7 @@ export default class HomeHealing extends Component<IProps, IState> {
           </div>
 
           <Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
-            <span className={classes["bold"]}>60€</span> par séance
+            <span className={classes["bold"]}>65€</span> par séance
           </Text>
 
           <ContactButton size={EButtonSize.MEDIUM} text="Explorez les bienfaits d'un soin intuitif. Prêt à essayer ?" />
