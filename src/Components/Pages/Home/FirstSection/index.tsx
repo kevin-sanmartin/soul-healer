@@ -25,13 +25,18 @@ export default class FirstSection extends Component<IProps, IState> {
         <Logo className={classes["logo"]} />
 
         <div className={classes["container"]}>
-          <Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title-container"]}>
+          <Text
+            font={"xiaoWei"}
+            tag={ETextTag.H1}
+            className={classes["title-container"]}
+          >
             <span className={classes["title"]}>
-              Trouvez l&apos;harmonie du corps et de l&apos;esprit avec mes soins énergétiques.
+              Trouvez l&apos;harmonie du corps et de l&apos;esprit avec mes
+              soins énergétiques.
             </span>
             <span className={classes["description"]}>
-              Nadia Richard, energeticienne à Grasse dans les Alpes-Maritimes. Soins énergétiques à mon domicile ou à
-              distance.
+              Nadia Richard, energeticienne à Pégomas dans les Alpes-Maritimes.
+              Soins énergétiques à mon domicile ou à distance.
             </span>
           </Text>
 

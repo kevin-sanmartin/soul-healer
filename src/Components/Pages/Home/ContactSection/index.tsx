@@ -32,9 +32,17 @@ type IProps = {
 export default class ContactSection extends Component<IProps> {
   public render() {
     return (
-      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
+      <section
+        className={classNames(classes["root"], this.props.className)}
+        id={this.props.id}
+      >
         <div className={classes["image-container"]}>
-          <Image src={HandHeartOutside} className={classes["image"]} fill alt="" />
+          <Image
+            src={HandHeartOutside}
+            className={classes["image"]}
+            fill
+            alt=""
+          />
         </div>
         <div className={classes["info-container"]}>
           <div className={classes["title-container"]}>
@@ -43,8 +51,10 @@ export default class ContactSection extends Component<IProps> {
             </Text>
 
             <Text tag={ETextTag.P} className={classes["description"]}>
-              N&apos;hésitez pas à m&apos;envoyer un message. Je suis là pour vous aider à soulager vos douleurs
-              physiques, améliorer votre bien-être intérieur, et vous accompagner dans votre cheminement personnel.
+              N&apos;hésitez pas à m&apos;envoyer un message. Je suis là pour
+              vous aider à soulager vos douleurs physiques, améliorer votre
+              bien-être intérieur, et vous accompagner dans votre cheminement
+              personnel.
             </Text>
           </div>
 
@@ -52,7 +62,7 @@ export default class ContactSection extends Component<IProps> {
             <div className={classes["contact-info"]}>
               <LocalisationIcon className={classes["icon"]} />
               <Text tag={ETextTag.P} className={classes["text"]}>
-                06130 Grasse
+                06580 Pégomas
               </Text>
             </div>
             <div className={classes["contact-info"]}>

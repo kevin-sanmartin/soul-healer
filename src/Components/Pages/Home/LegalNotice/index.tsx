@@ -29,7 +29,11 @@ export default class LegalNotice extends Component<IProps, IState> {
   override render() {
     return (
       <Fragment>
-        <Text tag={ETextTag.SPAN} onClick={this.toggleModal} className={classes["link"]}>
+        <Text
+          tag={ETextTag.SPAN}
+          onClick={this.toggleModal}
+          className={classes["link"]}
+        >
           Mentions légales
         </Text>
         {this.state.isModalOpen && (
@@ -43,7 +47,8 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Informations générales:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Le présent site est exploité par Nadia Richard en tant qu&apos;entreprise individuelle.
+                  Le présent site est exploité par Nadia Richard en tant
+                  qu&apos;entreprise individuelle.
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
                   N° Siret : 92486444000012
@@ -58,7 +63,7 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Nom: Nadia Richard.
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Adresse: 06130 Grasse - Alpes Maritimes - France.
+                  Adresse: 06580 Pégomas - Alpes Maritimes - France.
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
                   Téléphone: 06.65.47.24.90
@@ -73,8 +78,9 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Activité:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Nadia Richard propose des services de soins énergétiques et de guérison, dans le but d&apos;améliorer
-                  le bien-être et l&apos;équilibre énergétique des individus.
+                  Nadia Richard propose des services de soins énergétiques et de
+                  guérison, dans le but d&apos;améliorer le bien-être et
+                  l&apos;équilibre énergétique des individus.
                 </Text>
               </div>
 
@@ -83,11 +89,14 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Responsabilité:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Nadia Richard, en tant que propriétaire et exploitante du site, s&apos;efforce de fournir des
-                  informations précises et de qualité. Cependant, elle ne peut être tenue responsable de
-                  l&apos;exactitude, de l&apos;exhaustivité ou de la pertinence des informations fournies sur le site.
-                  Les utilisateurs sont invités à consulter un professionnel de la santé qualifié avant de prendre des
-                  décisions basées sur les informations disponibles sur le site.
+                  Nadia Richard, en tant que propriétaire et exploitante du
+                  site, s&apos;efforce de fournir des informations précises et
+                  de qualité. Cependant, elle ne peut être tenue responsable de
+                  l&apos;exactitude, de l&apos;exhaustivité ou de la pertinence
+                  des informations fournies sur le site. Les utilisateurs sont
+                  invités à consulter un professionnel de la santé qualifié
+                  avant de prendre des décisions basées sur les informations
+                  disponibles sur le site.
                 </Text>
               </div>
 
@@ -96,10 +105,12 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Propriété intellectuelle:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Tous les contenus présents sur le présent site (textes, logos, vidéos, etc.) sont la propriété
-                  exclusive de Nadia Richard. Les images sont la propriété exclusive de Mégane Guisnet
-                  (https://meganeguisnet.com). Toute reproduction, distribution, ou utilisation sans autorisation écrite
-                  préalable est strictement interdite.
+                  Tous les contenus présents sur le présent site (textes, logos,
+                  vidéos, etc.) sont la propriété exclusive de Nadia Richard.
+                  Les images sont la propriété exclusive de Mégane Guisnet
+                  (https://meganeguisnet.com). Toute reproduction, distribution,
+                  ou utilisation sans autorisation écrite préalable est
+                  strictement interdite.
                 </Text>
               </div>
 
@@ -108,10 +119,13 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Protection des données personnelles:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Nadia Richard s&apos;engage à respecter la confidentialité des données personnelles des utilisateurs
-                  du site. Les informations fournies par les utilisateurs via les formulaires de contact ou tout autre
-                  moyen de communication ne seront utilisées que dans le but de répondre aux demandes et de fournir les
-                  services demandés. Les données personnelles ne seront pas partagées avec des tiers sans consentement
+                  Nadia Richard s&apos;engage à respecter la confidentialité des
+                  données personnelles des utilisateurs du site. Les
+                  informations fournies par les utilisateurs via les formulaires
+                  de contact ou tout autre moyen de communication ne seront
+                  utilisées que dans le but de répondre aux demandes et de
+                  fournir les services demandés. Les données personnelles ne
+                  seront pas partagées avec des tiers sans consentement
                   préalable.
                 </Text>
               </div>
@@ -121,9 +135,10 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Liens externes:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Le présent site peut contenir des liens vers des sites tiers. Ces liens sont fournis uniquement à
-                  titre informatif et Nadia Richard n&apos;assume aucune responsabilité quant au contenu de ces sites
-                  externes.
+                  Le présent site peut contenir des liens vers des sites tiers.
+                  Ces liens sont fournis uniquement à titre informatif et Nadia
+                  Richard n&apos;assume aucune responsabilité quant au contenu
+                  de ces sites externes.
                 </Text>
               </div>
 
@@ -132,8 +147,10 @@ export default class LegalNotice extends Component<IProps, IState> {
                   Loi applicable et juridiction compétente:
                 </Text>
                 <Text tag={ETextTag.P} className={classes["text"]}>
-                  Les présentes mentions légales sont soumises au droit applicable dans le pays où vous exercez votre
-                  activité. Tout litige relatif au présent site sera soumis à la juridiction compétente de ce pays.
+                  Les présentes mentions légales sont soumises au droit
+                  applicable dans le pays où vous exercez votre activité. Tout
+                  litige relatif au présent site sera soumis à la juridiction
+                  compétente de ce pays.
                 </Text>
               </div>
             </div>
