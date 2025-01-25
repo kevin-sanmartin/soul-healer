@@ -68,7 +68,7 @@ export default class Welcome extends Component<IProps, IState> {
 
 						<div className={classes["description-container"]}>
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Tu as sûrement déjà ressenti un oment où tu étais fatigué, stressé, ou avec des tensions, et tu n'arrivais pas à te détendre, non ?
+								Tu as sûrement déjà ressenti un moment où tu étais fatigué, stressé, ou avec des tensions, et tu n'arrivais pas à te détendre, non ?
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["description"]}>
