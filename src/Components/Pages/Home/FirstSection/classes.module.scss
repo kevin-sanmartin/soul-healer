@@ -2,71 +2,71 @@
 @import "/styles/breakpoints.scss";
 
 .root {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-  background-image: url("/images/outside/portrait-professionnel-089.jpg");
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 100vh;
+	background-image: url("/images/outside/portrait-professionnel-089.jpg");
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-  @media screen and (max-width: $medium) {
-    align-items: flex-end;
-    background-position: 70%;
-    background-attachment: scroll;
-  }
+	@media screen and (max-width: $medium) {
+		align-items: flex-end;
+		background-position: 70%;
+		background-attachment: scroll;
+	}
 
-  .logo {
-    position: absolute;
-    top: 100px;
-    right: 20px;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
+	.logo {
+		position: absolute;
+		top: 100px;
+		right: 20px;
+		width: 200px;
+		height: 200px;
+		border-radius: 5px;
 
-    @media screen and (max-width: $large) {
-      top: 10px;
-      left: 10px;
-      width: 120px;
-      height: 120px;
-    }
-  }
+		@media screen and (max-width: $large) {
+			top: 10px;
+			left: 10px;
+			width: 120px;
+			height: 120px;
+		}
+	}
 
-  .container {
-    width: 100%;
-    max-width: 620px;
-    padding-bottom: 50px;
+	.container {
+		width: 100%;
+		max-width: 630px;
+		padding-bottom: 50px;
 
-    .title-container {
-      display: flex;
-      flex-direction: column;
+		.title-container {
+			display: flex;
+			flex-direction: column;
 
-      .title {
-        font-size: 28px;
-        font-weight: 800;
-        text-shadow: 2px 2px 0px $Black;
-        color: $Crayola;
-        margin: 20px 0;
+			.title {
+				font-size: 28px;
+				font-weight: 800;
+				text-shadow: 2px 2px 0px $Black;
+				color: $Crayola;
+				margin: 20px 0;
 
-        @media screen and (min-width: $small) {
-          font-size: 38px;
-        }
-      }
+				@media screen and (min-width: $small) {
+					font-size: 38px;
+				}
+			}
 
-      .description {
-        font-size: 18px;
-        text-align: justify;
-        margin-bottom: 40px;
-        color: $BlanchedAlmond;
+			.description {
+				font-size: 18px;
+				text-align: justify;
+				margin-bottom: 40px;
+				color: $BlanchedAlmond;
 
-        @media screen and (min-width: $small) {
-          font-size: 22px;
-        }
-      }
-    }
-  }
+				@media screen and (min-width: $small) {
+					font-size: 22px;
+				}
+			}
+		}
+	}
 }

@@ -23,76 +23,75 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 import classes from "./classes.module.scss";
 
 type IProps = {
-  id: EWebsiteLinks;
-  className?: string;
+	id: EWebsiteLinks;
+	className?: string;
 };
 type IState = {
-  isListItemContainerVisible: boolean;
+	isListItemContainerVisible: boolean;
 };
 
 export default class HealingBenefits extends Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
+	constructor(props: IProps) {
+		super(props);
 
-    this.state = {
-      isListItemContainerVisible: false,
-    };
+		this.state = {
+			isListItemContainerVisible: false,
+		};
 
-    this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
-  }
+		this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+	}
 
-  public render() {
-    return (
-      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
-        <div className={classes["healing-presentation-container"]}>
-          <Text tag={ETextTag.H2} font="xiaoWei" className={classes["title"]}>
-            Les soins énergétiques peuvent soulager:
-          </Text>
+	public render() {
+		return (
+			<section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
+				<div className={classes["healing-presentation-container"]}>
+					<Text tag={ETextTag.H2} font="xiaoWei" className={classes["title"]}>
+						Les soins énergétiques apportent:
+					</Text>
 
-          <div className={classes["container"]}>
-            <Observer onVisibilityChange={this.handleVisibilityChange} className={classes["list-container"]}>
-              <ListItem
-                className={classNames(classes["list-item"], {
-                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
-                })}
-                title="Maux physiques"
-                icon={<CheckIcon className={classes["icon"]} />}
-              />
-              <ListItem
-                className={classNames(classes["list-item"], {
-                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
-                })}
-                title="Maux emotionnels"
-                icon={<CheckIcon className={classes["icon"]} />}
-              />
-              <ListItem
-                className={classNames(classes["list-item"], {
-                  [classes["is-visible"]]: this.state.isListItemContainerVisible,
-                })}
-                title="Maux energetiques"
-                icon={<CheckIcon className={classes["icon"]} />}
-              />
-            </Observer>
-          </div>
+					<div className={classes["container"]}>
+						<Observer onVisibilityChange={this.handleVisibilityChange} className={classes["list-container"]}>
+							<ListItem
+								className={classNames(classes["list-item"], {
+									[classes["is-visible"]]: this.state.isListItemContainerVisible,
+								})}
+								title="Bienfaits physiques"
+								icon={<CheckIcon className={classes["icon"]} />}
+							/>
+							<ListItem
+								className={classNames(classes["list-item"], {
+									[classes["is-visible"]]: this.state.isListItemContainerVisible,
+								})}
+								title="Bienfaits emotionnels et mentaux"
+								icon={<CheckIcon className={classes["icon"]} />}
+							/>
+							<ListItem
+								className={classNames(classes["list-item"], {
+									[classes["is-visible"]]: this.state.isListItemContainerVisible,
+								})}
+								title="Bienfaits energetiques et spirituels"
+								icon={<CheckIcon className={classes["icon"]} />}
+							/>
+						</Observer>
+					</div>
 
-          <Text tag={ETextTag.P} className={classes["text"]}>
-            Tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l&apos;âge ou la
-            situation. Bébés, enfants et adultes. Donc, si vous êtes dans une démarche d&apos;accompagnement et de
-            travail sur soi, c&apos;est le soin à faire en première intention.
-          </Text>
+					<Text tag={ETextTag.P} className={classes["text"]}>
+						Tout le monde peut profiter des bienfaits des soins énergétiques ! Ces bienfaits peuvent varier selon la sensibilité de chacun et les besoins spécifiques à
+						chaque séance. Les soins énergétiques sont un accompagnement holistique qui agit en profondeur pour un mieux-être global.
+					</Text>
 
-          <Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
-            Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
-          </Text>
+					<Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
+						Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
+					</Text>
 
-          <ContactButton size={EButtonSize.MEDIUM} text="Prenez soin de vous dès aujourd'hui." />
-        </div>
-      </section>
-    );
-  }
+					<ContactButton size={EButtonSize.MEDIUM} text="Prenez soin de vous dès aujourd'hui." />
+				</div>
+			</section>
+		);
+	}
 
-  private handleVisibilityChange(isVisible: boolean) {
-    if (this.state.isListItemContainerVisible === isVisible) return;
-    this.setState({ isListItemContainerVisible: isVisible });
-  }
+	private handleVisibilityChange(isVisible: boolean) {
+		if (this.state.isListItemContainerVisible === isVisible) return;
+		this.setState({ isListItemContainerVisible: isVisible });
+	}
 }
