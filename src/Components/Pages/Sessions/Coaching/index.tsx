@@ -11,7 +11,7 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
 import RoomDetails from "/public/images/roomDetails/portrait-professionnel-010-min.jpg";
-import HandInside from "/public/images/healingSeance/portrait-professionnel-023-min.jpg";
+import Outside from "/public/images/outside/meganeguisnet-photographe--11.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -42,7 +42,7 @@ export default class Coaching extends Component<IProps, IState> {
 					[classes["is-visible"]]: this.state.isContainerVisible,
 				})}>
 				<div className={classes["image-container"]}>
-					<Image src={RoomDetails} className={classes["image"]} alt="" />
+					<Image src={Outside} className={classes["image"]} alt="" />
 				</div>
 
 				<div className={classes["container"]}>
@@ -82,9 +82,9 @@ export default class Coaching extends Component<IProps, IState> {
 						</Text>
 					</div>
 
-					<Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
+					{/* <Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
 						<span className={classes["bold"]}>65€</span> par séance
-					</Text>
+					</Text> */}
 
 					<ContactButton size={EButtonSize.MEDIUM} text="Explorez les bienfaits d'un soin. Prêt à essayer ?" />
 				</div>
