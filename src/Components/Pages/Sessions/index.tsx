@@ -119,9 +119,9 @@ export default class Sessions extends Component<IProps, IState> {
 		}));
 
 		if (this.state.isLessThanLargeViewport) {
-			this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: false });
+			this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: false, isCoachingVisible: false });
 		} else {
-			this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: true });
+			this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: true, isCoachingVisible: true });
 		}
 	}
 
