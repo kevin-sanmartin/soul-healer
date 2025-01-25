@@ -14,35 +14,27 @@ import { EButtonSize } from "@/src/Entities/Button";
 import classes from "./classes.module.scss";
 
 type IProps = {
-  className?: string;
+	className?: string;
 };
 type IState = {};
 
 export default class FirstSection extends Component<IProps, IState> {
-  public render() {
-    return (
-      <section className={classNames(classes["root"], this.props.className)}>
-        <Logo className={classes["logo"]} />
+	public render() {
+		return (
+			<section className={classNames(classes["root"], this.props.className)}>
+				<Logo className={classes["logo"]} />
 
-        <div className={classes["container"]}>
-          <Text
-            font={"xiaoWei"}
-            tag={ETextTag.H1}
-            className={classes["title-container"]}
-          >
-            <span className={classes["title"]}>
-              Trouvez l&apos;harmonie du corps et de l&apos;esprit avec mes
-              soins énergétiques.
-            </span>
-            <span className={classes["description"]}>
-              Nadia Richard, energeticienne à Pégomas dans les Alpes-Maritimes.
-              Soins énergétiques à mon domicile ou à distance.
-            </span>
-          </Text>
+				<div className={classes["container"]}>
+					<Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title-container"]}>
+						<span className={classes["title"]}>Trouvez l'harmonie du corps et de l'esprit avec mes soins énergétiques.</span>
+						<span className={classes["description"]}>
+							Nadia Richard, energeticienne à Pégomas dans les Alpes-Maritimes. Soins énergétiques à mon domicile ou à distance.
+						</span>
+					</Text>
 
-          <ContactButton size={EButtonSize.LARGE} text="Contactez-moi" />
-        </div>
-      </section>
-    );
-  }
+					<ContactButton size={EButtonSize.LARGE} text="Contactez-moi" />
+				</div>
+			</section>
+		);
+	}
 }
