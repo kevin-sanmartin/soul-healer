@@ -23,7 +23,7 @@ type IState = {
 	isContainerVisible: boolean;
 };
 
-export default class HomeHealing extends Component<IProps, IState> {
+export default class Coaching extends Component<IProps, IState> {
 	constructor(props: IProps) {
 		super(props);
 
@@ -47,34 +47,38 @@ export default class HomeHealing extends Component<IProps, IState> {
 
 				<div className={classes["container"]}>
 					<Text tag={ETextTag.P} className={classes["title"]}>
-						Séance à mon domicile
+						Coaching personnalisé + soins énergétiques
 					</Text>
 
 					<div className={classes["text-container"]}>
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Découvre mes soins énergétiques dans les Alpes-Maritimes, une approche douce pour ton bien-être global.
+							<b>Mon approche :</b>
+							<br /> Chaque soin commence par un échange pour mieux comprendre tes besoins. Ensuite, je te propose un soin énergétique adapté, qui travaille sur tes
+							blocages émotionnels et physiques, pour t'aider à retrouver sérénité et énergie.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Mes soins énergétiques se pratiquent en individuel, par apposition des mains, tout en restant allongé et habillé. Préfères des habits confortables pour
-							profiter pleinement de ce moment.
+							<b>Les bienfaits de ce soin personnalisé :</b>
+							<ul>
+								<li>- Libération des tensions et rééquilibrage énergétique</li>
+								<li>- Harmonisation des émotions et apaisement du mental</li>
+								<li>- Retrouver de la clarté, de la sérénité et de l'énergie</li>
+								<li>- Suivi personnalisé pour un bien-être durable</li>
+							</ul>
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Chaque séance débute par un échange pour comprendre tes attentes et instaurer une relation de confiance. Le soin, accompagné d'une musique douce, viens
-							t'inviter au lâcher-prise et à la détente profonde.
+							<b>Formules et tarifs :</b>
+							<ul>
+								<li>- Séance combinée Coaching + soin énergétique (2H) : 85€</li>
+								<li>- Pack de 3 séances combinées (Coaching + soin énergétique) : 230€ (au lieu de 255€)</li>
+								<li>- Pack de 5 séances combinées (Coaching + soin énergétique) : 380€ (au lieu de 425€)</li>
+							</ul>
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Grâce à l'apposition des mains, je canalise les énergies pour rétablir ton équilibre intérieur.
-						</Text>
-
-						<Text tag={ETextTag.P} className={classes["text"]}>
-							Après le soin, nous échangeons sur tes ressentis et je reste disponible pour un suivi personnalisé.
-						</Text>
-
-						<Text tag={ETextTag.P} className={classes["text"]}>
-							Offre-toi une pause bien-être à Pégomas dans les Alpes-Maritimes et reconnecte-toi à ton énergie.
+							Chaque séance est un moment privilégié pour prendre soin de toi et travailler en profondeur sur tes objectifs de bien-être. Réserve tes séances
+							combinées « Coaching et soin énergétique » dès aujourd'hui pour retrouver un bien-être complet et durable.
 						</Text>
 					</div>
 

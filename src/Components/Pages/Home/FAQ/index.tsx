@@ -17,22 +17,22 @@ import { EWebsiteLinks } from "@/src/Config/WebsiteLinks";
 import classes from "./classes.module.scss";
 
 type IProps = {
-  id: string;
-  className?: string;
+	id: string;
+	className?: string;
 };
 type IState = {};
 
 export default class FAQ extends Component<IProps, IState> {
-  override render() {
-    return (
-      <section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
-        <Dropdown title="Qu'est-ce qu'un soin énergétique intuitif ?" icon={FaHandSparkles} defaultOpen>
-          <WhatIsEnergyHealing />
-        </Dropdown>
-        <Dropdown title="Faisons connaissance" icon={BsPersonFill} id={EWebsiteLinks.ABOUT} defaultOpen>
-          <AboutMe />
-        </Dropdown>
-      </section>
-    );
-  }
+	override render() {
+		return (
+			<section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
+				<Dropdown title="Un soin énergétique, c'est quoi ?" icon={FaHandSparkles} defaultOpen>
+					<WhatIsEnergyHealing />
+				</Dropdown>
+				<Dropdown title="Faisons connaissance" icon={BsPersonFill} id={EWebsiteLinks.ABOUT} defaultOpen>
+					<AboutMe />
+				</Dropdown>
+			</section>
+		);
+	}
 }

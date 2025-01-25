@@ -47,45 +47,32 @@ export default class RemoteHealing extends Component<IProps, IState> {
 
 				<div className={classes["container"]}>
 					<Text tag={ETextTag.P} className={classes["title"]}>
-						Séance à distance
+						Soins énergétiques à distance - Réserve dès aujourd'hui
 					</Text>
 
 					<div className={classes["text-container"]}>
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Mes soins énergétiques canalisés à distance se font uniquement sur réservation. Ils sont disponibles le jour de la réservation.
+							Mes soins énergétiques à distance sont disponibles sur réservation. Pour organiser ta séance, contacte-moi par email avec tes disponibilités. Nous
+							fixerons un rendez-vous téléphonique pour faire connaissance, convenir d'une date et finaliser les détails.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Il suffit de me contacter par mail et de me donner vos disponibilités afin que je puisse organiser notre rendez-vous téléphonique dans un premier temps
-							pour faire connaissance et convenir d'une date ensuite pour le soin à distance et du paiement.
+							Avant le soin, je te demanderai une photo récente (claire, de face, sans filtre, avec les yeux visibles) pour assurer un suivi personnalisé lors de
+							futurs rendez-vous. Tu recevras également toutes les recommandations nécessaires par email la veille.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Je vous demanderai alors de m'envoyer une photo récente debout, claire, prise de face, sans filtre, les yeux bien visibles. Je conserverai la photo afin
-							d'être en mesure d'effectuer un suivi complet et précieux pour tous pour tout nouveau rendez-vous futur. Je vous confirmerai la réservation et les
-							recommandations nécessaires au bon déroulement du soin par mail la veille du rendez-vous.
+							Le jour du soin, installe-toi confortablement dans un lieu calme, en position assise ou allongé, et prépare-toi à la détente. Une musique apaisante et
+							des exercices de respiration profonde favoriseront ta relaxation. Je t'enverrai un message à la fin du soin pour t'en informer.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Vous devrez être aussi détendu et à l'aise que possible lors de cette séance à distance, en choisissant un lieu prédisposé pour cela. Que vous optiez
-							pour la position assise dans un fauteuil ou allongée sur un lit, cela ne changera pas tant que vous êtes ouvert au soin.
+							Après la séance, nous échangerons pour faire le point sur tes ressentis et évaluer tes besoins. Un suivi peut être organisé selon tes sensations et
+							l'évolution constatée.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Comme en présentiel, je vous demanderai de prendre de profondes inspirations et expirations comme lors d'une méditation afin de faire le vide, une
-							musique pour vous accompagner serait l'idéal, pour vous permettre de vous détendre et de pouvoir accueillir le soin avec facilité. Je vous enverrai
-							alors un message sur votre portable pour vous avertir de la fin du soin.
-						</Text>
-
-						<Text tag={ETextTag.P} className={classes["text"]}>
-							Nous pourrons donc échanger par mail afin d'avoir une trace écrite chacun, pour effectuer un retour sur le soin, les ressentis, l'évaluation de « vos
-							douleurs » s'il y en a sur une échelle de 1 à 10 afin de déterminer s'il est nécessaire de reprendre rendez-vous.
-						</Text>
-
-						<Text tag={ETextTag.P} className={classes["text"]}>
-							Alors, nous ferons le point sur vos ressentis, vos émotions, votre soin. Je vous demanderai le lendemain, de m'expliquer précisément vos ressentis,
-							comment s'est passé votre nuit ? Sur une échelle de 1 à 10 où se situe « votre douleur », votre état et donc voir s'il est nécessaire de reprendre
-							rendez-vous pour un deuxième soin.
+							Réserve ton soin énergétique à distance et offre-toi un moment de bien-être, où que tu sois.
 						</Text>
 					</div>
 

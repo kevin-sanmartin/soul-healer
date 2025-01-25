@@ -43,8 +43,7 @@ export default class ContactSection extends Component<IProps> {
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["description"]}>
-							N'hésitez pas à m'envoyer un message. Je suis là pour vous aider à soulager vos douleurs physiques, améliorer votre bien-être intérieur, et vous
-							accompagner dans votre cheminement personnel.
+							Offre-toi un moment de bien-être unique : réserve maintenant un soin énergétique pour retrouver énergie et équilibre intérieur.
 						</Text>
 					</div>
 

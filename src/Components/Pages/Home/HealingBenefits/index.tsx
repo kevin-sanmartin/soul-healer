@@ -46,7 +46,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
 			<section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
 				<div className={classes["healing-presentation-container"]}>
 					<Text tag={ETextTag.H2} font="xiaoWei" className={classes["title"]}>
-						Les soins énergétiques peuvent soulager:
+						Les soins énergétiques apportent:
 					</Text>
 
 					<div className={classes["container"]}>
@@ -55,29 +55,29 @@ export default class HealingBenefits extends Component<IProps, IState> {
 								className={classNames(classes["list-item"], {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
-								title="Maux physiques"
+								title="Bienfaits physiques"
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 							<ListItem
 								className={classNames(classes["list-item"], {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
-								title="Maux emotionnels"
+								title="Bienfaits emotionnels et mentaux"
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 							<ListItem
 								className={classNames(classes["list-item"], {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
-								title="Maux energetiques"
+								title="Bienfaits energetiques et spirituels"
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 						</Observer>
 					</div>
 
 					<Text tag={ETextTag.P} className={classes["text"]}>
-						Tout le monde peut profiter des bienfaits des soins énergétiques ! Et ce, quel que soit l'âge ou la situation. Bébés, enfants et adultes. Donc, si vous êtes
-						dans une démarche d'accompagnement et de travail sur soi, c'est le soin à faire en première intention.
+						Tout le monde peut profiter des bienfaits des soins énergétiques ! Ces bienfaits peuvent varier selon la sensibilité de chacun et les besoins spécifiques à
+						chaque séance. Les soins énergétiques sont un accompagnement holistique qui agit en profondeur pour un mieux-être global.
 					</Text>
 
 					<Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>

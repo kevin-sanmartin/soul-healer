@@ -63,26 +63,24 @@ export default class Welcome extends Component<IProps, IState> {
 						</Tag>
 
 						<Text tag={ETextTag.H2} className={classes["title"]}>
-							Comment vous sentez-vous ? Comment puis-je vous aider ?
+							Et si tu t'offrais une pause bien-être rien que pour toi ?
 						</Text>
 
 						<div className={classes["description-container"]}>
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Savez-vous que nos pensées, nos émotions et sentiments peuvent être à l'origine de nos maladies physiques ?
+								Tu as sûrement déjà ressenti un oment où tu étais fatigué, stressé, ou avec des tensions, et tu n'arrivais pas à te détendre, non ?
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Nous possédons tous en nous les clés de notre bien-être intérieur, il suffit d'être à l'écoute de notre corps par nos ressentis.
+								Un soin énergétique permet de rétablir un équilibre, de libérer ces blocages et de restaurer une énergie plus fluide.
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Il arrive cependant que nous ne soyons plus à l'écoute par rapport à des circonstances de la vie, ce qui peut être source de mal-être, de
-								souffrances ou de maladies.
+								C'est un peu comme une méditation, où on apprend à se détendre et à libérer l'esprit des pensées envahissantes.
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Restaurer le lien que nous avons tous est donc primordial ! Dans certains cas, nous pourrons y parvenir seul, mais parfois une aide extérieure sera
-								nécessaire.
+								Les soins énergétiques visent à atteindre un état de calme intérieur et de mieux être global.
 							</Text>
 						</div>
 					</div>

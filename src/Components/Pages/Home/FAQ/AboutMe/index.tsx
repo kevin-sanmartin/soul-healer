@@ -49,28 +49,36 @@ export default class AboutMe extends Component<IProps, IState> {
 						className={classNames(classes["container"], {
 							[classes["is-visible"]]: this.state.isFirstBlockVisible,
 						})}>
-						<div className={classes["text-container"]}>
-							<Text tag={ETextTag.H3} className={classes["title"]}>
-								Qu'est-ce qui m'anime et me rend heureuse ?
-							</Text>
-
-							<Text tag={ETextTag.P} className={classes["text"]}>
-								Je suis Nadia, j'habite Pégomas (06), maman de deux grandes filles, avec mon mari nous avons ce même point commun d'aimer communiquer avec les
-								autres.
-							</Text>
-
-							<Text tag={ETextTag.P} className={classes["text"]}>
-								Ce qui m'anime, c'est de vous aider a retrouver votre bien-être intérieur, vous soulagez de vos maux, d'échanger avec vous, de vous apporter toute
-								ma bienveillance, de discuter de vos maux émotionnels.
-							</Text>
-						</div>
-
 						<div className={classes["image-container"]}>
 							<Image src={MusicOutside} className={classes["image"]} fill alt="" />
 						</div>
+
+						<div className={classes["text-container"]}>
+							<Text tag={ETextTag.H3} className={classes["title"]}>
+								Qui suis-je ? Nadia, praticienne en soins énergétiques à Pégomas dans les Alpes-Maritimes.
+							</Text>
+
+							<Text tag={ETextTag.P} className={classes["text"]}>
+								Je suis énergéticienne, formée dans une école de guerrisseuses, où j'ai approfondi mes connaissances et ma pratique des soins énergétiques.
+							</Text>
+
+							<Text tag={ETextTag.P} className={classes["text"]}>
+								Mon parcours a débuté lors d'un atelier avec mon ostéopathe énergéticienne, un moment clé où tout à basculer. J'ai pris conscience que je devais
+								changer de métier, puis mes mains se sont mises à vibrer et à chauffer, révélant mon potentiel naturel pour transmettre l'énergie.
+							</Text>
+
+							<Text tag={ETextTag.P} className={classes["text"]}>
+								Depuis, j'accompagne les personnes dans leur chemin de bien-être et de rééquilibrage énergétique, avec passion et bienveillance dans un espace dédié
+								pour toi enclin à la relaxation
+							</Text>
+
+							<Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
+								Es-tu prêt(e) à recevoir un soin énergétique personnalisé et à vivre une expérience qui pourrais changer ton quotidien ?
+							</Text>
+						</div>
 					</Observer>
 
-					<Observer
+					{/* <Observer
 						onVisibilityChange={this.handleSecondBlockVisibilityChange}
 						className={classNames(classes["container"], {
 							[classes["is-visible"]]: this.state.isSecondBlockVisible,
@@ -132,10 +140,11 @@ export default class AboutMe extends Component<IProps, IState> {
 								Avez-vous le désir de communiquer, de vous autoriser à recevoir un soin énergétique, et enfin, avez-vous envie que l'on se rencontre ?
 							</Text>
 						</div>
+
 						<div className={classNames(classes["image-container"], classes["portrait"])}>
 							<Image src={Outside2} className={classes["image"]} fill alt="" />
 						</div>
-					</Observer>
+					</Observer> */}
 
 					<ContactButton size={EButtonSize.MEDIUM} text="Travaillons ensemble pour une harmonie de vos énergies" />
 				</div>
