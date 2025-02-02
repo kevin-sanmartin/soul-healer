@@ -41,7 +41,7 @@ export default class Welcome extends Component<IProps, IState> {
 		return (
 			<section className={classNames(classes["root"], this.props.className)} id={this.props.id}>
 				<Observer onVisibilityChange={this.handleVisibilityChange} className={classes["presentation-container"]}>
-					<div
+					{/* <div
 						className={classNames(classes["video-container"], {
 							[classes["is-visible"]]: this.state.isPresentationContainerVisible,
 						})}>
@@ -50,7 +50,7 @@ export default class Welcome extends Component<IProps, IState> {
 							src="https://www.youtube.com/embed/RMUx8-1GIJA?si=9AltmyasP0il9KzY"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						/>
-					</div>
+					</div> */}
 
 					<div
 						className={classNames(classes["text-container"], {
