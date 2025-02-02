@@ -39,7 +39,7 @@ export default class ContactSection extends Component<IProps> {
 				<div className={classes["info-container"]}>
 					<div className={classes["title-container"]}>
 						<Text tag={ETextTag.H2} className={classes["title"]}>
-							Contactez-moi
+							Réservation
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["description"]}>
