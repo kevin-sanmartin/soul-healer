@@ -11,5 +11,5 @@ export enum EWebsiteLinksNames {
 	HEALING_BENEFITS = "Bienfaits des soins",
 	ABOUT = "Qui suis-je ?",
 	FAQ = "FAQ",
-	CONTACT = "Contactez-moi",
+	CONTACT = "Réservation",
 }
