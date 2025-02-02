@@ -49,13 +49,13 @@ export default class AboutMe extends Component<IProps, IState> {
 						className={classNames(classes["container"], {
 							[classes["is-visible"]]: this.state.isFirstBlockVisible,
 						})}>
-						<div className={classes["image-container"]}>
-							<Image src={MusicOutside} className={classes["image"]} fill alt="" />
+						<div className={classNames(classes["image-container"], classes["portrait"])}>
+							<Image src={Outside2} className={classes["image"]} fill alt="" />
 						</div>
 
 						<div className={classes["text-container"]}>
 							<Text tag={ETextTag.H3} className={classes["title"]}>
-								Qui suis-je ? Nadia, praticienne en soins énergétiques à Pégomas dans les Alpes-Maritimes.
+								Nadia, praticienne en soins énergétiques à Pégomas dans les Alpes-Maritimes.
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["text"]}>
@@ -146,7 +146,7 @@ export default class AboutMe extends Component<IProps, IState> {
 						</div>
 					</Observer> */}
 
-					<ContactButton size={EButtonSize.MEDIUM} text="Travaillons ensemble pour une harmonie de vos énergies" />
+					<ContactButton size={EButtonSize.MEDIUM} text="Prêt(e) à t'écouter vraiment ?" />
 				</div>
 			</section>
 		);

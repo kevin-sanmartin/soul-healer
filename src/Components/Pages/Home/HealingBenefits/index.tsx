@@ -84,7 +84,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
 						Ces soins ne remplacent pas la médecine classique, mais peuvent être un complément très efficace.
 					</Text>
 
-					<ContactButton size={EButtonSize.MEDIUM} text="Prenez soin de vous dès aujourd'hui." />
+					<ContactButton size={EButtonSize.MEDIUM} text="Prends soin de toi aujourd'hui" />
 				</div>
 			</section>
 		);

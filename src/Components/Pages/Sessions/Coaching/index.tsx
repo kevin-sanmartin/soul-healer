@@ -52,33 +52,45 @@ export default class Coaching extends Component<IProps, IState> {
 
 					<div className={classes["text-container"]}>
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							<b>Mon approche :</b>
-							<br /> Chaque soin commence par un échange pour mieux comprendre tes besoins. Ensuite, je te propose un soin énergétique adapté, qui travaille sur tes
-							blocages émotionnels et physiques, pour t'aider à retrouver sérénité et énergie.
+							<b>Mon approche : un accompagnement global pour ton bien-être</b>
+							<br />
+							Chaque séance commence par un temps d'échange où nous explorons ensemble ta problématique du moment. À travers le coaching, je t'accompagne pour mieux
+							comprendre tes émotions, prendre du recul sur ta situation et identifier des clés concrètes pour avancer.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							<b>Les bienfaits de ce soin personnalisé :</b>
+							Ensuite, le soin énergétique vient compléter ce travail en libérant les blocages émotionnels et physiques, en rééquilibrant ton énergie et en favorisant
+							un état de bien-être profond. Cette synergie entre coaching et soin énergétique te permet de retrouver clarté, apaisement et vitalité, tout en amorçant
+							des changements durables dans ton quotidien.
+						</Text>
+
+						<Text tag={ETextTag.P} className={classes["text"]}>
+							<b>Les bienfaits de cet accompagnement :</b>
 							<ul>
-								<li>- Libération des tensions et rééquilibrage énergétique</li>
-								<li>- Harmonisation des émotions et apaisement du mental</li>
-								<li>- Retrouver de la clarté, de la sérénité et de l'énergie</li>
-								<li>- Suivi personnalisé pour un bien-être durable</li>
+								<li>✨ Une prise de conscience et une meilleure compréhension de tes besoins</li>
+								<li>✨ Un apaisement mental et émotionnel face aux défis du quotidien</li>
+								<li>✨ Une libération des tensions physiques et énergétiques</li>
+								<li>✨ Un soutien sur mesure pour avancer avec confiance et sérénité</li>
 							</ul>
+						</Text>
+
+						<Text tag={ETextTag.P} className={classes["text"]}>
+							Cet accompagnement est conçu pour t'aider à te reconnecter à toi-même, à lever les blocages qui t'empêchent d'avancer et à retrouver un équilibre
+							global.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
 							<b>Formules et tarifs :</b>
 							<ul>
 								<li>- Séance combinée Coaching + soin énergétique (2H) : 85€</li>
-								<li>- Pack de 3 séances combinées (Coaching + soin énergétique) : 230€ (au lieu de 255€)</li>
-								<li>- Pack de 5 séances combinées (Coaching + soin énergétique) : 380€ (au lieu de 425€)</li>
+								<li>- Pack de 3 séances (Coaching + soin énergétique) : 230€ (au lieu de 255€)</li>
+								<li>- Pack de 5 séances (Coaching + soin énergétique) : 380€ (au lieu de 425€)</li>
 							</ul>
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Chaque séance est un moment privilégié pour prendre soin de toi et travailler en profondeur sur tes objectifs de bien-être. Réserve tes séances
-							combinées « Coaching et soin énergétique » dès aujourd'hui pour retrouver un bien-être complet et durable.
+							Ces séances sont une véritable parenthèse de bien-être pour avancer sereinement vers un mieux-être global. Réserve dès aujourd'hui ton accompagnement
+							personnalisé !
 						</Text>
 					</div>
 
@@ -86,7 +98,7 @@ export default class Coaching extends Component<IProps, IState> {
 						<span className={classes["bold"]}>65€</span> par séance
 					</Text> */}
 
-					<ContactButton size={EButtonSize.MEDIUM} text="Explorez les bienfaits d'un soin. Prêt à essayer ?" />
+					<ContactButton size={EButtonSize.MEDIUM} text="Prends le temps de te recentrer" />
 				</div>
 			</Observer>
 		);

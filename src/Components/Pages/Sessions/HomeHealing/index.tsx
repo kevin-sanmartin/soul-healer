@@ -82,7 +82,7 @@ export default class HomeHealing extends Component<IProps, IState> {
 						<span className={classes["bold"]}>65€</span> par séance
 					</Text>
 
-					<ContactButton size={EButtonSize.MEDIUM} text="Explorez les bienfaits d'un soin. Prêt à essayer ?" />
+					<ContactButton size={EButtonSize.MEDIUM} text="Ton moment de relaxation commence ici" />
 				</div>
 			</Observer>
 		);

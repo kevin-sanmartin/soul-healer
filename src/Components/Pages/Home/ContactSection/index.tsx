@@ -68,7 +68,7 @@ export default class ContactSection extends Component<IProps> {
 						</div>
 					</div>
 
-					<ContactButton size={EButtonSize.MEDIUM} text="Prenez RDV" />
+					<ContactButton size={EButtonSize.MEDIUM} text="Prends soin de toi, c'est simple" />
 				</div>
 			</section>
 		);
