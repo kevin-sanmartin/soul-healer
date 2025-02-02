@@ -29,7 +29,7 @@ export default class FAQ extends Component<IProps, IState> {
 				<Dropdown title="Un soin énergétique, c'est quoi ?" icon={FaHandSparkles} defaultOpen>
 					<WhatIsEnergyHealing />
 				</Dropdown>
-				<Dropdown title="Faisons connaissance" icon={BsPersonFill} id={EWebsiteLinks.ABOUT} defaultOpen>
+				<Dropdown title="Qui suis-je ?" icon={BsPersonFill} id={EWebsiteLinks.ABOUT} defaultOpen>
 					<AboutMe />
 				</Dropdown>
 			</section>

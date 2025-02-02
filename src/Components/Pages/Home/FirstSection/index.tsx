@@ -32,7 +32,7 @@ export default class FirstSection extends Component<IProps, IState> {
 						</span>
 					</Text>
 
-					<ContactButton size={EButtonSize.LARGE} text="Contactez-moi" />
+					<ContactButton size={EButtonSize.LARGE} text="Je réserve mon moment" />
 				</div>
 			</section>
 		);
