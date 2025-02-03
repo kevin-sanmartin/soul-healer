@@ -59,11 +59,11 @@ export default class AboutMe extends Component<IProps, IState> {
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["text"]}>
-								Je suis énergéticienne, formée dans une école de guerrisseuses, où j'ai approfondi mes connaissances et ma pratique des soins énergétiques.
+								Je suis énergéticienne, formée dans une école de guérisseuses, où j'ai approfondi mes connaissances et ma pratique des soins énergétiques.
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["text"]}>
-								Mon parcours a débuté lors d'un atelier avec mon ostéopathe énergéticienne, un moment clé où tout à basculer. J'ai pris conscience que je devais
+								Mon parcours a débuté lors d'un atelier avec mon ostéopathe énergéticienne, un moment clé où tout a basculer. J'ai pris conscience que je devais
 								changer de métier, puis mes mains se sont mises à vibrer et à chauffer, révélant mon potentiel naturel pour transmettre l'énergie.
 							</Text>
 
@@ -73,7 +73,7 @@ export default class AboutMe extends Component<IProps, IState> {
 							</Text>
 
 							<Text tag={ETextTag.P} className={classNames(classes["text"], classes["bold"])}>
-								Es-tu prêt(e) à recevoir un soin énergétique personnalisé et à vivre une expérience qui pourrais changer ton quotidien ?
+								Es-tu prêt(e) à recevoir un soin énergétique personnalisé et à vivre une expérience qui pourrait changer ton quotidien ?
 							</Text>
 						</div>
 					</Observer>

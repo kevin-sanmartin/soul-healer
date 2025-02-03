@@ -42,7 +42,7 @@ export default class Sessions extends Component<IProps, IState> {
 		return (
 			<section className={classNames(classes["root"], this.props.className)}>
 				<Text tag={ETextTag.P} className={classes["title"]}>
-					Mes préstations
+					Mes prestations
 				</Text>
 				{this.state.isLessThanLargeViewport && (
 					<div className={classes["sessions-selector"]}>
@@ -68,7 +68,7 @@ export default class Sessions extends Component<IProps, IState> {
 							className={classNames(classes["selector"], {
 								[classes["selected"]]: this.state.isCoachingVisible,
 							})}>
-							Coaching + soins énergétique
+							Coaching + soins énergétiques
 						</Text>
 					</div>
 				)}

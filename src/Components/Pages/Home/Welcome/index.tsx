@@ -80,7 +80,7 @@ export default class Welcome extends Component<IProps, IState> {
 							</Text>
 
 							<Text tag={ETextTag.P} className={classes["description"]}>
-								Les soins énergétiques visent à atteindre un état de calme intérieur et de mieux être global.
+								Les soins énergétiques visent à atteindre un état de calme intérieur et de mieux-être global.
 							</Text>
 						</div>
 					</div>

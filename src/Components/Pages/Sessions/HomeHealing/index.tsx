@@ -56,12 +56,12 @@ export default class HomeHealing extends Component<IProps, IState> {
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Mes soins énergétiques se pratiquent en individuel, par apposition des mains, tout en restant allongé et habillé. Préfères des habits confortables pour
+							Mes soins énergétiques se pratiquent en individuel, par apposition des mains, tout en restant allongé et habillé. Préfère des habits confortables pour
 							profiter pleinement de ce moment.
 						</Text>
 
 						<Text tag={ETextTag.P} className={classes["text"]}>
-							Chaque séance débute par un échange pour comprendre tes attentes et instaurer une relation de confiance. Le soin, accompagné d'une musique douce, viens
+							Chaque séance débute par un échange pour comprendre tes attentes et instaurer une relation de confiance. Le soin, accompagné d'une musique douce, vient
 							t'inviter au lâcher-prise et à la détente profonde.
 						</Text>
 

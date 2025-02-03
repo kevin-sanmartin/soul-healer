@@ -62,14 +62,14 @@ export default class HealingBenefits extends Component<IProps, IState> {
 								className={classNames(classes["list-item"], {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
-								title="Bienfaits emotionnels et mentaux"
+								title="Bienfaits émotionnels et mentaux"
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 							<ListItem
 								className={classNames(classes["list-item"], {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
-								title="Bienfaits energetiques et spirituels"
+								title="Bienfaits énergetiques et spirituels"
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 						</Observer>
