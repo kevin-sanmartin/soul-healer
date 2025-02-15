@@ -2,70 +2,62 @@
 @import "/styles/breakpoints.scss";
 
 .root {
-  background-color: $White;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  background-image: url("/images/background.png");
-  background-color: $mainColor;
+	background-color: $White;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	background-image: url("/images/background.png");
+	background-color: $mainColor;
 
-  border-radius: 10px;
+	border-radius: 10px;
 
-  .collapsible {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background-color: transparent;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    cursor: pointer;
+	.collapsible {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		background-color: transparent;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		cursor: pointer;
 
-    &.open {
-      border-radius: 10px 10px 0 0;
-    }
+		&.open {
+			border-radius: 10px 10px 0 0;
+		}
 
-    .icon {
-      min-width: 40px;
-      min-height: 40px;
+		.icon {
+			min-width: 40px;
+			min-height: 40px;
 
-      @media screen and (max-width: $small) {
-        min-width: 30px;
-        min-height: 30px;
-      }
-    }
+			@media screen and (max-width: $small) {
+				min-width: 30px;
+				min-height: 30px;
+			}
+		}
 
-    .title {
-      font-size: 22px;
-      font-weight: 600;
-      color: $Black;
-      text-transform: uppercase;
+		.title {
+			font-size: 22px;
+			font-weight: 600;
+			color: $Black;
+			text-transform: uppercase;
+		}
 
-      @media screen and (max-width: $medium) {
-        font-size: 18px;
-      }
+		.arrow {
+			min-height: 24px;
+			min-width: 24px;
+			transition: transform 0.4s ease;
+			margin-left: auto;
 
-      @media screen and (max-width: $small) {
-        font-size: 14px;
-      }
-    }
+			&.open {
+				transform: rotate(180deg);
+			}
+		}
+	}
 
-    .arrow {
-      min-height: 24px;
-      min-width: 24px;
-      transition: transform 0.4s ease;
-      margin-left: auto;
-
-      &.open {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .content {
-    max-height: 0;
-    border-radius: 0 0 10px 10px;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-  }
+	.content {
+		max-height: 0;
+		border-radius: 0 0 10px 10px;
+		overflow: hidden;
+		transition: max-height 0.4s ease-out;
+	}
 }
