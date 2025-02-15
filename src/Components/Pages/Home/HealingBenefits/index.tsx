@@ -56,6 +56,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
 								title="Bienfaits physiques"
+								description={["Relaxation profonde", "Soulagement des douleurs", "Renforcement du système immunitaire", "Amélioration du sommeil"]}
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 							<ListItem
@@ -63,6 +64,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
 								title="Bienfaits émotionnels et mentaux"
+								description={["Réduction du stress", "Gestion des émotions", "Clarté mentale"]}
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 							<ListItem
@@ -70,6 +72,7 @@ export default class HealingBenefits extends Component<IProps, IState> {
 									[classes["is-visible"]]: this.state.isListItemContainerVisible,
 								})}
 								title="Bienfaits énergetiques et spirituels"
+								description={["Rééquilbrage des énergies", "Élimination des blocages énergétiques", "Connexion intérieur", "Élévation vibratoire"]}
 								icon={<CheckIcon className={classes["icon"]} />}
 							/>
 						</Observer>
