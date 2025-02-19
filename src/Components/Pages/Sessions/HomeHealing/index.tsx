@@ -47,7 +47,7 @@ export default class HomeHealing extends Component<IProps, IState> {
 
 				<div className={classes["container"]}>
 					<Text tag={ETextTag.P} className={classes["title"]}>
-						Séance à mon domicile
+						Séance en présentiel
 					</Text>
 
 					<div className={classes["text-container"]}>

@@ -48,7 +48,7 @@ export default class Sessions extends Component<IProps, IState> {
 						className={classNames(classes["selector"], {
 							[classes["selected"]]: this.state.isHomeHealingVisible,
 						})}>
-						Séances à mon domicile
+						Séances en présentiel
 					</Text>
 					<Text
 						onClick={() => this.handleSelectorClick(ESessionType.REMOTE_HEALING)}

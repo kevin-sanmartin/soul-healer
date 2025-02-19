@@ -28,7 +28,7 @@ export default class FirstSection extends Component<IProps, IState> {
 					<Text font={"xiaoWei"} tag={ETextTag.H1} className={classes["title-container"]}>
 						<span className={classes["title"]}>Repars léger(e), apaisé(e) et revitalisé(e) grâce à mes soins énergétiques.</span>
 						<span className={classes["description"]}>
-							Nadia Richard, énergeticienne à Pégomas dans les Alpes-Maritimes. Soins énergétiques à mon domicile ou à distance.
+							Nadia Richard, énergeticienne à Pégomas dans les Alpes-Maritimes. Soins énergétiques en présentiel ou à distance.
 						</span>
 					</Text>
 
