@@ -11,7 +11,6 @@ import { ETextTag } from "@/src/Entities/Text";
 
 // Assets
 import HandOutside from "/public/images/outside/portrait-professionnel-085.jpg";
-import IllustrationImage from "/public/images/outside/portrait-professionnel-042-min.jpg";
 
 // Styles
 import classes from "./classes.module.scss";
@@ -77,7 +76,7 @@ export default class RemoteHealing extends Component<IProps, IState> {
 					</div>
 
 					<Text tag={ETextTag.P} font="cabin" className={classes["price"]}>
-						<span className={classes["bold"]}>60€</span> par séance
+						<span className={classes["bold"]}>75€</span> par séance (1h)
 					</Text>
 
 					<ContactButton size={EButtonSize.MEDIUM} text="Soin intuitif, énergie régénératrice. Essayez ?" />

@@ -16,13 +16,13 @@ type IProps = {
 type IState = {
 	isHomeHealingVisible: boolean;
 	isRemoteHealingVisible: boolean;
-	isCoachingVisible: boolean;
+	// isCoachingVisible: boolean;
 };
 
 enum ESessionType {
 	HOME_HEALING = "HOME_HEALING",
 	REMOTE_HEALING = "REMOTE_HEALING",
-	COACHING = "COACHING",
+	// COACHING = "COACHING",
 }
 
 export default class Sessions extends Component<IProps, IState> {
@@ -31,7 +31,7 @@ export default class Sessions extends Component<IProps, IState> {
 		this.state = {
 			isHomeHealingVisible: true,
 			isRemoteHealingVisible: false,
-			isCoachingVisible: false,
+			// isCoachingVisible: false,
 		};
 	}
 
@@ -58,20 +58,20 @@ export default class Sessions extends Component<IProps, IState> {
 						})}>
 						Séances à distance
 					</Text>
-					<Text
+					{/* <Text
 						onClick={() => this.handleSelectorClick(ESessionType.COACHING)}
 						tag={ETextTag.P}
 						className={classNames(classes["selector"], {
 							[classes["selected"]]: this.state.isCoachingVisible,
 						})}>
 						Coaching + soins énergétiques
-					</Text>
+					</Text> */}
 				</div>
 
 				<div className={classes["sessions-container"]}>
 					{this.state.isHomeHealingVisible && <HomeHealing />}
 					{this.state.isRemoteHealingVisible && <RemoteHealing />}
-					{this.state.isCoachingVisible && <Coaching />}
+					{/* {this.state.isCoachingVisible && <Coaching />} */}
 				</div>
 			</section>
 		);
@@ -80,17 +80,13 @@ export default class Sessions extends Component<IProps, IState> {
 	private handleSelectorClick(sessionType: ESessionType) {
 		switch (sessionType) {
 			case ESessionType.HOME_HEALING:
-				this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: false, isCoachingVisible: false });
+				this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: false });
 				break;
 			case ESessionType.REMOTE_HEALING:
-				this.setState({ isHomeHealingVisible: false, isRemoteHealingVisible: true, isCoachingVisible: false });
+				this.setState({ isHomeHealingVisible: false, isRemoteHealingVisible: true });
 				break;
-			case ESessionType.COACHING:
-				this.setState({ isHomeHealingVisible: false, isRemoteHealingVisible: false, isCoachingVisible: true });
+			// case ESessionType.COACHING:
+			// 	this.setState({ isHomeHealingVisible: false, isRemoteHealingVisible: false, isCoachingVisible: true });
 		}
-	}
-
-	private handleComponentVisibility() {
-		this.setState({ isHomeHealingVisible: true, isRemoteHealingVisible: true, isCoachingVisible: true });
 	}
 }
